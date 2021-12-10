@@ -72,6 +72,7 @@
     "url": "https://github.com/gojanedoe/yoga-routine-builder/issues"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
   "homepage": "https://github.com/gojanedoe/yoga-routine-builder#readme"
 >>>>>>> f2e2065 (1st commit Holly's 1st feature branch)
@@ -82,4 +83,7 @@
   },
   "homepage": "https://github.com/gojanedoe/yoga-routine-builder#readme"
 >>>>>>> f2e2065 (1st commit Holly's 1st feature branch)
+=======
+  }
+>>>>>>> cad9ad9 (2nd commit, card renders with name and learn more)
 }

@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import CardMedia from '@mui/material/CardMedia';
 import "./DraggablePoseCard.css";
 
@@ -50,18 +51,31 @@ const DraggablePoseCard = () => {
             {/* This will open pose information */}
           </CardActions>
 =======
+=======
+import CardMedia from '@mui/material/CardMedia';
+
+
+const DraggablePoseCard = () => {
+
+
+
+>>>>>>> cad9ad9 (2nd commit, card renders with name and learn more)
     return (
-        <Card sx={{ minWidth: 275 }}>
+        <Card sx={{ maxWidth: 300 }} elevation={3}>
         <CardContent>
         
           <Typography variant="h5" component="div">
             Pose Name
+            {/* {actual pose name will be in curly braces here instead of "Pose Name"} */}
           </Typography>
           
+        {/* for delete icon and button, this video takes through coding: https://www.youtube.com/watch?v=M75MUZ1zVYM */}
           
         </CardContent> 
+      
         <CardActions>
           <Button size="small">Learn More</Button>
+          {/* This will open pose information */}
         </CardActions>
 >>>>>>> f2e2065 (1st commit Holly's 1st feature branch)
       </Card>
