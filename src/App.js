@@ -1,24 +1,48 @@
-import logo from './logo.svg';
+import React from 'react';
+import '@material-ui/core';
+import Grid  from '@material-ui/core/Grid';
+import Item from '@material-ui/core/Grid';
+import { borders } from '@material-ui/system';
+import Paper from '@material-ui/core/Paper';
+import Box from '@material-ui/core/Box';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <React.Fragment>
+      <div >
+      <Grid 
+        container 
+        spacing={2}
+        
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <Grid 
+          className="poseList"
+          container 
+          item xs={4}
+
+        >
+          <Paper>xs=8</Paper>
+          
+        </Grid>
+        
+        <Grid container item xs={4}>
+          <Box
+            border={5}>
+              xs=8
+          </Box>
+        </Grid>
+        
+        <Grid container item xs={4}>
+          <Item>xs=8</Item>
+        </Grid>
+
+      </Grid>
+        
+      </div>
+      
+    </React.Fragment>
   );
 }
 
