@@ -5,26 +5,33 @@ import Item from '@material-ui/core/Grid';
 import { borders } from '@material-ui/system';
 import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
+import { Container } from '@material-ui/core';
+import Card from '@material-ui/core/Card';
 
 import './App.css';
 
 function App() {
   return (
-    <React.Fragment>
-      <div>
-        <Grid container spacing={2}>
-          <Grid className="poseList" container item xs={4}>
-            <Paper>xs=8</Paper>
-          </Grid>
-          <Grid container item xs={4}>
-            <Box border={5}>xs=8</Box>
-          </Grid>
-          <Grid container item xs={4}>
-            <Item>xs=8</Item>
-          </Grid>
+    <Container className="landingContainer">
+      <Grid
+        container
+        className="landingGrid"
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        spacing={2}
+      >
+        <Grid item xs={4} className="landingColumn">
+          <Paper elevation={2}>1</Paper>
         </Grid>
-      </div>
-    </React.Fragment>
+        <Grid item xs={4}>
+          →
+        </Grid>
+        <Grid item xs={4} className="landingColumn">
+          <Paper elevation={2}>3</Paper>
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
 
