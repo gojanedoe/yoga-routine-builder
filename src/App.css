@@ -2,11 +2,19 @@
   box-sizing: border-box;
 }
 
-
-
-
-.poseList {
+.landingContainer {
   height: 100vh;
-  width: auto;
-  border: 2px solid black;
+}
+
+.landingGrid {
+  height: 100%;
+  text-align: center;
+
+  /* flex-grow: 1; */
+}
+
+.landingColumn {
+  border: solid black 1px;
+  height: 200px;
+  overflow: scroll;
 }
