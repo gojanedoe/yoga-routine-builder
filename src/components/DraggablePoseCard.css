@@ -1,0 +1,17 @@
+.container {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-areas: "header pic"
+                          "link";
+    grid-template-columns: 3fr 1fr;
+  }
+  
+  
+  .pic {
+    grid-area: header;
+  }
+  
+  .link {
+    background-color: beige;
+    grid-area: nav;
+  }
