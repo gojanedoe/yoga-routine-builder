@@ -1,10 +1,7 @@
 import React from 'react';
 import '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-import Item from '@material-ui/core/Grid';
-import { borders } from '@material-ui/system';
 import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box';
 import { Container } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 
@@ -21,14 +18,20 @@ function App() {
         alignItems="center"
         spacing={2}
       >
+        {/* ---- LEFT COLUMN ---- */}
         <Grid item xs={4} className="landingColumn">
-          <Paper elevation={2}>1</Paper>
+          <Card elevation={2}>Pose Card 1</Card>
+          <Card elevation={2}>Pose Card 2</Card>
+          <Card elevation={2}>Pose Card 3</Card>
+          <Card elevation={2}>Pose Card 4</Card>
         </Grid>
+        {/* ---- MIDDLE COLUMN ---- */}
         <Grid item xs={4}>
           →
         </Grid>
+        {/* ---- RIGHT COLUMN ---- */}
         <Grid item xs={4} className="landingColumn">
-          <Paper elevation={2}>3</Paper>
+          {/* <Paper elevation={2}>3</Paper> */}
         </Grid>
       </Grid>
     </Container>
