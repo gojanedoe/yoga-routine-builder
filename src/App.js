@@ -19,8 +19,17 @@ const dummyPoses = [
   { id: 'pose-5', name: 'Pose 5' }
 ];
 
+const dummyRoutine = [
+  { id: 'pose-6', name: 'Pose 6' },
+  { id: 'pose-7', name: 'Pose 7' },
+  { id: 'pose-8', name: 'Pose 8' },
+  { id: 'pose-9', name: 'Pose 9' },
+  { id: 'pose-10', name: 'Pose 10' }
+];
+
 function App() {
   const [poses, updatePoses] = useState(dummyPoses);
+  const [routine, updateRoutine] = useState(dummyRoutine);
 
   const handleOnDragEnd = result => {
     console.log('Draggable item move: \n', result);
@@ -89,7 +98,36 @@ function App() {
           </Grid>
           {/* ---- RIGHT COLUMN ---- */}
           <Grid item xs={4} className="landingColumn">
-            {/* <Paper elevation={2}>3</Paper> */}
+            <Droppable droppableId="column-2">
+              {provided => (
+                <ul
+                  // className="poseList"
+                  {...provided.droppableProps}
+                  ref={provided.innerRef}
+                >
+                  {routine.map((routinePose, index) => {
+                    return (
+                      <Draggable
+                        key={routinePose.id}
+                        draggableId={routinePose.id}
+                        index={index}
+                      >
+                        {provided => (
+                          <li
+                            {...provided.draggableProps}
+                            {...provided.dragHandleProps}
+                            ref={provided.innerRef}
+                          >
+                            <Card elevation={2}>{routinePose.name}</Card>
+                          </li>
+                        )}
+                      </Draggable>
+                    );
+                  })}
+                  {provided.placeholder}
+                </ul>
+              )}
+            </Droppable>
           </Grid>
           <Button variant="outlined">Start Routine</Button>
           <Button variant="outlined">Save Routine</Button>
