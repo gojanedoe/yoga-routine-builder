@@ -25,6 +25,12 @@ function App() {
           <Card elevation={2}>Pose Card 2</Card>
           <Card elevation={2}>Pose Card 3</Card>
           <Card elevation={2}>Pose Card 4</Card>
+          <Card elevation={2}>Pose Card 5</Card>
+          <Card elevation={2}>Pose Card 6</Card>
+          <Card elevation={2}>Pose Card 7</Card>
+          <Card elevation={2}>Pose Card 8</Card>
+          <Card elevation={2}>Pose Card 9</Card>
+          <Card elevation={2}>Pose Card 10</Card>
         </Grid>
         {/* ---- MIDDLE COLUMN ---- */}
         <Grid item xs={4}>
