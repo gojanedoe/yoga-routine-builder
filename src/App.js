@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { Container } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
+import Button from '@material-ui/core/Button';
 
 import './App.css';
 
@@ -33,6 +34,8 @@ function App() {
         <Grid item xs={4} className="landingColumn">
           {/* <Paper elevation={2}>3</Paper> */}
         </Grid>
+        <Button variant="outlined">Start Routine</Button>
+        <Button variant="outlined">Save Routine</Button>
       </Grid>
     </Container>
   );
