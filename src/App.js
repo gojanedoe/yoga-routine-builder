@@ -32,19 +32,45 @@ function App() {
   const [routine, updateRoutine] = useState(dummyRoutine);
 
   const handleOnDragEnd = result => {
-    console.log('Draggable item move: \n', result);
-
     // If pose is not dragged to a valid destination, keep list the same
     if (!result.destination) return;
 
-    const items = Array.from(poses);
-    // Grab moving pose & remove from list
-    const [reorderedItem] = items.splice(result.source.index, 1);
-    // Add moving pose to new spot (index) in list
-    items.splice(result.destination.index, 0, reorderedItem);
+    console.log('Result.source: ', result.source.droppableId);
+    console.log('Result.destination: ', result.destination.droppableId);
 
-    //Update state
-    updatePoses(items);
+    if (
+      result.source.droppableId === 'column-1' &&
+      result.destination.droppableId === 'column-1'
+    ) {
+      // Grab poses from original list
+      const items = Array.from(poses);
+
+      // Grab moving pose & remove from list
+      const [reorderedItem] = items.splice(result.source.index, 1);
+
+      // Add moving pose to new spot (index) in list
+      items.splice(result.destination.index, 0, reorderedItem);
+
+      //Update state
+      updatePoses(items);
+    } else if (
+      result.source.droppableId === 'column-1' &&
+      result.destination.droppableId === 'column-2'
+    ) {
+      // Grab poses from original lists
+      const fromItems = Array.from(poses);
+      const toItems = Array.from(routine);
+
+      // Grab moving pose & remove from list
+      const [reorderedItem] = fromItems.splice(result.source.index, 1);
+
+      // Add moving pose to new spot (index) in list
+      toItems.splice(result.destination.index, 0, reorderedItem);
+
+      //Update state
+      updatePoses(fromItems);
+      updateRoutine(toItems);
+    }
   };
 
   return (
