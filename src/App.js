@@ -16,16 +16,15 @@ const dummyPoses = [
   { id: 'pose-2', name: 'Pose 2' },
   { id: 'pose-3', name: 'Pose 3' },
   { id: 'pose-4', name: 'Pose 4' },
-  { id: 'pose-5', name: 'Pose 5' }
-];
-
-const dummyRoutine = [
+  { id: 'pose-5', name: 'Pose 5' },
   { id: 'pose-6', name: 'Pose 6' },
   { id: 'pose-7', name: 'Pose 7' },
   { id: 'pose-8', name: 'Pose 8' },
   { id: 'pose-9', name: 'Pose 9' },
   { id: 'pose-10', name: 'Pose 10' }
 ];
+
+const dummyRoutine = [];
 
 function App() {
   const [poses, updatePoses] = useState(dummyPoses);
