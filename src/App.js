@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import DraggablePoseCard from './components/DraggablePoseCard';
+import PoseBank from './components/PoseBank';
+import RoutineBuilder from './components/RoutineBuilder';
 import '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -94,76 +96,15 @@ function App() {
           spacing={2}
         >
           {/* ---- LEFT COLUMN ---- */}
-          <Grid item xs={4} className="landingColumn">
-            <Droppable droppableId="column-1">
-              {provided => (
-                <ul
-                  className="characters"
-                  {...provided.droppableProps}
-                  ref={provided.innerRef}
-                >
-                  {poses.map((pose, index) => {
-                    return (
-                      <Draggable
-                        key={pose.id}
-                        draggableId={pose.id}
-                        index={index}
-                      >
-                        {provided => (
-                          <li
-                            {...provided.draggableProps}
-                            {...provided.dragHandleProps}
-                            ref={provided.innerRef}
-                          >
-                            <Card elevation={2}>{pose.name}</Card>
-                          </li>
-                        )}
-                      </Draggable>
-                    );
-                  })}
-                  {provided.placeholder}
-                </ul>
-              )}
-            </Droppable>
-          </Grid>
+          <PoseBank poses={poses} />
 
           {/* ---- MIDDLE COLUMN ---- */}
           <Grid item xs={4}>
             →
           </Grid>
           {/* ---- RIGHT COLUMN ---- */}
-          <Grid item xs={4} className="landingColumn">
-            <Droppable droppableId="column-2">
-              {provided => (
-                <ul
-                  // className="poseList"
-                  {...provided.droppableProps}
-                  ref={provided.innerRef}
-                >
-                  {routine.map((routinePose, index) => {
-                    return (
-                      <Draggable
-                        key={routinePose.id}
-                        draggableId={routinePose.id}
-                        index={index}
-                      >
-                        {provided => (
-                          <li
-                            {...provided.draggableProps}
-                            {...provided.dragHandleProps}
-                            ref={provided.innerRef}
-                          >
-                            <Card elevation={2}>{routinePose.name}</Card>
-                          </li>
-                        )}
-                      </Draggable>
-                    );
-                  })}
-                  {provided.placeholder}
-                </ul>
-              )}
-            </Droppable>
-          </Grid>
+          <RoutineBuilder routine={routine} />
+
           <Button variant="outlined">Start Routine</Button>
           <Button variant="outlined">Save Routine</Button>
         </Grid>
