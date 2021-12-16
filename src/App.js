@@ -11,7 +11,6 @@ import './App.css';
 function App() {
   return (
     <Container className="landingContainer">
-      <DraggablePoseCard />
       <Grid
         container
         className="landingGrid"

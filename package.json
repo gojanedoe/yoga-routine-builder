@@ -5,14 +5,12 @@
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/system": "^4.12.1",
-    "@emotion/react": "^11.7.0",
-    "@emotion/styled": "^11.6.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -42,17 +40,5 @@
   },
   "devDependencies": {
     "prettier": "^2.5.1"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gojanedoe/yoga-routine-builder.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gojanedoe/yoga-routine-builder/issues"
-  },
-  "homepage": "https://github.com/gojanedoe/yoga-routine-builder#readme"
+  }
 }
