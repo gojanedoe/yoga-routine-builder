@@ -1,0 +1,11 @@
+.yogaPoseImages {
+  height: 100px;
+  width: 125px;
+  vertical-align: top;
+}
+
+.inputStyle {
+  padding: 20px 20px;
+  width: 75%;
+  box-sizing: border-box;
+}
