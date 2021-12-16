@@ -18,3 +18,13 @@
   height: 200px;
   overflow: scroll;
 }
+
+.landingColumn ul {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.landingColumn li {
+  list-style-type: none;
+}
