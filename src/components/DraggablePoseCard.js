@@ -22,7 +22,7 @@ const DraggablePoseCard = () => {
                 <td> */}
                   <Typography variant="h5" component="div" className="header">
                   Pose Name
-                  {/* {actual pose name will be in curly braces here instead of "Pose Name"} */}
+                  {/* {actual pose name will be in curly braces here instead of "Pose Name" to be rendered dynamically} */}
                   </Typography>
                 {/* </td>
                 <td>     </td>
