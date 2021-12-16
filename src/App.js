@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import DraggablePoseCard from './components/DraggablePoseCard';
 import '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
@@ -12,6 +11,7 @@ import './App.css';
 function App() {
   return (
     <Container className="landingContainer">
+      <DraggablePoseCard />
       <Grid
         container
         className="landingGrid"
@@ -46,17 +46,6 @@ function App() {
         <Button variant="outlined">Save Routine</Button>
       </Grid>
     </Container>
-=======
-
-import DraggablePoseCard from './components/DraggablePoseCard';
-
-function App() {
-  return (
-    
-    <div>
-      <DraggablePoseCard />
-    </div>
->>>>>>> f2e2065 (1st commit Holly's 1st feature branch)
   );
 }
 
