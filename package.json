@@ -4,13 +4,19 @@
   "private": true,
   "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@material-ui/core": "^4.12.3",
     "@material-ui/system": "^4.12.1",
 =======
+=======
+>>>>>>> f2e2065 (1st commit Holly's 1st feature branch)
     "@emotion/react": "^11.7.0",
     "@emotion/styled": "^11.6.0",
     "@material-ui/core": "^4.12.3",
     "@mui/material": "^5.2.3",
+<<<<<<< HEAD
+>>>>>>> f2e2065 (1st commit Holly's 1st feature branch)
+=======
 >>>>>>> f2e2065 (1st commit Holly's 1st feature branch)
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -46,10 +52,13 @@
     ]
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   "devDependencies": {
     "prettier": "^2.5.1"
   }
 =======
+=======
+>>>>>>> f2e2065 (1st commit Holly's 1st feature branch)
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "devDependencies": {},
@@ -62,10 +71,15 @@
   "bugs": {
     "url": "https://github.com/gojanedoe/yoga-routine-builder/issues"
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
   "homepage": "https://github.com/gojanedoe/yoga-routine-builder#readme"
 >>>>>>> f2e2065 (1st commit Holly's 1st feature branch)
 =======
   }
 >>>>>>> cad9ad9 (2nd commit, card renders with name and learn more)
+=======
+  },
+  "homepage": "https://github.com/gojanedoe/yoga-routine-builder#readme"
+>>>>>>> f2e2065 (1st commit Holly's 1st feature branch)
 }

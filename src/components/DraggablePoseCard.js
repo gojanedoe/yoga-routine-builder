@@ -4,13 +4,17 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+<<<<<<< HEAD
 import CardMedia from '@mui/material/CardMedia';
 import "./DraggablePoseCard.css";
 
+=======
+>>>>>>> f2e2065 (1st commit Holly's 1st feature branch)
 
 
 
 const DraggablePoseCard = () => {
+<<<<<<< HEAD
 
 
 
@@ -45,6 +49,21 @@ const DraggablePoseCard = () => {
             <Button size="small" className="link">Learn More</Button>
             {/* This will open pose information */}
           </CardActions>
+=======
+    return (
+        <Card sx={{ minWidth: 275 }}>
+        <CardContent>
+        
+          <Typography variant="h5" component="div">
+            Pose Name
+          </Typography>
+          
+          
+        </CardContent> 
+        <CardActions>
+          <Button size="small">Learn More</Button>
+        </CardActions>
+>>>>>>> f2e2065 (1st commit Holly's 1st feature branch)
       </Card>
     )
 }
