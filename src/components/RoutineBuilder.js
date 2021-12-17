@@ -3,6 +3,7 @@ import '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import { Droppable, Draggable } from 'react-beautiful-dnd';
+import DraggablePoseCard from './DraggablePoseCard';
 
 const RoutineBuilder = ({ routine }) => {
   return (
@@ -27,7 +28,7 @@ const RoutineBuilder = ({ routine }) => {
                       {...provided.dragHandleProps}
                       ref={provided.innerRef}
                     >
-                      <Card elevation={2}>{routinePose.name}</Card>
+                       <DraggablePoseCard routine = {routine} />
                     </li>
                   )}
                 </Draggable>

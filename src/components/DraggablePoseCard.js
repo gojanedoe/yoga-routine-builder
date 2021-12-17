@@ -6,26 +6,19 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 import "./DraggablePoseCard.css";
-import yogaPoses from '../data/yogaPoses';
+import yogaPoses from '../data/yogaPoses.json';
 
 
 
-const DraggablePoseCard = ({poseName, image, linkToModal}) => {
-
+const DraggablePoseCard = ({pose, linkToModal}) => {
 
     return (
         <Card sx={{ maxWidth: 1 }} elevation={3}>
           <CardContent className="contentContainer">
-                  
-                  {/* {yogaPoses[1].poseName}  works but displays poseName on all cards*/}
-                  {yogaPoses.map(pose => {
-                    return (
-                      <Typography variant="h5" component="div" className="header">
-                        {pose.poseName}
-                      </Typography>
-                    )
-                  })}
-                  <CardMedia 
+                 <Typography variant="h5" component="div" className="header">
+                    {pose.name}
+                </Typography>
+                <CardMedia 
                     component="img" 
                     title="Pose" 
                     height="150"

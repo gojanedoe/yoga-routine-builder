@@ -5,7 +5,13 @@ import Card from '@material-ui/core/Card';
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 import DraggablePoseCard from './DraggablePoseCard';
 
+
+
+
 const PoseBank = ({ poses }) => {
+
+  // console.log(poses)  (accesses array of poses)
+
   return (
     <Grid item xs={4} className="landingColumn">
       <Droppable droppableId="column-1">
@@ -16,6 +22,8 @@ const PoseBank = ({ poses }) => {
             ref={provided.innerRef}
           >
             {poses.map((pose, index) => {
+
+              
               return (
                 <Draggable key={pose.id} draggableId={pose.id} index={index}>
                   {provided => (

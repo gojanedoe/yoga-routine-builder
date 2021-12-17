@@ -1,69 +1,79 @@
 [
     {   
-        "poseName": "Cat/Cow",
+        "id": "pose-1",
+        "name": "Cat/Cow",
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
         "audio": "audio file!"
     },
     {   
-        "poseName": "Plank",
+        "id": "pose-2",
+        "name": "Plank",
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
         "audio": "audio file!"
     },
     {   
-        "poseName": "Bridge",
+        "id": "pose-3",
+        "name": "Bridge",
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
         "audio": "audio file!"
     },
     {   
-        "poseName": "Sukhasana",
+        "id": "pose-4",
+        "name": "Sukhasana",
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
         "audio": "audio file!"
     },
     {   
-        "poseName": "Tree",
+        "id": "pose-5",
+        "name": "Tree",
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
         "audio": "audio file!"
     },
     {   
-        "poseName": "Tree",
+        "id": "pose-6",
+        "name": "Tree",
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
         "audio": "audio file!"
     },
     {   
-        "poseName": "Extended Side Angle",
+        "id": "pose-7",
+        "name": "Extended Side Angle",
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
         "audio": "audio file!"
     },
     {   
-        "poseName": "Locust",
+        "id": "pose-8",
+        "name": "Locust",
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
         "audio": "audio file!"
     },
     {   
-        "poseName": "Downward Facing Dog",
+        "id": "pose-9",
+        "name": "Downward Facing Dog",
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
         "audio": "audio file!"
     },
     {   
-        "poseName": "Cobra",
+        "id": "pose-10",
+        "name": "Cobra",
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
