@@ -1,11 +1,16 @@
-[
+{
+    "title": "YogaRoutine",
+    "poses": [
     {   
         "id": "pose-1",
         "poseName": "Cat/Cow",
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
-        "audio": "audio file!"
+        "audio": "audio file!",
+        "muscles": [
+
+        ]
     },
     {   
         "id": "pose-2",
@@ -13,7 +18,10 @@
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
-        "audio": "audio file!"
+        "audio": "audio file!",
+        "muscles": [
+
+        ]
     },
     {   
         "id": "pose-3",
@@ -21,7 +29,10 @@
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
-        "audio": "audio file!"
+        "audio": "audio file!",
+        "muscles": [
+
+        ]
     },
     {   
         "id": "pose-4",
@@ -29,7 +40,10 @@
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
-        "audio": "audio file!"
+        "audio": "audio file!",
+        "muscles": [
+
+        ]
     },
     {   
         "id": "pose-5",
@@ -37,7 +51,10 @@
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
-        "audio": "audio file!"
+        "audio": "audio file!",
+        "muscles": [
+
+        ]
     },
     { 
         "id": "pose-6",  
@@ -45,7 +62,10 @@
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
-        "audio": "audio file!"
+        "audio": "audio file!",
+        "muscles": [
+
+        ]
     },
     {   
         "id": "pose-7",
@@ -53,7 +73,10 @@
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
-        "audio": "audio file!"
+        "audio": "audio file!",
+        "muscles": [
+
+        ]
     },
     {   
         "id": "pose-8",
@@ -61,7 +84,10 @@
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
-        "audio": "audio file!"
+        "audio": "audio file!",
+        "muscles": [
+
+        ]
     },
     {   
         "id": "pose-9",
@@ -69,7 +95,10 @@
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
-        "audio": "audio file!"
+        "audio": "audio file!",
+        "muscles": [
+
+        ]
     },
     {   
         "id": "pose-10",
@@ -77,6 +106,10 @@
         "description": "Hello",
         "benefits": "Good For You",
         "image": "this is an image file",
-        "audio": "audio file!"
-    }
-]
+        "audio": "audio file!",
+        "muscles": [
+
+        ]
+        }
+    ]
+}
