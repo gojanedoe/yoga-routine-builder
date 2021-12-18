@@ -1,4 +1,4 @@
-.container {
+.contentContainer {
     display: grid;
     grid-gap: 1px;
     grid-template-areas: "header pic"
