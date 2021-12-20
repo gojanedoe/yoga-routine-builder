@@ -1,18 +1,26 @@
 .contentContainer {
     display: grid;
     grid-gap: 1px;
-    grid-template-areas: "header pic"
-                          "link";
+    grid-template-areas:  "header" "pic"
+                          "" "link";
     grid-template-columns: 3fr 1fr;
-    height: 10%;
+    height: 100px;
+    justify-content: start;
   }
   
+  .header {
+    grid-area: "header";
+  }
   
   .pic {
-    grid-area: header;
+    grid-area: "header";
+    height: 4rem;
+    width: 4rem;
+    border: 1px solid;
   }
   
-  .link {
-    background-color: beige;
-    grid-area: nav;
+  #link {
+    grid-area: "link";
+    justify-content: end;
+    text-decoration: underline;
   }

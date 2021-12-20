@@ -29,7 +29,7 @@ const DraggablePoseCard = ({pose, linkToModal}) => {
       
           <CardActions>
             
-            <Button size="small" className="link">Learn More</Button>
+            <Button size="small" id="link">Learn More</Button>
             
           </CardActions>
       </Card>
