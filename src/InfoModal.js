@@ -1,5 +1,5 @@
 import { React, Fragment, useState } from "react";
-import { Modal, Grid, Box, Button, Container } from "@material-ui/core";
+import { Modal, Grid, Box, Button } from "@material-ui/core";
 import {
   display,
   flexbox,
@@ -20,7 +20,6 @@ function InfoModal(props) {
 
   return (
     <Fragment>
-      <Container>
       <Modal
         open={modalOpen}
         onClose={handleClose}
@@ -31,18 +30,14 @@ function InfoModal(props) {
         }}
       >
         <Box width="60%" height="70%" display="block">
-          <Grid container direction="row"  spacing={1}>
-            <Grid item xs={2}>
+          <Grid container spacing={1}>
+            <Grid item>
               <img
                 className="yogaPoseImages"
                 src={`images/exsideanglepose.png`}
                 alt="extended side angle"
               />
-              </Grid>
-            <Grid item xs={10}>
-                <div>This is some modal content</div>
-              </Grid>            
-            <Grid item xs={12}>
+              <Grid item>
                 <input
                   className="inputStyle"
                   type="number"
@@ -51,16 +46,21 @@ function InfoModal(props) {
                   step="1"
                 />
               </Grid>
-              <Grid item xs={4}>    
-              <Button style={{ backgroundColor: "purple" }}>
+            </Grid>
+            <Grid item xs={12} sm container>
+              <Grid item xs container direction="column" spacing={2}>
+                <Grid item xs>
+                  <div>This is some modal content</div>
+                  <Button style={{ backgroundColor: "purple" }}>
                     Add Pose to Routine
                   </Button>
                   <Button style={{ backgroundColor: "white" }}>Cancel</Button>
-                  </Grid>
+                </Grid>
               </Grid>
+            </Grid>
+          </Grid>
         </Box>
       </Modal>
-      </Container>
     </Fragment>
   );
 }
