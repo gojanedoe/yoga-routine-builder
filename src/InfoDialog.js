@@ -6,33 +6,36 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import './InfoDialog.css'
+import './InfoDialog.css';
 
-function InfoDialog() {
-  const [open, setOpen] = useState(false);
+function InfoDialog(props) {
+  const { modalOpen, setModalOpen } = props;
 
   const handleClickOpen = () => {
-    setOpen(true);
+    setModalOpen(true);
   };
 
   const handleClose = () => {
-    setOpen(false);
+    setModalOpen(false);
   };
 
   return (
     <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open info modal
-      </Button>
-      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" fullWidth="false" maxWidth="sm">
+      <Dialog
+        open={modalOpen}
+        onClose={handleClose}
+        aria-labelledby="form-dialog-title"
+        fullWidth="false"
+        maxWidth="sm"
+      >
         <DialogTitle id="form-dialog-title">Yoga Pose</DialogTitle>
         <DialogContent>
-                  <DialogContentText>
-                      <img
-                className="yogaPoseImages"
-                src={`images/exsideanglepose.png`}
-                alt="extended side angle"
-              />
+          <DialogContentText>
+            <img
+              className="yogaPoseImages"
+              src={`images/exsideanglepose.png`}
+              alt="extended side angle"
+            />
             Here is some modal content.
           </DialogContentText>
           <TextField
