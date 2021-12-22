@@ -8,10 +8,12 @@ import { Container } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 import yogaPoses from './data/yogaPoses.json';
-
+import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-
+import AudioPlayer from 'material-ui-audio-player';
 import './App.css';
+
 
 // const dummyPoses = [
 //   { id: 'pose-1', name: 'Pose 1' },
@@ -27,10 +29,30 @@ import './App.css';
 // ];
 
 // const Routine = [];
+function SimpleDialog(props) {
+  const { onClose, routine, open } = props;
+const handleClose =() =>{
+  onClose(routine)
+}
 
+  return (
+    <Dialog onClose={handleClose} open={open}>
+      <DialogTitle>Routine Playback</DialogTitle>
+     
+  <AudioPlayer
+    elevation={1}
+    width="500px"
+    variation="primary"
+    spacing={3}
+    src="Assets/tree_(vrkasana).mp4"
+  />
+    </Dialog>
+  );
+}
 function App() {
   const [poses, updatePoses] = useState(yogaPoses);
   const [routine, updateRoutine] = useState([]);
+  const [open, setOpen] = React.useState(false);
 
   const handleOnDragEnd = result => {
     // If pose is not dragged to a valid destination, keep list the same
@@ -84,8 +106,15 @@ function App() {
     }
   };
 
-  return (
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = value => {
+    setOpen(false);
+    
+  };
 
+  return (
     <DragDropContext onDragEnd={handleOnDragEnd}>
       <Container className="landingContainer">
         <Grid
@@ -99,8 +128,6 @@ function App() {
           {/* ---- LEFT COLUMN ---- */}
           <PoseBank poses={poses} />
 
-
-
           {/* ---- MIDDLE COLUMN ---- */}
           <Grid item xs={4}>
             →
@@ -108,7 +135,12 @@ function App() {
           {/* ---- RIGHT COLUMN ---- */}
           <RoutineBuilder routine={routine} />
 
-          <Button variant="outlined">Start Routine</Button>
+          <Button variant="outlined" onClick={handleClickOpen}>
+            Start Routine
+          </Button>
+
+          <SimpleDialog routine={routine} open={open} onClose={handleClose} />
+
           <Button variant="outlined">Save Routine</Button>
         </Grid>
       </Container>
