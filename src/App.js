@@ -30,6 +30,9 @@ import './App.css';
 function App() {
   const [poses, updatePoses] = useState(yogaPoses);
   const [routine, updateRoutine] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedPose, setSelectedPose] = useState(null);
+  const [poseCounter, setPoseCounter] = useState(10);
 
   return (
     <DragLogic
@@ -40,6 +43,16 @@ function App() {
     >
       <InfoModal />
       <Container className="landingContainer">
+        {modalOpen ? (
+          <InfoDialog
+            modalOpen={modalOpen}
+            setModalOpen={setModalOpen}
+            selectedPose={selectedPose}
+            updateRoutine={updateRoutine}
+            poseCounter={poseCounter}
+            setPoseCounter={setPoseCounter}
+          />
+        ) : null}
         <Grid
           container
           className="landingGrid"
@@ -49,8 +62,12 @@ function App() {
           spacing={2}
         >
           {/* ---- LEFT COLUMN ---- */}
-          <PoseBank poses={poses} />
-
+          <PoseBank
+            poses={poses}
+            setModalOpen={setModalOpen}
+            modalOpen={modalOpen}
+            setSelectedPose={setSelectedPose}
+          />
           {/* ---- MIDDLE COLUMN ---- */}
           <Grid item xs={4}>
             →

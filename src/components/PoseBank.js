@@ -5,7 +5,7 @@ import Card from '@material-ui/core/Card';
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 import DraggablePoseCard from './DraggablePoseCard';
 
-const PoseBank = ({ poses }) => {
+const PoseBank = ({ poses, setModalOpen, modalOpen, setSelectedPose }) => {
   return (
     <Grid item xs={4} className="landingColumn">
       <Droppable droppableId="column-1">
@@ -24,8 +24,12 @@ const PoseBank = ({ poses }) => {
                       {...provided.dragHandleProps}
                       ref={provided.innerRef}
                     >
-                      <DraggablePoseCard pose={pose} />
-                      {/* <Card elevation={2}>{pose.name}</Card> */}
+                      <DraggablePoseCard
+                        pose={pose}
+                        modalOpen={modalOpen}
+                        setModalOpen={setModalOpen}
+                        setSelectedPose={setSelectedPose}
+                      />
                     </li>
                   )}
                 </Draggable>
