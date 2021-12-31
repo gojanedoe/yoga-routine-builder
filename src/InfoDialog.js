@@ -9,13 +9,34 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import './InfoDialog.css';
 
 function InfoDialog(props) {
-  const { modalOpen, setModalOpen } = props;
+  const {
+    modalOpen,
+    setModalOpen,
+    selectedPose,
+    updateRoutine,
+    poseCounter,
+    setPoseCounter
+  } = props;
 
   const handleClickOpen = () => {
     setModalOpen(true);
   };
 
   const handleClose = () => {
+    setModalOpen(false);
+  };
+
+  const handleAddToRoutine = e => {
+    updateRoutine(prevState => {
+      // Create new pose id so there are no repeating keys in poses
+      let newPoseId = `pose-${poseCounter + 1}`;
+      let newPose = { ...selectedPose, id: newPoseId };
+
+      prevState.push(newPose);
+      return prevState;
+    });
+
+    setPoseCounter(poseCounter + 1);
     setModalOpen(false);
   };
 
@@ -54,7 +75,7 @@ function InfoDialog(props) {
           <Button onClick={handleClose} color="primary">
             Cancel
           </Button>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={e => handleAddToRoutine(e)} color="primary">
             Add to Routine
           </Button>
         </DialogActions>

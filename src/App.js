@@ -35,6 +35,8 @@ function App() {
   const [poses, updatePoses] = useState(yogaPoses);
   const [routine, updateRoutine] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
+  const [selectedPose, setSelectedPose] = useState(null);
+  const [poseCounter, setPoseCounter] = useState(10);
 
   const handleOnDragEnd = result => {
     // If pose is not dragged to a valid destination, keep list the same
@@ -92,7 +94,14 @@ function App() {
     <DragDropContext onDragEnd={handleOnDragEnd}>
       <Container className="landingContainer">
         {modalOpen ? (
-          <InfoDialog modalOpen={modalOpen} setModalOpen={setModalOpen} />
+          <InfoDialog
+            modalOpen={modalOpen}
+            setModalOpen={setModalOpen}
+            selectedPose={selectedPose}
+            updateRoutine={updateRoutine}
+            poseCounter={poseCounter}
+            setPoseCounter={setPoseCounter}
+          />
         ) : null}
         <Grid
           container
@@ -107,6 +116,7 @@ function App() {
             poses={poses}
             setModalOpen={setModalOpen}
             modalOpen={modalOpen}
+            setSelectedPose={setSelectedPose}
           />
 
           {/* ---- MIDDLE COLUMN ---- */}
