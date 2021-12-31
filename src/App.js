@@ -35,6 +35,12 @@ import './App.css';
 function App() {
   const [poses, updatePoses] = useState(yogaPoses);
   const [routine, updateRoutine] = useState([]);
+<<<<<<< HEAD
+=======
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedPose, setSelectedPose] = useState(null);
+  const [poseCounter, setPoseCounter] = useState(10);
+>>>>>>> Add pose to routine when info modal button is clicked
 
   const handleOnDragEnd = result => {
     // If pose is not dragged to a valid destination, keep list the same
@@ -92,6 +98,19 @@ function App() {
     <DragDropContext onDragEnd={handleOnDragEnd}>
       <InfoModal />
       <Container className="landingContainer">
+<<<<<<< HEAD
+=======
+        {modalOpen ? (
+          <InfoDialog
+            modalOpen={modalOpen}
+            setModalOpen={setModalOpen}
+            selectedPose={selectedPose}
+            updateRoutine={updateRoutine}
+            poseCounter={poseCounter}
+            setPoseCounter={setPoseCounter}
+          />
+        ) : null}
+>>>>>>> Add pose to routine when info modal button is clicked
         <Grid
           container
           className="landingGrid"
@@ -101,7 +120,16 @@ function App() {
           spacing={2}
         >
           {/* ---- LEFT COLUMN ---- */}
+<<<<<<< HEAD
           <PoseBank poses={poses} />
+=======
+          <PoseBank
+            poses={poses}
+            setModalOpen={setModalOpen}
+            modalOpen={modalOpen}
+            setSelectedPose={setSelectedPose}
+          />
+>>>>>>> Add pose to routine when info modal button is clicked
 
           {/* ---- MIDDLE COLUMN ---- */}
           <Grid item xs={4}>
