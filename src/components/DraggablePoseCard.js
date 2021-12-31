@@ -8,9 +8,15 @@ import CardMedia from '@material-ui/core/CardMedia';
 import './DraggablePoseCard.css';
 import yogaPoses from '../data/yogaPoses.json';
 
-const DraggablePoseCard = ({ pose, setModalOpen, modalOpen }) => {
+const DraggablePoseCard = ({
+  pose,
+  setModalOpen,
+  modalOpen,
+  setSelectedPose
+}) => {
   const handleClickModal = () => {
     setModalOpen(!modalOpen);
+    setSelectedPose(pose);
   };
   return (
     <Card sx={{ maxWidth: 1 }} elevation={3}>

@@ -5,7 +5,7 @@ import Card from '@material-ui/core/Card';
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 import DraggablePoseCard from './DraggablePoseCard';
 
-const PoseBank = ({ poses, setModalOpen, modalOpen }) => {
+const PoseBank = ({ poses, setModalOpen, modalOpen, setSelectedPose }) => {
   // console.log(poses)  (accesses array of poses)
 
   return (
@@ -30,6 +30,7 @@ const PoseBank = ({ poses, setModalOpen, modalOpen }) => {
                         pose={pose}
                         modalOpen={modalOpen}
                         setModalOpen={setModalOpen}
+                        setSelectedPose={setSelectedPose}
                       />
                       {/* <Card elevation={2}>{pose.name}</Card> */}
                     </li>
