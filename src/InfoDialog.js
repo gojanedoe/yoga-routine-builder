@@ -65,9 +65,9 @@ function InfoDialog(props) {
             margin="dense"
             id="seconds"
             label="Length of Pose"
-            type="number"
-            min="0"
-            max="10"
+            type="time"
+            min=":00"
+            max="1:00"
             step="1"
           />
         </DialogContent>
