@@ -5,11 +5,14 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
-import "./DraggablePoseCard.css";
+import './DraggablePoseCard.css';
 import yogaPoses from '../data/yogaPoses.json';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e87d7f3b7eeb44e5980f1b73f0a663770633cccb
 const DraggablePoseCard = ({
   pose,
   setModalOpen,
@@ -35,9 +38,21 @@ const DraggablePoseCard = ({
           className="pic"
         />
       </CardContent>
+<<<<<<< HEAD
 >>>>>>> Add pose to routine when info modal button is clicked
+=======
+>>>>>>> e87d7f3b7eeb44e5980f1b73f0a663770633cccb
 
+      <CardActions>
+        <Button size="small" className="link" onClick={handleClickModal}>
+          Learn More
+        </Button>
+      </CardActions>
+    </Card>
+  );
+};
 
+<<<<<<< HEAD
 const DraggablePoseCard = ({pose, linkToModal}) => {
 
     return (
@@ -66,3 +81,6 @@ const DraggablePoseCard = ({pose, linkToModal}) => {
 }
 
 export default DraggablePoseCard;
+=======
+export default DraggablePoseCard;
+>>>>>>> e87d7f3b7eeb44e5980f1b73f0a663770633cccb

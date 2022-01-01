@@ -4,18 +4,21 @@ import PoseBank from './components/PoseBank';
 import RoutineBuilder from './components/RoutineBuilder';
 import '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
+import Item from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
+import Box from '@material-ui/core/Box';
 import { Container } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
+import InfoModal from './InfoModal.js';
+import InfoDialog from './InfoDialog.js';
+import './App.css';
 import yogaPoses from './data/yogaPoses.json';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import Item from '@material-ui/core/Grid';
 import { borders } from '@material-ui/system';
 import Box from '@material-ui/core/Box';
 import InfoModal from './InfoModal.js';
-
-import './App.css';
 
 // const dummyPoses = [
 //   { id: 'pose-1', name: 'Pose 1' },
@@ -36,11 +39,17 @@ function App() {
   const [poses, updatePoses] = useState(yogaPoses);
   const [routine, updateRoutine] = useState([]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPose, setSelectedPose] = useState(null);
   const [poseCounter, setPoseCounter] = useState(10);
 >>>>>>> Add pose to routine when info modal button is clicked
+=======
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedPose, setSelectedPose] = useState(null);
+  const [poseCounter, setPoseCounter] = useState(10);
+>>>>>>> e87d7f3b7eeb44e5980f1b73f0a663770633cccb
 
   const handleOnDragEnd = result => {
     // If pose is not dragged to a valid destination, keep list the same
@@ -99,7 +108,10 @@ function App() {
       <InfoModal />
       <Container className="landingContainer">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e87d7f3b7eeb44e5980f1b73f0a663770633cccb
         {modalOpen ? (
           <InfoDialog
             modalOpen={modalOpen}
@@ -110,7 +122,10 @@ function App() {
             setPoseCounter={setPoseCounter}
           />
         ) : null}
+<<<<<<< HEAD
 >>>>>>> Add pose to routine when info modal button is clicked
+=======
+>>>>>>> e87d7f3b7eeb44e5980f1b73f0a663770633cccb
         <Grid
           container
           className="landingGrid"
@@ -121,15 +136,21 @@ function App() {
         >
           {/* ---- LEFT COLUMN ---- */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <PoseBank poses={poses} />
 =======
+=======
+>>>>>>> e87d7f3b7eeb44e5980f1b73f0a663770633cccb
           <PoseBank
             poses={poses}
             setModalOpen={setModalOpen}
             modalOpen={modalOpen}
             setSelectedPose={setSelectedPose}
           />
+<<<<<<< HEAD
 >>>>>>> Add pose to routine when info modal button is clicked
+=======
+>>>>>>> e87d7f3b7eeb44e5980f1b73f0a663770633cccb
 
           {/* ---- MIDDLE COLUMN ---- */}
           <Grid item xs={4}>
