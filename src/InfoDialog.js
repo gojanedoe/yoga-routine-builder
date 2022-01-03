@@ -46,15 +46,15 @@ function InfoDialog(props) {
         fullWidth="false"
         maxWidth="sm"
       >
-        <DialogTitle id="form-dialog-title">Yoga Pose</DialogTitle>
+        <DialogTitle id="form-dialog-title">{selectedPose.name}</DialogTitle>
         <DialogContent>
           <DialogContentText>
             <img
               className="yogaPoseImages"
-              src={`images/exsideanglepose.png`}
+              src={selectedPose.image}
               alt="extended side angle"
             />
-            {`${'Need a map function here'}`}
+            {`${selectedPose.description}`}
           </DialogContentText>
           <TextField
             autoFocus
