@@ -30,7 +30,6 @@ const PoseBank = ({ poses, setModalOpen, modalOpen, setSelectedPose }) => {
                         pose={pose}
                         modalOpen={modalOpen}
                         setModalOpen={setModalOpen}
-                        //this (below) isn't given as a prop in DraggablePoseCard yet
                         setSelectedPose={setSelectedPose}
                       />
                       {/* <Card elevation={2}>{pose.name}</Card> */}
