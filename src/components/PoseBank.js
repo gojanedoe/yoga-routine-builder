@@ -28,6 +28,7 @@ const PoseBank = ({ poses, setModalOpen, modalOpen, setSelectedPose }) => {
                         pose={pose}
                         modalOpen={modalOpen}
                         setModalOpen={setModalOpen}
+                        //this (below) isn't given as a prop in DraggablePoseCard yet
                         setSelectedPose={setSelectedPose}
                       />
                     </li>

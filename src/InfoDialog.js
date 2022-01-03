@@ -7,6 +7,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import './InfoDialog.css';
+import yogaPoses from './data/yogaPoses.json';
 
 function InfoDialog(props) {
   const {
@@ -17,10 +18,6 @@ function InfoDialog(props) {
     poseCounter,
     setPoseCounter
   } = props;
-
-  const handleClickOpen = () => {
-    setModalOpen(true);
-  };
 
   const handleClose = () => {
     setModalOpen(false);
@@ -57,7 +54,7 @@ function InfoDialog(props) {
               src={`images/exsideanglepose.png`}
               alt="extended side angle"
             />
-            Here is some modal content.
+            {`${'Need a map function here'}`}
           </DialogContentText>
           <TextField
             autoFocus

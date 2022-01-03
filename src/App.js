@@ -7,7 +7,7 @@ import { Container } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import yogaPoses from './data/yogaPoses.json';
 import DragLogic from './components/DragLogic';
-import InfoModal from './InfoModal.js';
+import InfoDialog from './InfoDialog.js';
 
 import './App.css';
 
@@ -40,7 +40,6 @@ function App() {
       routine={routine}
       updateRoutine={updateRoutine}
     >
-      <InfoModal />
       <Container className="landingContainer">
         {modalOpen ? (
           <InfoDialog
