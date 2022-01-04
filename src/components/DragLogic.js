@@ -1,22 +1,10 @@
-import React, { useState } from 'react';
-import DraggablePoseCard from './DraggablePoseCard';
-import PoseBank from './PoseBank';
-import RoutineBuilder from './RoutineBuilder';
+import React from 'react';
 import '@material-ui/core';
-// import Grid from '@material-ui/core/Grid';
-// import Paper from '@material-ui/core/Paper';
-// import { Container } from '@material-ui/core';
-// import Card from '@material-ui/core/Card';
-// import Button from '@material-ui/core/Button';
-// import yogaPoses from './data/yogaPoses.json';
-
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import { DragDropContext } from 'react-beautiful-dnd';
 
 import '../App.css';
 
 function DragLogic({ children, poses, routine, updatePoses, updateRoutine }) {
-  // const [poses, updatePoses] = useState(yogaPoses);
-  // const [routine, updateRoutine] = useState([]);
 
   const handleOnDragEnd = result => {
     // If pose is not dragged to a valid destination, keep list the same
