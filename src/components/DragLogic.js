@@ -14,30 +14,24 @@ function DragLogic({ children, poses, routine, updatePoses, updateRoutine }) {
     const destination = result.destination.droppableId;
     const destinationIndex = result.destination.index;
 
+    // Grab poses from original lists, depending on source
+    const fromItems = Array.from(source === 'column-1' ? poses : routine);
+    const toItems = Array.from(source === 'column-1' ? routine : poses);
+
+    // Grab moving pose & remove place in list
+    const [reorderedItem] = fromItems.splice(sourceIndex, 1);
+
     if (source === destination) {
-      // Grab poses from original list
-      const items = Array.from(source === 'column-1' ? poses : routine);
+      // Drop pose back in same list
+      fromItems.splice(destinationIndex, 0, reorderedItem);
 
-      // Grab moving pose & remove from list
-      const [reorderedItem] = items.splice(sourceIndex, 1);
-
-      // Add moving pose to new spot (index) in list
-      items.splice(destinationIndex, 0, reorderedItem);
-
-      //Update state
-      source === 'column-1' ? updatePoses(items) : updateRoutine(items);
+      //Update pose bank or pose routine state
+      source === 'column-1' ? updatePoses(fromItems) : updateRoutine(fromItems);
     } else {
-      // Grab poses from original lists, depending on source
-      const fromItems = Array.from(source === 'column-1' ? poses : routine);
-      const toItems = Array.from(source === 'column-1' ? routine : poses);
-
-      // Grab moving pose & remove from list
-      const [reorderedItem] = fromItems.splice(sourceIndex, 1);
-
-      // Add moving pose to new spot (index) in list
+      // Drop pose in other list
       toItems.splice(destinationIndex, 0, reorderedItem);
 
-      //Update state
+      //Update pose bank and pose routine state
       updatePoses(source === 'column-1' ? fromItems : toItems);
       updateRoutine(source === 'column-1' ? toItems : fromItems);
     }
