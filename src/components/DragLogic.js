@@ -5,7 +5,6 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import '../App.css';
 
 function DragLogic({ children, poses, routine, updatePoses, updateRoutine }) {
-
   const handleOnDragEnd = result => {
     // If pose is not dragged to a valid destination, keep list the same
     if (!result.destination) return;
@@ -27,10 +26,10 @@ function DragLogic({ children, poses, routine, updatePoses, updateRoutine }) {
 
       //Update state
       source === 'column-1' ? updatePoses(items) : updateRoutine(items);
-    } else if (source === 'column-1' && destination === 'column-2') {
-      // Grab poses from original lists
-      const fromItems = Array.from(poses);
-      const toItems = Array.from(routine);
+    } else {
+      // Grab poses from original lists, depending on source
+      const fromItems = Array.from(source === 'column-1' ? poses : routine);
+      const toItems = Array.from(source === 'column-1' ? routine : poses);
 
       // Grab moving pose & remove from list
       const [reorderedItem] = fromItems.splice(sourceIndex, 1);
@@ -39,22 +38,8 @@ function DragLogic({ children, poses, routine, updatePoses, updateRoutine }) {
       toItems.splice(destinationIndex, 0, reorderedItem);
 
       //Update state
-      updatePoses(fromItems);
-      updateRoutine(toItems);
-    } else if (source === 'column-2' && destination === 'column-1') {
-      // Grab poses from original lists
-      const fromItems = Array.from(routine);
-      const toItems = Array.from(poses);
-
-      // Grab moving pose & remove from list
-      const [reorderedItem] = fromItems.splice(sourceIndex, 1);
-
-      // Add moving pose to new spot (index) in list
-      toItems.splice(destinationIndex, 0, reorderedItem);
-
-      //Update state
-      updatePoses(toItems);
-      updateRoutine(fromItems);
+      updatePoses(source === 'column-1' ? fromItems : toItems);
+      updateRoutine(source === 'column-1' ? toItems : fromItems);
     }
   };
 
