@@ -12,6 +12,10 @@ import yogaPoses from './data/yogaPoses.json';
 
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
+//firebase
+import database from './firebase';
+import { ref, set, onValue, update, remove, get, child } from 'firebase/database';
+
 import './App.css';
 
 // const dummyPoses = [
@@ -32,6 +36,51 @@ import './App.css';
 function App() {
   const [poses, updatePoses] = useState(yogaPoses);
   const [routine, updateRoutine] = useState([]);
+
+    //database testing state
+    const [data, setData] = useState("");
+
+    //database testing handler
+    const handleTest = (e) => {
+      setData(e.target.value);
+    }
+
+     //database testing - get data from database
+     const getRoutine = () => {
+
+      get(ref(database, 'YogaRoutine')).then((snapshot) => {
+  
+        let obj = snapshot.val();
+  
+        Object.keys(obj).forEach(key => {
+          
+          console.log(`Value at key ${key}: ${obj[key]}`);
+  
+        });
+  
+      });    
+  
+    }
+
+    //database testing update/create routine
+
+    const createRoutine = () => {
+
+      update(ref(database, 'YogaRoutine'), {
+        routine: data,
+        id: "pose-1",
+        name: "Plank",
+        description: "Hello",
+        benefits: "Good For You",
+        image: "this is an image file",
+        audio: "audio file!",
+        muscles: [
+          "Abdominals", "Glutes", "Quads"
+          ]
+      });
+  
+    }
+  
 
   const handleOnDragEnd = result => {
     // If pose is not dragged to a valid destination, keep list the same
@@ -110,6 +159,11 @@ function App() {
 
           <Button variant="outlined">Start Routine</Button>
           <Button variant="outlined">Save Routine</Button>
+          <div>
+          <input type="test" onChange={handleTest} value={data} />
+          <button onClick={createRoutine}>Add Routine</button>
+          <button onClick={getRoutine}>Test Query</button>
+        </div>
         </Grid>
       </Container>
     </DragDropContext>
