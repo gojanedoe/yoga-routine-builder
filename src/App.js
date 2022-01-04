@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import DraggablePoseCard from './components/DraggablePoseCard';
 import PoseBank from './components/PoseBank';
 import RoutineBuilder from './components/RoutineBuilder';
+import SimpleDialog from './components/SimpleDialog'
 import '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import { Container } from '@material-ui/core';
@@ -29,26 +30,7 @@ import './App.css';
 // ];
 
 // const Routine = [];
-function SimpleDialog(props) {
-  const { onClose, routine, open } = props;
-const handleClose =() =>{
-  onClose(routine)
-}
 
-  return (
-    <Dialog onClose={handleClose} open={open}>
-      <DialogTitle>Routine Playback</DialogTitle>
-     
-  <AudioPlayer
-    elevation={1}
-    width="500px"
-    variation="primary"
-    spacing={3}
-    src="Assets/tree_(vrkasana).mp4"
-  />
-    </Dialog>
-  );
-}
 function App() {
   const [poses, updatePoses] = useState(yogaPoses);
   const [routine, updateRoutine] = useState([]);
