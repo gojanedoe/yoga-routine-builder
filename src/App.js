@@ -118,7 +118,12 @@ function App() {
             →
           </Grid>
           {/* ---- RIGHT COLUMN ---- */}
-          <RoutineBuilder routine={routine} />
+          <RoutineBuilder
+            routine={routine}
+            setModalOpen={setModalOpen}
+            modalOpen={modalOpen}
+            setSelectedPose={setSelectedPose}
+          />
 
           <Button variant="outlined">Start Routine</Button>
           <Button variant="outlined">Save Routine</Button>
