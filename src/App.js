@@ -48,7 +48,7 @@ function App() {
      //database testing - get data from database
      const getRoutine = () => {
 
-      get(ref(database, 'YogaRoutine')).then((snapshot) => {
+      get(ref(database, 'YogaPose')).then((snapshot) => {
   
         let obj = snapshot.val();
   
@@ -66,7 +66,7 @@ function App() {
 
     const createRoutine = () => {
 
-      update(ref(database, 'YogaRoutine'), {
+      update(ref(database, 'YogaPose'), {
         routine: data,
         id: "pose-1",
         name: "Plank",
@@ -79,6 +79,13 @@ function App() {
           ]
       });
   
+    }
+  
+    const saveRoutine = () => {
+
+      update(ref(database, '/'), {
+        Routine: Array.from(routine)
+      })
     }
   
 
@@ -158,10 +165,10 @@ function App() {
           <RoutineBuilder routine={routine} />
 
           <Button variant="outlined">Start Routine</Button>
-          <Button variant="outlined">Save Routine</Button>
+          <Button variant="outlined" onClick={saveRoutine}>Save Routine</Button>
           <div>
           <input type="test" onChange={handleTest} value={data} />
-          <button onClick={createRoutine}>Add Routine</button>
+          {/* <button onClick={saveRoutine}>Add Routine</button> */}
           <button onClick={getRoutine}>Test Query</button>
         </div>
         </Grid>
