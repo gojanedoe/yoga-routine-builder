@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import DraggablePoseCard from './components/DraggablePoseCard';
 import PoseBank from './components/PoseBank';
 import RoutineBuilder from './components/RoutineBuilder';
+import SimpleDialog from './components/SimpleDialog'
 import '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import { Container } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 import yogaPoses from './data/yogaPoses.json';
-
+import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-
-import SimpleDialog from './components/SimpleDialog';
 import './App.css';
 
 
