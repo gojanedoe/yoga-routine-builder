@@ -5,6 +5,8 @@ import AudioPlayer from 'material-ui-audio-player';
 import NewPlayerCarousel from './NewPlayerCarousel';
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
+import PoseTimer from './PoseTimer';
+import { useTimer } from 'react-timer-hook';
 
 function SimpleDialog(props) {
   const { onClose, routine, open } = props;
@@ -12,6 +14,12 @@ function SimpleDialog(props) {
     onClose(routine);
   };
 
+  const time = new Date();
+    time.setSeconds(time.getSeconds() + 600); // 10 minutes timer
+  
+       
+      
+  
   return (
     <Dialog fullScreen onClose={handleClose} open={open}>
       <DialogTitle>Routine Playback</DialogTitle>
@@ -24,6 +32,7 @@ function SimpleDialog(props) {
         <CloseIcon />
       </IconButton>
       <NewPlayerCarousel />
+      <PoseTimer expiryTimestamp={time} />
       <AudioPlayer
         elevation={1}
         width="500px"
