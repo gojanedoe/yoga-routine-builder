@@ -12,10 +12,13 @@ import DragLogic from './components/DragLogic';
 import InfoDialog from './components/InfoDialog.js';
 =======
 import InfoDialog from './InfoDialog.js';
+<<<<<<< HEAD
 >>>>>>> some psuedo code added
 =======
 import InfoDialog from './components/InfoDialog.js';
 >>>>>>> capturing user input in InfoDialog
+=======
+>>>>>>> some psuedo code added
 import Timer from './components/Timer.js';
 
 import './App.css';
@@ -66,6 +69,7 @@ function App() {
       <Container className="landingContainer">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* <Timer routine={routine} /> */}
 =======
         <Timer routine={routine} />
@@ -73,6 +77,9 @@ function App() {
 =======
         {/* <Timer routine={routine} /> */}
 >>>>>>> capturing user input in InfoDialog
+=======
+        <Timer routine={routine} />
+>>>>>>> some psuedo code added
         {modalOpen ? (
           <InfoDialog
             modalOpen={modalOpen}

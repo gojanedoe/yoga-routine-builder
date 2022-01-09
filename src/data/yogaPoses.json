@@ -1,6 +1,7 @@
 [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     {   
         "id": "pose-1",
         "name": "Cat/Cow",
@@ -86,6 +87,8 @@
 =======
 =======
 >>>>>>> some psuedo code added
+=======
+>>>>>>> some psuedo code added
   {
     "id": "pose-1",
     "name": "Cat/Cow",
@@ -93,6 +96,7 @@
     "benefits": "Good For You",
     "image": "resources/cat-cow.png",
     "audio": "audio file!",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "defaultTime": 50,
@@ -107,6 +111,10 @@
     "addedTime": 0,
     "totalTime": 0
 >>>>>>> applied new timer logic
+=======
+    "defaultTime": 10,
+    "addedTime": 0
+>>>>>>> some psuedo code added
   },
   {
     "id": "pose-2",
@@ -115,6 +123,7 @@
     "benefits": "Good For You",
     "image": "/resources/plank.jpg",
     "audio": "audio file!",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "defaultTime": 39,
@@ -129,6 +138,10 @@
     "addedTime": 0,
     "totalTime": 0
 >>>>>>> applied new timer logic
+=======
+    "defaultTime": 20,
+    "addedTime": 0
+>>>>>>> some psuedo code added
   },
   {
     "id": "pose-3",
@@ -139,6 +152,7 @@
     "audio": "audio file!",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 49,
     "addedTime": 0,
     "totalTime": 0
@@ -151,6 +165,10 @@
     "addedTime": 0,
     "totalTime": 0
 >>>>>>> applied new timer logic
+=======
+    "defaultTime": 45,
+    "addedTime": 0
+>>>>>>> some psuedo code added
   },
   {
     "id": "pose-4",
@@ -161,6 +179,7 @@
     "audio": "audio file!",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 41,
     "addedTime": 0,
     "totalTime": 0
@@ -173,6 +192,10 @@
     "addedTime": 0,
     "totalTime": 0
 >>>>>>> applied new timer logic
+=======
+    "defaultTime": 45,
+    "addedTime": 0
+>>>>>>> some psuedo code added
   },
   {
     "id": "pose-5",
@@ -183,6 +206,7 @@
     "audio": "audio file!",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 64,
     "addedTime": 0,
     "totalTime": 0
@@ -191,12 +215,15 @@
     "id": "pose-6",
     "name": "Chair",
 =======
+=======
+>>>>>>> some psuedo code added
     "defaultTime": 45,
     "addedTime": 0
   },
   {
     "id": "pose-6",
     "name": "Tree",
+<<<<<<< HEAD
 >>>>>>> some psuedo code added
 =======
     "defaultTime": 64,
@@ -207,10 +234,13 @@
     "id": "pose-6",
     "name": "Chair",
 >>>>>>> applied new timer logic
+=======
+>>>>>>> some psuedo code added
     "description": "Hello",
     "benefits": "Good For You",
     "image": "resources/chair.jpg",
     "audio": "audio file!",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "defaultTime": 51,
@@ -225,6 +255,10 @@
     "addedTime": 0,
     "totalTime": 0
 >>>>>>> applied new timer logic
+=======
+    "defaultTime": 45,
+    "addedTime": 0
+>>>>>>> some psuedo code added
   },
   {
     "id": "pose-7",
@@ -235,6 +269,7 @@
     "audio": "audio file!",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 70,
     "addedTime": 0,
     "totalTime": 0
@@ -247,6 +282,10 @@
     "addedTime": 0,
     "totalTime": 0
 >>>>>>> applied new timer logic
+=======
+    "defaultTime": 45,
+    "addedTime": 0
+>>>>>>> some psuedo code added
   },
   {
     "id": "pose-8",
@@ -257,6 +296,7 @@
     "audio": "audio file!",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 53,
     "addedTime": 0,
     "totalTime": 0
@@ -269,6 +309,10 @@
     "addedTime": 0,
     "totalTime": 0
 >>>>>>> applied new timer logic
+=======
+    "defaultTime": 45,
+    "addedTime": 0
+>>>>>>> some psuedo code added
   },
   {
     "id": "pose-9",
@@ -279,6 +323,7 @@
     "audio": "audio file!",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 57,
     "addedTime": 0,
     "totalTime": 0
@@ -291,6 +336,10 @@
     "addedTime": 0,
     "totalTime": 0
 >>>>>>> applied new timer logic
+=======
+    "defaultTime": 45,
+    "addedTime": 0
+>>>>>>> some psuedo code added
   },
   {
     "id": "pose-10",
@@ -300,6 +349,7 @@
     "image": "resources/cobra.jpg",
     "audio": "audio file!",
     "defaultTime": 45,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "addedTime": 0,
@@ -313,6 +363,11 @@
     "addedTime": 0,
     "totalTime": 0
 >>>>>>> applied new timer logic
+  }
+]
+>>>>>>> some psuedo code added
+=======
+    "addedTime": 0
   }
 ]
 >>>>>>> some psuedo code added
