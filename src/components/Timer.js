@@ -36,6 +36,7 @@ import { useEffect } from 'react';
 
 const Timer = props => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [timerSeconds, setTimerSeconds] = useState(33);
   const [timerIsRunning, setTimerisRunning] = useState(false);
 
@@ -67,13 +68,24 @@ const Timer = props => {
     resetTimer //resets setTimerSeconds to next index equation
 >>>>>>> some psuedo code added
 =======
+=======
+  const [timerSeconds, setTimerSeconds] = useState(33);
+  const [timerIsRunning, setTimerisRunning] = useState(false);
+
+>>>>>>> some psuedo code added
   const {
-    timerIsRunning,
-    timerSeconds,
+    routine,
+    timerIsRunning, //initialize to false
+    timerSeconds, //setTimerSeconds(routine[index].defaultTime + routine[index].addedTime)
     setTimerSeconds,
+<<<<<<< HEAD
     handleNextPhoto,
     resetTimer
 >>>>>>> starting Timer build use this one
+=======
+    handleNextPhoto, //if/else or case/switch situation (carousel event?)
+    resetTimer //resets setTimerSeconds to next index equation
+>>>>>>> some psuedo code added
   } = props;
 
   // Referenced from https://upmostly.com/tutorials/build-a-react-timer-component-using-hooks
@@ -220,4 +232,22 @@ prev = () => {
 };
 
 export default Timer;
+<<<<<<< HEAD
 >>>>>>> applied new timer logic
+=======
+
+/*
+http://react-responsive-carousel.js.org/storybook/?path=/story/02-advanced--with-external-controls
+next = () => {
+            this.setState((state) => ({
+                currentSlide: state.currentSlide + 1,
+            }));
+        };
+
+prev = () => {
+            this.setState((state) => ({
+                currentSlide: state.currentSlide - 1,
+            }));
+        }; 
+*/
+>>>>>>> some psuedo code added

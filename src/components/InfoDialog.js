@@ -66,6 +66,7 @@ function InfoDialog(props) {
             max="1:00"
             step="1"
           />
+          {/* needs capturing and sending over to Timer component */}
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
