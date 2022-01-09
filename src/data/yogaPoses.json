@@ -1,5 +1,6 @@
 [
 <<<<<<< HEAD
+<<<<<<< HEAD
     {   
         "id": "pose-1",
         "name": "Cat/Cow",
@@ -83,6 +84,8 @@
     }
 ]
 =======
+=======
+>>>>>>> some psuedo code added
   {
     "id": "pose-1",
     "name": "Cat/Cow",
@@ -90,9 +93,14 @@
     "benefits": "Good For You",
     "image": "resources/cat-cow.png",
     "audio": "audio file!",
+<<<<<<< HEAD
     "defaultTime": 50,
     "addedTime": 0,
     "totalTime": 0
+=======
+    "defaultTime": 10,
+    "addedTime": 0
+>>>>>>> some psuedo code added
   },
   {
     "id": "pose-2",
@@ -101,9 +109,14 @@
     "benefits": "Good For You",
     "image": "/resources/plank.jpg",
     "audio": "audio file!",
+<<<<<<< HEAD
     "defaultTime": 39,
     "addedTime": 0,
     "totalTime": 0
+=======
+    "defaultTime": 20,
+    "addedTime": 0
+>>>>>>> some psuedo code added
   },
   {
     "id": "pose-3",
@@ -112,9 +125,14 @@
     "benefits": "Good For You",
     "image": "resources/bridge.jpg",
     "audio": "audio file!",
+<<<<<<< HEAD
     "defaultTime": 49,
     "addedTime": 0,
     "totalTime": 0
+=======
+    "defaultTime": 45,
+    "addedTime": 0
+>>>>>>> some psuedo code added
   },
   {
     "id": "pose-4",
@@ -123,9 +141,14 @@
     "benefits": "Good For You",
     "image": "resources/sukhasana.png",
     "audio": "audio file!",
+<<<<<<< HEAD
     "defaultTime": 41,
     "addedTime": 0,
     "totalTime": 0
+=======
+    "defaultTime": 45,
+    "addedTime": 0
+>>>>>>> some psuedo code added
   },
   {
     "id": "pose-5",
@@ -134,6 +157,7 @@
     "benefits": "Good For You",
     "image": "resources/tree.jpg",
     "audio": "audio file!",
+<<<<<<< HEAD
     "defaultTime": 64,
     "addedTime": 0,
     "totalTime": 0
@@ -141,13 +165,26 @@
   {
     "id": "pose-6",
     "name": "Chair",
+=======
+    "defaultTime": 45,
+    "addedTime": 0
+  },
+  {
+    "id": "pose-6",
+    "name": "Tree",
+>>>>>>> some psuedo code added
     "description": "Hello",
     "benefits": "Good For You",
     "image": "resources/chair.jpg",
     "audio": "audio file!",
+<<<<<<< HEAD
     "defaultTime": 51,
     "addedTime": 0,
     "totalTime": 0
+=======
+    "defaultTime": 45,
+    "addedTime": 0
+>>>>>>> some psuedo code added
   },
   {
     "id": "pose-7",
@@ -156,9 +193,14 @@
     "benefits": "Good For You",
     "image": "resources/extended-side-angle.png",
     "audio": "audio file!",
+<<<<<<< HEAD
     "defaultTime": 70,
     "addedTime": 0,
     "totalTime": 0
+=======
+    "defaultTime": 45,
+    "addedTime": 0
+>>>>>>> some psuedo code added
   },
   {
     "id": "pose-8",
@@ -167,9 +209,14 @@
     "benefits": "Good For You",
     "image": "resources/locust.jpg",
     "audio": "audio file!",
+<<<<<<< HEAD
     "defaultTime": 53,
     "addedTime": 0,
     "totalTime": 0
+=======
+    "defaultTime": 45,
+    "addedTime": 0
+>>>>>>> some psuedo code added
   },
   {
     "id": "pose-9",
@@ -178,9 +225,14 @@
     "benefits": "Good For You",
     "image": "resources/downward-facing-dog.jpg",
     "audio": "audio file!",
+<<<<<<< HEAD
     "defaultTime": 57,
     "addedTime": 0,
     "totalTime": 0
+=======
+    "defaultTime": 45,
+    "addedTime": 0
+>>>>>>> some psuedo code added
   },
   {
     "id": "pose-10",
@@ -190,8 +242,14 @@
     "image": "resources/cobra.jpg",
     "audio": "audio file!",
     "defaultTime": 45,
+<<<<<<< HEAD
     "addedTime": 0,
     "totalTime": 0
+  }
+]
+>>>>>>> some psuedo code added
+=======
+    "addedTime": 0
   }
 ]
 >>>>>>> some psuedo code added
