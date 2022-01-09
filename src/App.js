@@ -8,6 +8,8 @@ import Button from '@material-ui/core/Button';
 import yogaPoses from './data/yogaPoses.json';
 import DragLogic from './components/DragLogic';
 import InfoDialog from './InfoDialog.js';
+import Timer from './components/Timer.js';
+
 import './App.css';
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
       updateRoutine={updateRoutine}
     >
       <Container className="landingContainer">
+        <Timer routine={routine} />
         {modalOpen ? (
           <InfoDialog
             modalOpen={modalOpen}
