@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> applied new timer logic
 import { React, useState } from 'react';
@@ -33,6 +34,17 @@ const Timer = props => {
     setTimerSeconds,
     handleNextPhoto, //if/else or case/switch situation (carousel event?)
     resetTimer //resets setTimerSeconds to next index equation
+=======
+import { useEffect } from 'react';
+
+const Timer = props => {
+  const {
+    timerIsRunning,
+    timerSeconds,
+    setTimerSeconds,
+    handleNextPhoto,
+    resetTimer
+>>>>>>> starting Timer build use this one
   } = props;
 
   // Referenced from https://upmostly.com/tutorials/build-a-react-timer-component-using-hooks
@@ -55,6 +67,7 @@ const Timer = props => {
   }, [timerIsRunning, timerSeconds]);
 
   return <div className="Timer">:{timerSeconds}</div>;
+<<<<<<< HEAD
 >>>>>>> starting Timer build use this one
 };
 
@@ -134,3 +147,8 @@ prev = () => {
 
 export default Timer;
 >>>>>>> applied new timer logic
+=======
+};
+
+export default Timer;
+>>>>>>> starting Timer build use this one
