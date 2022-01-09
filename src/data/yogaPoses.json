@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
     {   
         "id": "pose-1",
         "name": "Cat/Cow",
@@ -81,3 +82,106 @@
         "audio": "resources/cobra.mp4"
     }
 ]
+=======
+  {
+    "id": "pose-1",
+    "name": "Cat/Cow",
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/cat-cow.png",
+    "audio": "audio file!",
+    "defaultTime": 10,
+    "addedTime": 0
+  },
+  {
+    "id": "pose-2",
+    "name": "Plank",
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "/resources/plank.jpg",
+    "audio": "audio file!",
+    "defaultTime": 20,
+    "addedTime": 0
+  },
+  {
+    "id": "pose-3",
+    "name": "Bridge",
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/bridge.jpg",
+    "audio": "audio file!",
+    "defaultTime": 45,
+    "addedTime": 0
+  },
+  {
+    "id": "pose-4",
+    "name": "Sukhasana",
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/sukhasana.png",
+    "audio": "audio file!",
+    "defaultTime": 45,
+    "addedTime": 0
+  },
+  {
+    "id": "pose-5",
+    "name": "Tree",
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/tree.jpg",
+    "audio": "audio file!",
+    "defaultTime": 45,
+    "addedTime": 0
+  },
+  {
+    "id": "pose-6",
+    "name": "Tree",
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/chair.jpg",
+    "audio": "audio file!",
+    "defaultTime": 45,
+    "addedTime": 0
+  },
+  {
+    "id": "pose-7",
+    "name": "Extended Side Angle",
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/extended-side-angle.png",
+    "audio": "audio file!",
+    "defaultTime": 45,
+    "addedTime": 0
+  },
+  {
+    "id": "pose-8",
+    "name": "Locust",
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/locust.jpg",
+    "audio": "audio file!",
+    "defaultTime": 45,
+    "addedTime": 0
+  },
+  {
+    "id": "pose-9",
+    "name": "Downward Facing Dog",
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/downward-facing-dog.jpg",
+    "audio": "audio file!",
+    "defaultTime": 45,
+    "addedTime": 0
+  },
+  {
+    "id": "pose-10",
+    "name": "Cobra",
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/cobra.jpg",
+    "audio": "audio file!",
+    "defaultTime": 45,
+    "addedTime": 0
+  }
+]
+>>>>>>> some psuedo code added
