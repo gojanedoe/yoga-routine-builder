@@ -2,7 +2,7 @@
 
 // const Timer = props => {
 //   const [timerIsRunning, setTimerisRunning] = useState(false);
-//   const [timerSeconds, setTimerSeconds] = useState(33);
+// const [timerSeconds, setTimerSeconds] = useState(33);
 
 //   const {
 //     routine,

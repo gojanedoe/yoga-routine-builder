@@ -18,7 +18,7 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPose, setSelectedPose] = useState(null);
   const [poseCounter, setPoseCounter] = useState(10);
-  const [addedTime, setAddedTime] = useState(0);
+  const [addedTime, setAddedTime] = useState(0); //(...selectedPose, addedTime: addedTime)
 
   return (
     <DragLogic
