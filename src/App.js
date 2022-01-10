@@ -163,10 +163,13 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             addedTime2={addedTime2}
             setAddedTime2={setAddedTime2}
 >>>>>>> Add and save time to individual poses
+=======
+>>>>>>> Grab index of currently chosen pose
             routine={routine}
             totalTime={totalTime}
             setTotalTime={setTotalTime}
@@ -175,6 +178,7 @@ function App() {
 =======
             routine={routine}
 >>>>>>> Grab index of currently chosen pose
+<<<<<<< HEAD
 =======
             addedTime={addedTime}
             setAddedTime={setAddedTime}
@@ -206,6 +210,8 @@ function App() {
 =======
 >>>>>>> capturing user input in InfoDialog
 >>>>>>> capturing user input in InfoDialog
+=======
+>>>>>>> Grab index of currently chosen pose
           />
         ) : null}
         {timerRunning ? (

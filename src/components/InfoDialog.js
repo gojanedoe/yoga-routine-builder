@@ -17,7 +17,8 @@ function InfoDialog(props) {
     poseCounter,
     setPoseCounter,
     addedTime,
-    setAddedTime
+    setAddedTime,
+    routine
   } = props;
 
   const handleClose = () => {
@@ -40,12 +41,21 @@ function InfoDialog(props) {
   };
 
   const addTimeHandler = event => {
+    // Check right column poses (routine state) to find the current pose's placement
+    let currentIndex = routine.findIndex(pose => pose.id === selectedPose.id);
+
+    // TODO
+    // use the index to update routine[index].addedTime
+
+    console.log('selectedPose', selectedPose);
+
+    console.log('current index', currentIndex);
+
     if (event.target.value > 0) {
       setAddedTime(event.target.value);
     } else {
       setAddedTime(0);
     }
-    console.log(addedTime);
   };
 
   return (
