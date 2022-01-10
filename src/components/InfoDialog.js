@@ -15,7 +15,9 @@ function InfoDialog(props) {
     selectedPose,
     updateRoutine,
     poseCounter,
-    setPoseCounter
+    setPoseCounter,
+    addedTime,
+    setAddedTime
   } = props;
 
   const handleClose = () => {
@@ -34,6 +36,16 @@ function InfoDialog(props) {
 
     setPoseCounter(poseCounter + 1);
     setModalOpen(false);
+    setAddedTime(0);
+  };
+
+  const addTimeHandler = event => {
+    if (event.target.value > 0) {
+      setAddedTime(event.target.value);
+    } else {
+      setAddedTime(0);
+    }
+    console.log(addedTime);
   };
 
   return (
@@ -57,14 +69,16 @@ function InfoDialog(props) {
           </DialogContentText>
           <TextField
             autoFocus
+            className="textField"
             variant="outlined"
             margin="dense"
             id="seconds"
             label="Length of Pose"
-            type="time"
-            min=":00"
-            max="1:00"
-            step="1"
+            type="number"
+            defaultValue={addedTime} //will eventually be {selectedPose.defaultTime}
+            value={addedTime}
+            inputProps={{ min: 0, max: 10, step: 1 }}
+            onChange={addTimeHandler}
           />
           {/* needs capturing and sending over to Timer component */}
         </DialogContent>
