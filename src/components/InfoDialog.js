@@ -56,6 +56,14 @@ function InfoDialog(props) {
     } else {
       setAddedTime(0);
     }
+<<<<<<< HEAD
+=======
+    console.log(event.target.value);
+    console.log('selected pose:', {
+      ...selectedPose,
+      addedTime: event.target.value
+    });
+>>>>>>> some pair programming
   };
 
   return (
