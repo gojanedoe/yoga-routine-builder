@@ -7,7 +7,7 @@ import { Container } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import yogaPoses from './data/yogaPoses.json';
 import DragLogic from './components/DragLogic';
-import InfoDialog from './InfoDialog.js';
+import InfoDialog from './components/InfoDialog.js';
 import Timer from './components/Timer.js';
 
 import './App.css';
@@ -18,6 +18,7 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPose, setSelectedPose] = useState(null);
   const [poseCounter, setPoseCounter] = useState(10);
+  const [addedTime, setAddedTime] = useState(0);
 
   return (
     
@@ -31,7 +32,7 @@ function App() {
     >
       
       <Container className="landingContainer">
-        <Timer routine={routine} />
+        {/* <Timer routine={routine} /> */}
         {modalOpen ? (
           <InfoDialog
             modalOpen={modalOpen}
@@ -40,6 +41,8 @@ function App() {
             updateRoutine={updateRoutine}
             poseCounter={poseCounter}
             setPoseCounter={setPoseCounter}
+            addedTime={addedTime}
+            setAddedTime={setAddedTime}
           />
         ) : null}
         <Grid
