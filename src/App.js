@@ -56,9 +56,12 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [addedTime, setAddedTime] = useState(0);
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> some pair programming
   const [addedTime, setAddedTime] = useState(0);
 >>>>>>> applied new timer logic
 =======
@@ -102,6 +105,9 @@ function App() {
 =======
 >>>>>>> capturing user input in InfoDialog
 >>>>>>> capturing user input in InfoDialog
+=======
+  const [addedTime, setAddedTime] = useState(0); //(...selectedPose, addedTime: addedTime)
+>>>>>>> some pair programming
 
   return (
     
