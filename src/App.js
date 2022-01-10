@@ -39,6 +39,7 @@ function App() {
             setPoseCounter={setPoseCounter}
             addedTime={addedTime}
             setAddedTime={setAddedTime}
+            routine={routine}
           />
         ) : null}
         <Grid
