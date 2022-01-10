@@ -5,6 +5,7 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import '../App.css';
 
 function DragLogic({ children, poses, routine, updatePoses, updateRoutine }) {
+
   const handleOnDragEnd = result => {
     // If pose is not dragged to a valid destination, keep list the same
     if (!result.destination) return;
@@ -13,6 +14,14 @@ function DragLogic({ children, poses, routine, updatePoses, updateRoutine }) {
     const sourceIndex = result.source.index;
     const destination = result.destination.droppableId;
     const destinationIndex = result.destination.index;
+
+
+
+    // if source is left column, don't let it reorder, only let it copy
+
+    // if source is right column, do the usual from below but only let it re-arrange (no copy, no into left column)
+
+
 
     // Grab poses from original lists, depending on source
     const fromItems = Array.from(source === 'column-1' ? poses : routine);
