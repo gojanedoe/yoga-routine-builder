@@ -26,6 +26,7 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPose, setSelectedPose] = useState(null);
   const [poseCounter, setPoseCounter] = useState(10);
+<<<<<<< HEAD
   const [addedTime, setAddedTime] = useState(0);
 <<<<<<< HEAD
   const [timerRunning, setTimerRunning] = useState(false);
@@ -36,6 +37,9 @@ function App() {
   };
 =======
 >>>>>>> capturing user input in InfoDialog
+=======
+  const [addedTime, setAddedTime] = useState(0); //(...selectedPose, addedTime: addedTime)
+>>>>>>> some pair programming
 
   return (
     
