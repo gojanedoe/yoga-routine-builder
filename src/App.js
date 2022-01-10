@@ -37,6 +37,7 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [addedTime, setAddedTime] = useState(0);
 <<<<<<< HEAD
 =======
@@ -62,6 +63,9 @@ function App() {
 =======
   const [addedTime, setAddedTime] = useState(0);
 >>>>>>> capturing user input in InfoDialog
+=======
+  const [addedTime, setAddedTime] = useState(0); //(...selectedPose, addedTime: addedTime)
+>>>>>>> some pair programming
 
   return (
     

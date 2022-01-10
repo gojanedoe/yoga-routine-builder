@@ -105,10 +105,14 @@ prev = () => {
 // const Timer = props => {
 //   const [timerIsRunning, setTimerisRunning] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 // const [timerSeconds, setTimerSeconds] = useState(33);
 =======
 //   const [timerSeconds, setTimerSeconds] = useState(33);
 >>>>>>> capturing user input in InfoDialog
+=======
+// const [timerSeconds, setTimerSeconds] = useState(33);
+>>>>>>> some pair programming
 
 //   const {
 //     routine,
