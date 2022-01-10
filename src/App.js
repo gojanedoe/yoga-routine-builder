@@ -8,10 +8,14 @@ import Button from '@material-ui/core/Button';
 import yogaPoses from './data/yogaPoses.json';
 import DragLogic from './components/DragLogic';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import InfoDialog from './components/InfoDialog.js';
 =======
 import InfoDialog from './InfoDialog.js';
 >>>>>>> some psuedo code added
+=======
+import InfoDialog from './components/InfoDialog.js';
+>>>>>>> capturing user input in InfoDialog
 import Timer from './components/Timer.js';
 
 import './App.css';
@@ -23,12 +27,15 @@ function App() {
   const [selectedPose, setSelectedPose] = useState(null);
   const [poseCounter, setPoseCounter] = useState(10);
   const [addedTime, setAddedTime] = useState(0);
+<<<<<<< HEAD
   const [timerRunning, setTimerRunning] = useState(false);
   const [totalTime, setTotalTime] = useState(0);
 
   const startRoutineHandler = () => {
     setTimerRunning(!timerRunning);
   };
+=======
+>>>>>>> capturing user input in InfoDialog
 
   return (
     
@@ -43,10 +50,14 @@ function App() {
       
       <Container className="landingContainer">
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* <Timer routine={routine} /> */}
 =======
         <Timer routine={routine} />
 >>>>>>> some psuedo code added
+=======
+        {/* <Timer routine={routine} /> */}
+>>>>>>> capturing user input in InfoDialog
         {modalOpen ? (
           <InfoDialog
             modalOpen={modalOpen}
@@ -57,9 +68,12 @@ function App() {
             setPoseCounter={setPoseCounter}
             addedTime={addedTime}
             setAddedTime={setAddedTime}
+<<<<<<< HEAD
             routine={routine}
             totalTime={totalTime}
             setTotalTime={setTotalTime}
+=======
+>>>>>>> capturing user input in InfoDialog
           />
         ) : null}
         {timerRunning ? (
