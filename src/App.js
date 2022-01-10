@@ -11,6 +11,7 @@ import DragLogic from './components/DragLogic';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import InfoDialog from './components/InfoDialog.js';
 =======
 import InfoDialog from './InfoDialog.js';
@@ -25,11 +26,19 @@ import InfoDialog from './components/InfoDialog.js';
 import InfoDialog from './components/InfoDialog.js';
 >>>>>>> capturing user input in InfoDialog
 =======
+=======
+>>>>>>> capturing user input in InfoDialog
 import InfoDialog from './components/InfoDialog.js';
 =======
 import InfoDialog from './InfoDialog.js';
 >>>>>>> some psuedo code added
+<<<<<<< HEAD
 >>>>>>> some psuedo code added
+=======
+=======
+import InfoDialog from './components/InfoDialog.js';
+>>>>>>> capturing user input in InfoDialog
+>>>>>>> capturing user input in InfoDialog
 import Timer from './components/Timer.js';
 
 import './App.css';
@@ -54,13 +63,18 @@ function App() {
 >>>>>>> applied new timer logic
 =======
   const [addedTime, setAddedTime] = useState(0);
+<<<<<<< HEAD
 >>>>>>> applied new timer logic
+=======
+<<<<<<< HEAD
+>>>>>>> capturing user input in InfoDialog
   const [timerRunning, setTimerRunning] = useState(false);
   const [totalTime, setTotalTime] = useState(0);
 
   const startRoutineHandler = () => {
     setTimerRunning(!timerRunning);
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -84,6 +98,10 @@ function App() {
 >>>>>>> Add and save time to individual poses
 =======
 >>>>>>> applied new timer logic
+=======
+=======
+>>>>>>> capturing user input in InfoDialog
+>>>>>>> capturing user input in InfoDialog
 
   return (
     
@@ -102,6 +120,9 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> capturing user input in InfoDialog
         {/* <Timer routine={routine} /> */}
 =======
         <Timer routine={routine} />
@@ -109,6 +130,7 @@ function App() {
 =======
         {/* <Timer routine={routine} /> */}
 >>>>>>> capturing user input in InfoDialog
+<<<<<<< HEAD
 =======
         <Timer routine={routine} />
 >>>>>>> some psuedo code added
@@ -121,6 +143,8 @@ function App() {
         <Timer routine={routine} />
 >>>>>>> some psuedo code added
 >>>>>>> some psuedo code added
+=======
+>>>>>>> capturing user input in InfoDialog
         {modalOpen ? (
           <InfoDialog
             modalOpen={modalOpen}
@@ -172,10 +196,16 @@ function App() {
 =======
             addedTime={addedTime}
             setAddedTime={setAddedTime}
+<<<<<<< HEAD
             routine={routine}
             totalTime={totalTime}
             setTotalTime={setTotalTime}
+<<<<<<< HEAD
 >>>>>>> applied new timer logic
+=======
+=======
+>>>>>>> capturing user input in InfoDialog
+>>>>>>> capturing user input in InfoDialog
           />
         ) : null}
         {timerRunning ? (

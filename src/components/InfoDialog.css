@@ -5,5 +5,9 @@
 }
 
 .textField {
+<<<<<<< HEAD
   width: 35%;
+=======
+  width: 25%;
+>>>>>>> capturing user input in InfoDialog
 }
