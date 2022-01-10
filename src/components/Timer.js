@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> applied new timer logic
 import { React, useState } from 'react';
@@ -97,11 +98,17 @@ prev = () => {
         }; 
 */
 =======
+=======
+>>>>>>> capturing user input in InfoDialog
 // import { useEffect } from 'react';
 
 // const Timer = props => {
 //   const [timerIsRunning, setTimerisRunning] = useState(false);
+<<<<<<< HEAD
 // const [timerSeconds, setTimerSeconds] = useState(33);
+=======
+//   const [timerSeconds, setTimerSeconds] = useState(33);
+>>>>>>> capturing user input in InfoDialog
 
 //   const {
 //     routine,
@@ -150,6 +157,7 @@ prev = () => {
 //             }));
 //         };
 // */
+<<<<<<< HEAD
 >>>>>>> capturing user input in InfoDialog
 =======
 };
@@ -179,3 +187,5 @@ prev = () => {
         }; 
 */
 >>>>>>> some psuedo code added
+=======
+>>>>>>> capturing user input in InfoDialog

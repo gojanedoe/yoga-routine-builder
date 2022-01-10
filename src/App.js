@@ -9,6 +9,7 @@ import yogaPoses from './data/yogaPoses.json';
 import DragLogic from './components/DragLogic';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import InfoDialog from './components/InfoDialog.js';
 =======
 import InfoDialog from './InfoDialog.js';
@@ -19,6 +20,9 @@ import InfoDialog from './components/InfoDialog.js';
 >>>>>>> capturing user input in InfoDialog
 =======
 >>>>>>> some psuedo code added
+=======
+import InfoDialog from './components/InfoDialog.js';
+>>>>>>> capturing user input in InfoDialog
 import Timer from './components/Timer.js';
 
 import './App.css';
@@ -29,6 +33,7 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPose, setSelectedPose] = useState(null);
   const [poseCounter, setPoseCounter] = useState(10);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,6 +59,9 @@ function App() {
 >>>>>>> Add and save time to individual poses
 =======
 >>>>>>> applied new timer logic
+=======
+  const [addedTime, setAddedTime] = useState(0);
+>>>>>>> capturing user input in InfoDialog
 
   return (
     
@@ -70,6 +78,7 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* <Timer routine={routine} /> */}
 =======
         <Timer routine={routine} />
@@ -80,6 +89,9 @@ function App() {
 =======
         <Timer routine={routine} />
 >>>>>>> some psuedo code added
+=======
+        {/* <Timer routine={routine} /> */}
+>>>>>>> capturing user input in InfoDialog
         {modalOpen ? (
           <InfoDialog
             modalOpen={modalOpen}
@@ -88,6 +100,7 @@ function App() {
             updateRoutine={updateRoutine}
             poseCounter={poseCounter}
             setPoseCounter={setPoseCounter}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             addedTime={addedTime}
@@ -113,6 +126,10 @@ function App() {
             totalTime={totalTime}
             setTotalTime={setTotalTime}
 >>>>>>> applied new timer logic
+=======
+            addedTime={addedTime}
+            setAddedTime={setAddedTime}
+>>>>>>> capturing user input in InfoDialog
           />
         ) : null}
         {timerRunning ? (
