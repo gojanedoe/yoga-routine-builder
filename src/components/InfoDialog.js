@@ -16,10 +16,14 @@ function InfoDialog(props) {
     updateRoutine,
     poseCounter,
     setPoseCounter,
-    addedTime,
-    setAddedTime,
+    addedTime2,
+    setAddedTime2,
     routine
   } = props;
+
+  const [currentIndex, setCurrentIndex] = useState(
+    routine.findIndex(pose => pose.id === selectedPose.id)
+  );
 
   const handleClose = () => {
     setModalOpen(false);
@@ -37,30 +41,42 @@ function InfoDialog(props) {
 
     setPoseCounter(poseCounter + 1);
     setModalOpen(false);
-    setAddedTime(0);
+    // setAddedTime(0);
   };
 
   const addTimeHandler = event => {
     // Check right column poses (routine state) to find the current pose's placement
-    let currentIndex = routine.findIndex(pose => pose.id === selectedPose.id);
 
-    // TODO
-    // use the index to update routine[index].addedTime
+    setCurrentIndex(routine.findIndex(pose => pose.id === selectedPose.id));
+    //let currentIndex = routine.findIndex(pose => pose.id === selectedPose.id);
 
-    console.log('selectedPose', selectedPose);
+    setAddedTime2(event.target.value);
 
     console.log('current index', currentIndex);
 
-    if (event.target.value > 0) {
-      setAddedTime(event.target.value);
-    } else {
-      setAddedTime(0);
-    }
+    // Update routine with newly timed pose
+    // setAddedTime(event.target.value);
+    let updatedPose = {
+      ...selectedPose,
+      addedTime: Number(event.target.value)
+    };
+
+    updateRoutine(prevRoutine => {
+      prevRoutine.splice(currentIndex, 1, updatedPose);
+      return prevRoutine;
+    });
+
     console.log(event.target.value);
     console.log('selected pose:', {
       ...selectedPose,
       addedTime: event.target.value
     });
+
+    console.log(routine);
+    console.log(
+      'routine added time at curr index: ',
+      routine[currentIndex].addedTime
+    );
   };
 
   return (
@@ -90,8 +106,8 @@ function InfoDialog(props) {
             id="seconds"
             label="Length of Pose"
             type="number"
-            defaultValue={addedTime} //will eventually be {selectedPose.defaultTime}
-            value={addedTime}
+            defaultValue={selectedPose.defaultTime} //will eventually be {selectedPose.defaultTime}
+            value={routine[currentIndex].addedTime} //routine[currentIndex].addedTime
             inputProps={{ min: 0, max: 10, step: 1 }}
             onChange={addTimeHandler}
           />
