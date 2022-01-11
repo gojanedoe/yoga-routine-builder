@@ -57,6 +57,9 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add and save time to individual poses
   const [addedTime, setAddedTime] = useState(0);
 <<<<<<< HEAD
 =======
@@ -108,6 +111,9 @@ function App() {
 =======
   const [addedTime, setAddedTime] = useState(0); //(...selectedPose, addedTime: addedTime)
 >>>>>>> some pair programming
+=======
+  const [addedTime2, setAddedTime2] = useState(0); //(...selectedPose, addedTime: addedTime)
+>>>>>>> Add and save time to individual poses
 
   return (
     
@@ -164,8 +170,12 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add and save time to individual poses
             addedTime={addedTime}
             setAddedTime={setAddedTime}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -188,6 +198,8 @@ function App() {
 =======
             addedTime={addedTime}
             setAddedTime={setAddedTime}
+=======
+>>>>>>> Add and save time to individual poses
 =======
             addedTime2={addedTime2}
             setAddedTime2={setAddedTime2}
