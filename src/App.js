@@ -27,6 +27,7 @@ function App() {
   const [selectedPose, setSelectedPose] = useState(null);
   const [poseCounter, setPoseCounter] = useState(10);
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [addedTime, setAddedTime] = useState(0);
 <<<<<<< HEAD
   const [timerRunning, setTimerRunning] = useState(false);
@@ -40,6 +41,9 @@ function App() {
 =======
   const [addedTime, setAddedTime] = useState(0); //(...selectedPose, addedTime: addedTime)
 >>>>>>> some pair programming
+=======
+  const [addedTime2, setAddedTime2] = useState(0); //(...selectedPose, addedTime: addedTime)
+>>>>>>> Add and save time to individual poses
 
   return (
     
@@ -70,10 +74,15 @@ function App() {
             updateRoutine={updateRoutine}
             poseCounter={poseCounter}
             setPoseCounter={setPoseCounter}
+<<<<<<< HEAD
             addedTime={addedTime}
             setAddedTime={setAddedTime}
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+            addedTime2={addedTime2}
+            setAddedTime2={setAddedTime2}
+>>>>>>> Add and save time to individual poses
             routine={routine}
             totalTime={totalTime}
             setTotalTime={setTotalTime}
