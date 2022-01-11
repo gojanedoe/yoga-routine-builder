@@ -18,7 +18,7 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPose, setSelectedPose] = useState(null);
   const [poseCounter, setPoseCounter] = useState(10);
-  const [addedTime, setAddedTime] = useState(0); //(...selectedPose, addedTime: addedTime)
+  const [addedTime2, setAddedTime2] = useState(0); //(...selectedPose, addedTime: addedTime)
 
   return (
     
@@ -41,8 +41,8 @@ function App() {
             updateRoutine={updateRoutine}
             poseCounter={poseCounter}
             setPoseCounter={setPoseCounter}
-            addedTime={addedTime}
-            setAddedTime={setAddedTime}
+            addedTime2={addedTime2}
+            setAddedTime2={setAddedTime2}
             routine={routine}
           />
         ) : null}
