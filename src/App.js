@@ -23,6 +23,8 @@ function App() {
       updatePoses={updatePoses}
       routine={routine}
       updateRoutine={updateRoutine}
+      poseCounter={poseCounter}
+      setPoseCounter={setPoseCounter}
     >
       <Container className="landingContainer">
         {modalOpen ? (
