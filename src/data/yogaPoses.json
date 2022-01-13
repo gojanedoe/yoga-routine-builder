@@ -2,8 +2,8 @@
     {   
         "id": "pose-1",
         "name": "Cat/Cow",
-        "description": "Hello",
-        "benefits": "Good For You",
+        "description": "On hands and knees, alternates between curving the back/pelvis upward (like an angry cat) and curving them downward, stretching the muscles of the hips, back, abdomen, chest, and lungs",
+        "benefits": "Tones the gastrointestinal tract and muscles surrounding the female reproductive system, helps relieve stress from menstrual cramps, lower back pain and sciatica",
         "image": "resources/catcow.svg",  
         "audio": "resources/catcow.mp4"
     },
@@ -11,72 +11,72 @@
     {   
         "id": "pose-2",
         "name": "Plank",
-        "description": "Hello",
-        "benefits": "Good For You",
+        "description": "On hands and toes in the push-up position, tightening abs, glutes, muscles in the back and legs",
+        "benefits": "Tones and strengthens the core for healthy posture, balance and coordination",
         "image": "resources/plank.svg",
         "audio": "resources/plank.mp4"
     },
     {   
         "id": "pose-3",
         "name": "Bridge",
-        "description": "Hello",
-        "benefits": "Good For You",
+        "description": "On back with feet flat on mat, knees up, extending navel towards the ceiling",
+        "benefits": "A gentle start to spine extensions, improving the mobility of the spine and countering the effects of too much sitting",
         "image": "resources/bridge.svg",
         "audio": "resources/bridge.mp4"
     },
     {   
         "id": "pose-4",
         "name": "Sukhasana",
-        "description": "Hello",
-        "benefits": "Good For You",
+        "description": "Seated with legs crossed, shoulders and head relaxed, hands on knees, focusing on deep, even breath",
+        "benefits": "Improves concentration, flexibility of lower extremeties, including hips, and stability",
         "image": "resources/sukhasana.svg",
         "audio": "resources/sukhasana.mp4"
     },
     {   
         "id": "pose-5",
         "name": "Tree",
-        "description": "Hello",
-        "benefits": "Good For You",
+        "description": "Standing, one foot balance for developing stablity with the core and connection with the earth",
+        "benefits": "helps improve posture and provides stability to the pelvis, srengthening the ankles and legs, elongating the spine and improving flexibity and balance",
         "image": "resources/tree.svg",
         "audio": "resources/tree.mp4"
     },
     {   
         "id": "pose-6",
         "name": "Chair",
-        "description": "Hello",
-        "benefits": "Good For You",
+        "description": "Standing and squating into a position as if seated in a chair",
+        "benefits": "Strengthens the ankles, thighs, calves, and spine, stretches shoulders and chest, stimulates the abdominal organs, diaphragm and heart",
         "image": "resources/chair.svg",
         "audio": "resources/chair.mp4"
     },
     {   
         "id": "pose-7",
         "name": "Extended Side Angle",
-        "description": "Hello",
-        "benefits": "Good For You",
+        "description": "Standing and twisting with feet apart, leaning toward one knee, then the other",
+        "benefits": "Stretches and strengthens the legs, knees, and ankles, increases stamina and stimulates the abdominal organs, as well as increasing physical balance",
         "image": "resources/exsideangle.svg",
         "audio": "resources/extended_side_angle.mp4"
     },
     {   
         "id": "pose-8",
         "name": "Lotus",
-        "description": "Hello",
-        "benefits": "Good For You",
+        "description": "Laying on belly and raising head and chest, and feet and legs off of the mat",
+        "benefits": "Imporoves function of intestine and appetite, strengthens the thighs and abdominal muscles, and improves blood supply to lower back muscles",
         "image": "resources/lotus.svg",
         "audio": "resources/lotus.mp4"
     },
     {   
         "id": "pose-9",
         "name": "Downward Facing Dog",
-        "description": "Hello",
-        "benefits": "Good For You",
+        "description": "On hands and knees, pushing hips up",
+        "benefits": "Helps calm the mind, relieve stress as well as energize the body, stretching the shoulders, hamstrings, calves, arches, and hands",
         "image": "resources/downdog.svg",
         "audio": "resources/down_dog.mp4"
     },
     {   
         "id": "pose-10",
         "name": "Cobra",
-        "description": "Hello",
-        "benefits": "Good For You",
+        "description": "from belly, gently bringing the chest up",
+        "benefits": "Increases the mobility of the spine, strenghtens spinal support muscles, and helps relieve back pain, opens the chest and front of the body",
         "image": "resources/cobra.svg",
         "audio": "resources/cobra.mp4"
     }
