@@ -18,12 +18,14 @@ function App() {
   const [poseCounter, setPoseCounter] = useState(10);
 
   return (
+    
     <DragLogic
       poses={poses}
       updatePoses={updatePoses}
       routine={routine}
       updateRoutine={updateRoutine}
     >
+      
       <Container className="landingContainer">
         {modalOpen ? (
           <InfoDialog

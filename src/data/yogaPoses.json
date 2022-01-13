@@ -4,79 +4,80 @@
         "name": "Cat/Cow",
         "description": "Hello",
         "benefits": "Good For You",
-        "image": "resources/cat-cow.png",  
-        "audio": "audio file!"
+        "image": "resources/catcow.svg",  
+        "audio": "resources/catcow.mp4"
     },
+    
     {   
         "id": "pose-2",
         "name": "Plank",
         "description": "Hello",
         "benefits": "Good For You",
-        "image": "/resources/plank.jpg",
-        "audio": "audio file!"
+        "image": "resources/plank.svg",
+        "audio": "resources/plank.mp4"
     },
     {   
         "id": "pose-3",
         "name": "Bridge",
         "description": "Hello",
         "benefits": "Good For You",
-        "image": "resources/bridge.jpg",
-        "audio": "audio file!"
+        "image": "resources/bridge.svg",
+        "audio": "resources/bridge.mp4"
     },
     {   
         "id": "pose-4",
         "name": "Sukhasana",
         "description": "Hello",
         "benefits": "Good For You",
-        "image": "resources/sukhasana.png",
-        "audio": "audio file!"
+        "image": "resources/sukhasana.svg",
+        "audio": "resources/sukhasana.mp4"
     },
     {   
         "id": "pose-5",
         "name": "Tree",
         "description": "Hello",
         "benefits": "Good For You",
-        "image": "resources/tree.jpg",
-        "audio": "audio file!"
+        "image": "resources/tree.svg",
+        "audio": "resources/tree.mp4"
     },
     {   
         "id": "pose-6",
-        "name": "Tree",
+        "name": "Chair",
         "description": "Hello",
         "benefits": "Good For You",
-        "image": "resources/chair.jpg",
-        "audio": "audio file!"
+        "image": "resources/chair.svg",
+        "audio": "resources/chair.mp4"
     },
     {   
         "id": "pose-7",
         "name": "Extended Side Angle",
         "description": "Hello",
         "benefits": "Good For You",
-        "image": "resources/extended-side-angle.png",
-        "audio": "audio file!"
+        "image": "resources/exsideangle.svg",
+        "audio": "resources/extended_side_angle.mp4"
     },
     {   
         "id": "pose-8",
-        "name": "Locust",
+        "name": "Lotus",
         "description": "Hello",
         "benefits": "Good For You",
-        "image": "resources/locust.jpg",
-        "audio": "audio file!"
+        "image": "resources/lotus.svg",
+        "audio": "resources/lotus.mp4"
     },
     {   
         "id": "pose-9",
         "name": "Downward Facing Dog",
         "description": "Hello",
         "benefits": "Good For You",
-        "image": "resources/downward-facing-dog.jpg",
-        "audio": "audio file!"
+        "image": "resources/downdog.svg",
+        "audio": "resources/down_dog.mp4"
     },
     {   
         "id": "pose-10",
         "name": "Cobra",
         "description": "Hello",
         "benefits": "Good For You",
-        "image": "resources/cobra.jpg",
-        "audio": "audio file!"
+        "image": "resources/cobra.svg",
+        "audio": "resources/cobra.mp4"
     }
 ]
