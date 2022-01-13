@@ -1,5 +1,7 @@
 import React from 'react';
 import { useTimer } from 'react-timer-hook';
+import "./PoseTimer.css";
+
 
 function PoseTimer({ expiryTimestamp }) {
   const {
@@ -17,12 +19,10 @@ function PoseTimer({ expiryTimestamp }) {
 
   return (
     <div style={{textAlign: 'center'}}>
-      <h1>react-timer-hook </h1>
-      <p>Timer Demo</p>
-      <div style={{fontSize: '100px'}}>
-        <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
+      <h3>Time left in pose:</h3>
+      <div className="countdown" style={{fontSize: '100px'}}>
+        <span>{minutes}</span>:<span>{seconds}</span>
       </div>
-      <p>{isRunning ? 'Running' : 'Not running'}</p>
       <button onClick={start}>Start</button>
       <button onClick={pause}>Pause</button>
       <button onClick={resume}>Resume</button>
