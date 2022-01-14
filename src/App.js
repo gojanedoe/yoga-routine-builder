@@ -9,12 +9,13 @@ import { Container } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 import yogaPoses from './data/yogaPoses.json';
+import GetRoutineGrid from './components/RoutineGrid';
 
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 //firebase
 import database from './firebase';
-import { ref, set, onValue, update, remove, get, child } from 'firebase/database';
+import { ref, set, onValue, update, remove, get, child, push } from 'firebase/database';
 
 import './App.css';
 
@@ -36,58 +37,33 @@ import './App.css';
 function App() {
   const [poses, updatePoses] = useState(yogaPoses);
   const [routine, updateRoutine] = useState([]);
-
-    //database testing state
-    const [data, setData] = useState("");
-
-    //database testing handler
-    const handleTest = (e) => {
-      setData(e.target.value);
-    }
-
-     //database testing - get data from database
-     const getRoutine = () => {
-
-      get(ref(database, 'YogaPose')).then((snapshot) => {
-  
-        let obj = snapshot.val();
-  
-        Object.keys(obj).forEach(key => {
-          
-          console.log(`Value at key ${key}: ${obj[key]}`);
-  
-        });
-  
-      });    
-  
-    }
+  const [viewModalOpen, setViewModalOpen] = useState(false);
 
     //database testing update/create routine
 
-    const createRoutine = () => {
+    // const createRoutine = () => {
 
-      update(ref(database, 'YogaPose'), {
-        routine: data,
-        id: "pose-1",
-        name: "Plank",
-        description: "Hello",
-        benefits: "Good For You",
-        image: "this is an image file",
-        audio: "audio file!",
-        muscles: [
-          "Abdominals", "Glutes", "Quads"
-          ]
-      });
+    //   update(ref(database, 'YogaPose'), {
+    //     routine: data,
+    //     id: "pose-1",
+    //     name: "Plank",
+    //     description: "Hello",
+    //     benefits: "Good For You",
+    //     image: "this is an image file",
+    //     audio: "audio file!",
+    //     muscles: [
+    //       "Abdominals", "Glutes", "Quads"
+    //       ]
+    //   });
   
-    }
+    // }
   
     const saveRoutine = () => {
 
-      update(ref(database, '/'), {
+      push(ref(database, '/'), {
         Routine: Array.from(routine)
       })
     }
-  
 
   const handleOnDragEnd = result => {
     // If pose is not dragged to a valid destination, keep list the same
@@ -166,12 +142,19 @@ function App() {
 
           <Button variant="outlined">Start Routine</Button>
           <Button variant="outlined" onClick={saveRoutine}>Save Routine</Button>
+          <Button variant="outlined" onClick={() => setViewModalOpen({viewModalOpen: true})}>View Routines</Button>
           <div>
-          <input type="test" onChange={handleTest} value={data} />
+          {/* <input type="test" onChange={handleTest} value={data} /> */}
           {/* <button onClick={saveRoutine}>Add Routine</button> */}
-          <button onClick={getRoutine}>Test Query</button>
+          {/* <button onClick={getRoutine}>Get Database</button> */}
         </div>
         </Grid>
+          {viewModalOpen ? (
+             <GetRoutineGrid
+              viewModalOpen={viewModalOpen}
+              setViewModalOpen={setViewModalOpen}
+            />
+          ) : null}
       </Container>
     </DragDropContext>
   );
