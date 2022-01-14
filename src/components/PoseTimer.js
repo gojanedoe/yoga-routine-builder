@@ -20,7 +20,7 @@ function PoseTimer({ expiryTimestamp }) {
   return (
     <div style={{textAlign: 'center'}}>
       <h3>Time left in pose:</h3>
-      <div className="countdown" style={{fontSize: '100px'}}>
+      <div className="countdown" style={{fontSize: '25px'}}>
         <span>{minutes}</span>:<span>{seconds}</span>
       </div>
       <button onClick={start}>Start</button>
