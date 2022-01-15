@@ -1,5 +1,4 @@
 
- 
 .carousel-wrapper {
     width: 1000px;
     margin-left: auto;
@@ -18,7 +17,7 @@
  
 .carousel.carousel-slider img {
     object-fit: scale-down;
-    height: 150px;
+    height: 350px;
     /* big pictur \e on top */
 }
  
