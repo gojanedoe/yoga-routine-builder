@@ -1,7 +1,6 @@
 import React from 'react';
 import '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 import DraggablePoseCard from './DraggablePoseCard';
 
