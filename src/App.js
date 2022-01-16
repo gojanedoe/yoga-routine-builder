@@ -124,7 +124,12 @@ function App() {
 
           <SimpleDialog routine={routine} open={open} onClose={handleClose} />
 
-          <Button variant="outlined">Save Routine</Button>
+          <Button
+            variant="outlined"
+            disabled={routine.length === 0 ? true : false}
+          >
+            Save Routine
+          </Button>
         </Grid>
       </Container>
     </DragDropContext>
