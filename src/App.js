@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DraggablePoseCard from './components/DraggablePoseCard';
 import PoseBank from './components/PoseBank';
 import RoutineBuilder from './components/RoutineBuilder';
-import SimpleDialog from './components/SimpleDialog'
+import SimpleDialog from './components/SimpleDialog';
 import '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import { Container } from '@material-ui/core';
@@ -13,7 +13,6 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import './App.css';
-
 
 // const dummyPoses = [
 //   { id: 'pose-1', name: 'Pose 1' },
@@ -92,7 +91,6 @@ function App() {
   };
   const handleClose = value => {
     setOpen(false);
-    
   };
 
   return (
@@ -116,7 +114,11 @@ function App() {
           {/* ---- RIGHT COLUMN ---- */}
           <RoutineBuilder routine={routine} />
 
-          <Button variant="outlined" onClick={handleClickOpen}>
+          <Button
+            variant="outlined"
+            onClick={handleClickOpen}
+            disabled={routine.length === 0 ? true : false}
+          >
             Start Routine
           </Button>
 
