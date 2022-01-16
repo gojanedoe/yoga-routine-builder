@@ -11,6 +11,10 @@ import './PoseTimer.css';
 
 function SimpleDialog(props) {
   const { onClose, routine, open } = props;
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  console.log('slide index: ', slideIndex);
+
   const handleClose = () => {
     onClose(routine);
   };
@@ -37,7 +41,12 @@ function SimpleDialog(props) {
               width="500px"
               variation="primary"
               spacing={3}
-              src="Assets/tree_(vrkasana).mp4"
+              src={
+                routine.length === 0
+                  ? 'Assets/tree_(vrkasana).mp4'
+                  : routine[slideIndex].audio
+              }
+              // src="Assets/tree_(vrkasana).mp4"
               style={{ textAlign: 'center' }}
             />
           </item>
@@ -65,7 +74,7 @@ function SimpleDialog(props) {
         </Grid>
       </Grid>
       <Grid>
-        <NewPlayerCarousel routine={routine} />
+        <NewPlayerCarousel routine={routine} setSlideIndex={setSlideIndex} />
       </Grid>
     </Dialog>
   );
