@@ -18,14 +18,19 @@
 .carousel.carousel-slider img {
     object-fit: scale-down;
     height: 350px;
-    /* big pictur \e on top */
+    /* big picture on top */
 }
  
 .carousel {
     height: 200px;
     width: 1000px;
     margin:0;
-    /* whole carousel */
+    background-color:rgb(214, 230, 176);
+    /* light olive...nice */
+    /* background-color:rgb(230, 222, 176); */
+    /* neutral tan .... not bad */
+     /* background-color:rgb(230, 180, 176); */
+    /* dark rose...not bad  */
 }
  
 img {

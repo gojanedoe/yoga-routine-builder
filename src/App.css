@@ -9,7 +9,7 @@
 .landingGrid {
   height: 100%;
   text-align: center;
-
+  background-color:rgb(214, 230, 176);
   /* flex-grow: 1; */
 }
 
