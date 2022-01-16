@@ -22,6 +22,13 @@ function SimpleDialog(props) {
   const time = new Date();
   time.setSeconds(time.getSeconds() + 600); // 10 minutes timer
 
+  const handleAudioEnd = () => {
+    // Go to next slide
+    setSlideIndex(prevIndex => {
+      return prevIndex + 1;
+    });
+  };
+
   return (
     <Dialog
       fullScreen
@@ -46,8 +53,8 @@ function SimpleDialog(props) {
                   ? 'Assets/tree_(vrkasana).mp4'
                   : routine[slideIndex].audio
               }
-              // src="Assets/tree_(vrkasana).mp4"
               style={{ textAlign: 'center' }}
+              onFinished={handleAudioEnd}
             />
           </item>
         </Grid>
@@ -74,7 +81,11 @@ function SimpleDialog(props) {
         </Grid>
       </Grid>
       <Grid>
-        <NewPlayerCarousel routine={routine} setSlideIndex={setSlideIndex} />
+        <NewPlayerCarousel
+          routine={routine}
+          slideIndex={slideIndex}
+          setSlideIndex={setSlideIndex}
+        />
       </Grid>
     </Dialog>
   );

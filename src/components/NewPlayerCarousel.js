@@ -9,20 +9,22 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 // and there are elements I want/need to change
 //help with customizing: http://react-responsive-carousel.js.org/storybook/?path=/story/02-advanced--with-external-controls
 
-export default function NewPlayerCarousel({ routine, setSlideIndex }) {
+export default function NewPlayerCarousel({
+  routine,
+  slideIndex,
+  setSlideIndex
+}) {
   //const [currImg, setCurrImg] = useState(0);
   //const [slideIndex, setSlideIndex] = useState(0);
 
   const updateSlide = index => {
     setSlideIndex(index);
 
-    // console.log(index);
-    // console.log('pose properties: ', routine[index]);
   };
 
   return (
     <div className="carousel-wrapper">
-      <Carousel onChange={updateSlide}>
+      <Carousel onChange={updateSlide} selectedItem={slideIndex}>
         {routine.map(pose => {
           return <img src={pose.image} />;
         })}
