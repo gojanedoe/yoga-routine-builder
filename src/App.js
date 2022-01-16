@@ -100,7 +100,10 @@ function App() {
 
           <SimpleDialog routine={routine} open={open} onClose={handleClose} />
 
-          <Button variant="outlined" onClick={saveRoutine}>Save Routine</Button>
+          <Button 
+          variant="outlined" 
+          disabled={routine.length === 0 ? true : false}
+          onClick={saveRoutine}>Save Routine</Button>
           <Button variant="outlined" onClick={() => setViewModalOpen({viewModalOpen: true})}>View Routines</Button>
         </Grid>
           {viewModalOpen ? (
