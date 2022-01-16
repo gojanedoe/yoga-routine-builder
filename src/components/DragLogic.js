@@ -4,36 +4,43 @@ import { DragDropContext } from 'react-beautiful-dnd';
 
 import '../App.css';
 
-function DragLogic({ children, poses, routine, updatePoses, updateRoutine }) {
+function DragLogic({
+  children,
+  poses,
+  routine,
+  updatePoses,
+  updateRoutine,
+  poseCounter,
+  setPoseCounter
+}) {
   const handleOnDragEnd = result => {
     // If pose is not dragged to a valid destination, keep list the same
     if (!result.destination) return;
 
+    // Otherwise, if pose is dragged to valid destination, add or reorder pose cards
     const source = result.source.droppableId;
     const sourceIndex = result.source.index;
-    const destination = result.destination.droppableId;
     const destinationIndex = result.destination.index;
 
-    // Grab poses from original lists, depending on source
-    const fromItems = Array.from(source === 'column-1' ? poses : routine);
-    const toItems = Array.from(source === 'column-1' ? routine : poses);
+    const sourceItems = Array.from(source === 'column-1' ? poses : routine);
 
-    // Grab moving pose & remove place in list
-    const [reorderedItem] = fromItems.splice(sourceIndex, 1);
+    if (source === 'column-2') {
+      // reorder pose within column
+      const [reorderedItem] = sourceItems.splice(sourceIndex, 1);
+      sourceItems.splice(destinationIndex, 0, reorderedItem);
 
-    if (source === destination) {
-      // Drop pose back in same list
-      fromItems.splice(destinationIndex, 0, reorderedItem);
+      updateRoutine(sourceItems);
+    } else if (source === 'column-1') {
+      // Create new pose id so there are no repeating keys in poses
+      const newPoseId = `pose-${poseCounter + 1}`;
+      setPoseCounter(poseCounter + 1);
 
-      //Update pose bank or pose routine state
-      source === 'column-1' ? updatePoses(fromItems) : updateRoutine(fromItems);
-    } else {
       // Drop pose in other list
-      toItems.splice(destinationIndex, 0, reorderedItem);
+      const destinationItems = Array.from(routine);
+      const itemCopy = { ...sourceItems[sourceIndex], id: newPoseId };
+      destinationItems.splice(destinationIndex, 0, itemCopy);
 
-      //Update pose bank and pose routine state
-      updatePoses(source === 'column-1' ? fromItems : toItems);
-      updateRoutine(source === 'column-1' ? toItems : fromItems);
+      updateRoutine(destinationItems);
     }
   };
 
