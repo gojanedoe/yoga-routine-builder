@@ -23,6 +23,12 @@ function SimpleDialog(props) {
   time.setSeconds(time.getSeconds() + 600); // 10 minutes timer
 
   const handleAudioEnd = () => {
+    // If routine is over, alert and end
+    if (slideIndex === routine.length - 1) {
+      alert('Great workout!');
+      return;
+    }
+
     // Go to next slide
     setSlideIndex(prevIndex => {
       return prevIndex + 1;
@@ -55,6 +61,7 @@ function SimpleDialog(props) {
               }
               style={{ textAlign: 'center' }}
               onFinished={handleAudioEnd}
+              autoplay={true}
             />
           </item>
         </Grid>
