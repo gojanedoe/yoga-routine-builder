@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> applied new timer logic
 import { React, useState } from 'react';
 
 const Timer = props => {
@@ -15,6 +18,7 @@ const Timer = props => {
       })}
     </div>
   );
+<<<<<<< HEAD
 =======
 import { useEffect } from 'react';
 
@@ -125,3 +129,8 @@ prev = () => {
 //         };
 // */
 >>>>>>> capturing user input in InfoDialog
+=======
+};
+
+export default Timer;
+>>>>>>> applied new timer logic

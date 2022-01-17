@@ -94,6 +94,7 @@
     "image": "resources/cat-cow.png",
     "audio": "audio file!",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 50,
     "addedTime": 0,
     "totalTime": 0
@@ -101,6 +102,11 @@
     "defaultTime": 10,
     "addedTime": 0
 >>>>>>> some psuedo code added
+=======
+    "defaultTime": 50,
+    "addedTime": 0,
+    "totalTime": 0
+>>>>>>> applied new timer logic
   },
   {
     "id": "pose-2",
@@ -110,6 +116,7 @@
     "image": "/resources/plank.jpg",
     "audio": "audio file!",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 39,
     "addedTime": 0,
     "totalTime": 0
@@ -117,6 +124,11 @@
     "defaultTime": 20,
     "addedTime": 0
 >>>>>>> some psuedo code added
+=======
+    "defaultTime": 39,
+    "addedTime": 0,
+    "totalTime": 0
+>>>>>>> applied new timer logic
   },
   {
     "id": "pose-3",
@@ -126,6 +138,7 @@
     "image": "resources/bridge.jpg",
     "audio": "audio file!",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 49,
     "addedTime": 0,
     "totalTime": 0
@@ -133,6 +146,11 @@
     "defaultTime": 45,
     "addedTime": 0
 >>>>>>> some psuedo code added
+=======
+    "defaultTime": 49,
+    "addedTime": 0,
+    "totalTime": 0
+>>>>>>> applied new timer logic
   },
   {
     "id": "pose-4",
@@ -142,6 +160,7 @@
     "image": "resources/sukhasana.png",
     "audio": "audio file!",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 41,
     "addedTime": 0,
     "totalTime": 0
@@ -149,6 +168,11 @@
     "defaultTime": 45,
     "addedTime": 0
 >>>>>>> some psuedo code added
+=======
+    "defaultTime": 41,
+    "addedTime": 0,
+    "totalTime": 0
+>>>>>>> applied new timer logic
   },
   {
     "id": "pose-5",
@@ -157,6 +181,7 @@
     "benefits": "Good For You",
     "image": "resources/tree.jpg",
     "audio": "audio file!",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "defaultTime": 64,
     "addedTime": 0,
@@ -173,10 +198,20 @@
     "id": "pose-6",
     "name": "Tree",
 >>>>>>> some psuedo code added
+=======
+    "defaultTime": 64,
+    "addedTime": 0,
+    "totalTime": 0
+  },
+  {
+    "id": "pose-6",
+    "name": "Chair",
+>>>>>>> applied new timer logic
     "description": "Hello",
     "benefits": "Good For You",
     "image": "resources/chair.jpg",
     "audio": "audio file!",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "defaultTime": 51,
     "addedTime": 0,
@@ -185,6 +220,11 @@
     "defaultTime": 45,
     "addedTime": 0
 >>>>>>> some psuedo code added
+=======
+    "defaultTime": 51,
+    "addedTime": 0,
+    "totalTime": 0
+>>>>>>> applied new timer logic
   },
   {
     "id": "pose-7",
@@ -194,6 +234,7 @@
     "image": "resources/extended-side-angle.png",
     "audio": "audio file!",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 70,
     "addedTime": 0,
     "totalTime": 0
@@ -201,6 +242,11 @@
     "defaultTime": 45,
     "addedTime": 0
 >>>>>>> some psuedo code added
+=======
+    "defaultTime": 70,
+    "addedTime": 0,
+    "totalTime": 0
+>>>>>>> applied new timer logic
   },
   {
     "id": "pose-8",
@@ -210,6 +256,7 @@
     "image": "resources/locust.jpg",
     "audio": "audio file!",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 53,
     "addedTime": 0,
     "totalTime": 0
@@ -217,6 +264,11 @@
     "defaultTime": 45,
     "addedTime": 0
 >>>>>>> some psuedo code added
+=======
+    "defaultTime": 53,
+    "addedTime": 0,
+    "totalTime": 0
+>>>>>>> applied new timer logic
   },
   {
     "id": "pose-9",
@@ -226,6 +278,7 @@
     "image": "resources/downward-facing-dog.jpg",
     "audio": "audio file!",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 57,
     "addedTime": 0,
     "totalTime": 0
@@ -233,6 +286,11 @@
     "defaultTime": 45,
     "addedTime": 0
 >>>>>>> some psuedo code added
+=======
+    "defaultTime": 57,
+    "addedTime": 0,
+    "totalTime": 0
+>>>>>>> applied new timer logic
   },
   {
     "id": "pose-10",
@@ -243,6 +301,7 @@
     "audio": "audio file!",
     "defaultTime": 45,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "addedTime": 0,
     "totalTime": 0
   }
@@ -250,6 +309,10 @@
 >>>>>>> some psuedo code added
 =======
     "addedTime": 0
+=======
+    "addedTime": 0,
+    "totalTime": 0
+>>>>>>> applied new timer logic
   }
 ]
 >>>>>>> some psuedo code added
