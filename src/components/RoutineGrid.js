@@ -7,6 +7,13 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
+import CardMedia from '@material-ui/core/CardMedia';
+
+import './RoutineGrid.css';
 
 //firebase
 import database from '../firebase';
@@ -30,10 +37,17 @@ const GetRoutineGrid = (props) => {
 
         onValue(dbRef, (snapshot) => {
             const data = snapshot.val();
-
-            setDisplayData({ displayData: data });
+            let data1 = JSON.parse(JSON.stringify(data));
+            setDisplayData({ displayData: data1 });
         });
     }, [])
+
+    const deleteHandler = (id) => {
+
+        remove(ref(database, `/${id}`));
+  
+    }
+
 
 
     return (
@@ -47,21 +61,32 @@ const GetRoutineGrid = (props) => {
             >
                 <DialogTitle id="form-dialog-title">Saved Routines</DialogTitle>
                 <DialogContent>
-                    <Grid container spacing={1}>
-                        {displayData.length !== 0 ? displayData.map((routine, index) =>{
-                            console.log(routine[index]);
-                        }) : <p>hi!</p>}
-                        {/* {if(displayData.length !== 0) {
-                            displayData.forEach((routine, index) => {
-                                <Grid item xs={6}>
-                                    <div>
-                                        {routine[index].forEach((poses, index) => {
-                                            <p>{poses[index].name}</p>
-                                        })}
-                                    </div>
-                                </Grid>
-                            })}
-                        else {<p>Hi!</p>}} */}
+                    <Grid container spacing={2}>
+                            {displayData["displayData"].length !== 0 ? Object.keys(displayData["displayData"]).map(index =>{
+                                return (
+                                    <Grid item xs={4}>
+                                        <div>
+                                        <Card className="root">
+                                            <CardActionArea>
+                                                <CardMedia
+                                                className="media"
+                                                image={displayData["displayData"][index]["Routine"][0].image}
+                                                title={`Routine ${index}`}
+                                                />           
+                                            </CardActionArea>
+                                            <CardActions>
+                                                <Button size="small" color="primary">
+                                                Play
+                                                </Button>
+                                                <Button onClick={e => {e.preventDefault(); deleteHandler(index)}} size="small" color="secondary">
+                                                Delete
+                                                </Button>
+                                            </CardActions>
+                                            </Card>
+                                        </div>
+                                    </Grid>
+                                )
+                            }) : <p>Hi!</p>}
                     </Grid>
                 </DialogContent>
                 <DialogActions>
