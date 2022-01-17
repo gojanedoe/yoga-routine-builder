@@ -58,6 +58,7 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Add and save time to individual poses
   const [addedTime, setAddedTime] = useState(0);
@@ -74,6 +75,13 @@ function App() {
 =======
 <<<<<<< HEAD
 >>>>>>> capturing user input in InfoDialog
+=======
+  const [addedTime, setAddedTime] = useState(0);
+<<<<<<< HEAD
+=======
+  const [addedTime, setAddedTime] = useState(0);
+>>>>>>> applied new timer logic
+>>>>>>> applied new timer logic
   const [timerRunning, setTimerRunning] = useState(false);
   const [totalTime, setTotalTime] = useState(0);
 
@@ -83,6 +91,9 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> applied new timer logic
 =======
 >>>>>>> capturing user input in InfoDialog
 =======
@@ -93,6 +104,7 @@ function App() {
 >>>>>>> Add and save time to individual poses
 =======
 >>>>>>> applied new timer logic
+<<<<<<< HEAD
 =======
   const [addedTime, setAddedTime] = useState(0);
 >>>>>>> capturing user input in InfoDialog
@@ -114,6 +126,8 @@ function App() {
 =======
   const [addedTime2, setAddedTime2] = useState(0); //(...selectedPose, addedTime: addedTime)
 >>>>>>> Add and save time to individual poses
+=======
+>>>>>>> applied new timer logic
 
   return (
     
@@ -171,8 +185,11 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Add and save time to individual poses
+=======
+>>>>>>> applied new timer logic
             addedTime={addedTime}
             setAddedTime={setAddedTime}
 <<<<<<< HEAD
@@ -219,6 +236,7 @@ function App() {
             addedTime={addedTime}
             setAddedTime={setAddedTime}
 <<<<<<< HEAD
+<<<<<<< HEAD
             routine={routine}
             totalTime={totalTime}
             setTotalTime={setTotalTime}
@@ -230,6 +248,12 @@ function App() {
 >>>>>>> capturing user input in InfoDialog
 =======
 >>>>>>> Grab index of currently chosen pose
+=======
+            routine={routine}
+            totalTime={totalTime}
+            setTotalTime={setTotalTime}
+>>>>>>> applied new timer logic
+>>>>>>> applied new timer logic
           />
         ) : null}
         {timerRunning ? (

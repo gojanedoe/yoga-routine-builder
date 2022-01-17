@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> applied new timer logic
 =======
@@ -14,6 +15,10 @@
 >>>>>>> starting Timer build use this one
 =======
 >>>>>>> capturing user input in InfoDialog
+=======
+=======
+>>>>>>> applied new timer logic
+>>>>>>> applied new timer logic
 import { React, useState } from 'react';
 
 const Timer = props => {
@@ -29,6 +34,7 @@ const Timer = props => {
       })}
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,6 +56,8 @@ const Timer = props => {
     setTimerSeconds,
     handleNextPhoto, //if/else or case/switch situation (carousel event?)
     resetTimer //resets setTimerSeconds to next index equation
+=======
+>>>>>>> applied new timer logic
 =======
 import { useEffect } from 'react';
 
@@ -315,4 +323,12 @@ prev = () => {
 //         };
 // */
 >>>>>>> capturing user input in InfoDialog
+<<<<<<< HEAD
 >>>>>>> capturing user input in InfoDialog
+=======
+=======
+};
+
+export default Timer;
+>>>>>>> applied new timer logic
+>>>>>>> applied new timer logic

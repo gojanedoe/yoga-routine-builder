@@ -101,6 +101,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 50,
     "addedTime": 0,
     "totalTime": 0
@@ -109,6 +110,8 @@
     "addedTime": 0
 >>>>>>> some psuedo code added
 =======
+=======
+>>>>>>> applied new timer logic
     "defaultTime": 50,
     "addedTime": 0,
     "totalTime": 0
@@ -123,13 +126,19 @@
     "addedTime": 0
 >>>>>>> some psuedo code added
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> applied new timer logic
 =======
     "defaultTime": 50,
     "addedTime": 0,
     "totalTime": 0
 >>>>>>> applied new timer logic
+<<<<<<< HEAD
 =======
 >>>>>>> some psuedo code added
+=======
+>>>>>>> applied new timer logic
   },
   {
     "id": "pose-2",
@@ -143,6 +152,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> applied new timer logic
     "defaultTime": 39,
     "addedTime": 0,
     "totalTime": 0
@@ -155,6 +167,7 @@
     "addedTime": 0,
     "totalTime": 0
 >>>>>>> applied new timer logic
+<<<<<<< HEAD
 =======
     "defaultTime": 20,
     "addedTime": 0
@@ -173,6 +186,8 @@
     "addedTime": 0
 >>>>>>> some psuedo code added
 >>>>>>> some psuedo code added
+=======
+>>>>>>> applied new timer logic
   },
   {
     "id": "pose-3",
@@ -186,6 +201,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 49,
     "addedTime": 0,
     "totalTime": 0
@@ -194,6 +210,8 @@
     "addedTime": 0
 >>>>>>> some psuedo code added
 =======
+=======
+>>>>>>> applied new timer logic
     "defaultTime": 49,
     "addedTime": 0,
     "totalTime": 0
@@ -208,13 +226,19 @@
     "addedTime": 0
 >>>>>>> some psuedo code added
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> applied new timer logic
 =======
     "defaultTime": 49,
     "addedTime": 0,
     "totalTime": 0
 >>>>>>> applied new timer logic
+<<<<<<< HEAD
 =======
 >>>>>>> some psuedo code added
+=======
+>>>>>>> applied new timer logic
   },
   {
     "id": "pose-4",
@@ -228,6 +252,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> applied new timer logic
     "defaultTime": 41,
     "addedTime": 0,
     "totalTime": 0
@@ -240,6 +267,7 @@
     "addedTime": 0,
     "totalTime": 0
 >>>>>>> applied new timer logic
+<<<<<<< HEAD
 =======
     "defaultTime": 41,
     "addedTime": 0,
@@ -257,6 +285,8 @@
 >>>>>>> applied new timer logic
 =======
 >>>>>>> some psuedo code added
+=======
+>>>>>>> applied new timer logic
   },
   {
     "id": "pose-5",
@@ -270,6 +300,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 64,
     "addedTime": 0,
     "totalTime": 0
@@ -302,6 +333,8 @@
 =======
 =======
 >>>>>>> some psuedo code added
+=======
+>>>>>>> applied new timer logic
     "defaultTime": 64,
     "addedTime": 0,
     "totalTime": 0
@@ -320,7 +353,19 @@
     "id": "pose-6",
     "name": "Tree",
 >>>>>>> some psuedo code added
+<<<<<<< HEAD
 >>>>>>> some psuedo code added
+=======
+=======
+    "defaultTime": 64,
+    "addedTime": 0,
+    "totalTime": 0
+  },
+  {
+    "id": "pose-6",
+    "name": "Chair",
+>>>>>>> applied new timer logic
+>>>>>>> applied new timer logic
     "description": "Hello",
     "benefits": "Good For You",
     "image": "resources/chair.jpg",
@@ -330,6 +375,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 51,
     "addedTime": 0,
     "totalTime": 0
@@ -352,6 +398,8 @@
     "totalTime": 0
 >>>>>>> applied new timer logic
 =======
+=======
+>>>>>>> applied new timer logic
     "defaultTime": 51,
     "addedTime": 0,
     "totalTime": 0
@@ -359,7 +407,15 @@
     "defaultTime": 45,
     "addedTime": 0
 >>>>>>> some psuedo code added
+<<<<<<< HEAD
 >>>>>>> some psuedo code added
+=======
+=======
+    "defaultTime": 51,
+    "addedTime": 0,
+    "totalTime": 0
+>>>>>>> applied new timer logic
+>>>>>>> applied new timer logic
   },
   {
     "id": "pose-7",
@@ -373,6 +429,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> applied new timer logic
     "defaultTime": 70,
     "addedTime": 0,
     "totalTime": 0
@@ -385,6 +444,7 @@
     "addedTime": 0,
     "totalTime": 0
 >>>>>>> applied new timer logic
+<<<<<<< HEAD
 =======
     "defaultTime": 70,
     "addedTime": 0,
@@ -402,6 +462,8 @@
 >>>>>>> applied new timer logic
 =======
 >>>>>>> some psuedo code added
+=======
+>>>>>>> applied new timer logic
   },
   {
     "id": "pose-8",
@@ -415,6 +477,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "defaultTime": 53,
     "addedTime": 0,
     "totalTime": 0
@@ -423,6 +486,8 @@
     "addedTime": 0
 >>>>>>> some psuedo code added
 =======
+=======
+>>>>>>> applied new timer logic
     "defaultTime": 53,
     "addedTime": 0,
     "totalTime": 0
@@ -436,6 +501,7 @@
     "addedTime": 0,
     "totalTime": 0
 >>>>>>> applied new timer logic
+<<<<<<< HEAD
 =======
     "defaultTime": 53,
     "addedTime": 0,
@@ -445,6 +511,8 @@
     "addedTime": 0
 >>>>>>> some psuedo code added
 >>>>>>> some psuedo code added
+=======
+>>>>>>> applied new timer logic
   },
   {
     "id": "pose-9",
@@ -458,6 +526,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> applied new timer logic
     "defaultTime": 57,
     "addedTime": 0,
     "totalTime": 0
@@ -470,6 +541,7 @@
     "addedTime": 0,
     "totalTime": 0
 >>>>>>> applied new timer logic
+<<<<<<< HEAD
 =======
     "defaultTime": 45,
     "addedTime": 0
@@ -488,6 +560,8 @@
     "addedTime": 0
 >>>>>>> some psuedo code added
 >>>>>>> some psuedo code added
+=======
+>>>>>>> applied new timer logic
   },
   {
     "id": "pose-10",
@@ -502,6 +576,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "addedTime": 0,
     "totalTime": 0
   }
@@ -523,12 +598,21 @@
     "totalTime": 0
 >>>>>>> applied new timer logic
 =======
+=======
+>>>>>>> applied new timer logic
     "addedTime": 0,
     "totalTime": 0
 =======
     "addedTime": 0
 >>>>>>> some psuedo code added
+<<<<<<< HEAD
 >>>>>>> some psuedo code added
+=======
+=======
+    "addedTime": 0,
+    "totalTime": 0
+>>>>>>> applied new timer logic
+>>>>>>> applied new timer logic
   }
 ]
 >>>>>>> some psuedo code added
