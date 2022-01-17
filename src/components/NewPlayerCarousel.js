@@ -14,12 +14,8 @@ export default function NewPlayerCarousel({
   slideIndex,
   setSlideIndex
 }) {
-  //const [currImg, setCurrImg] = useState(0);
-  //const [slideIndex, setSlideIndex] = useState(0);
-
   const updateSlide = index => {
     setSlideIndex(index);
-
   };
 
   return (
