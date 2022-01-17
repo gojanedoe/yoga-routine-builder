@@ -18,7 +18,13 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPose, setSelectedPose] = useState(null);
   const [poseCounter, setPoseCounter] = useState(10);
-  const [addedTime2, setAddedTime2] = useState(0); //(...selectedPose, addedTime: addedTime)
+  const [addedTime, setAddedTime] = useState(0);
+  const [timerRunning, setTimerRunning] = useState(false);
+  const [totalTime, setTotalTime] = useState(0);
+
+  const startRoutineHandler = () => {
+    setTimerRunning(!timerRunning);
+  };
 
   return (
     
@@ -41,10 +47,15 @@ function App() {
             updateRoutine={updateRoutine}
             poseCounter={poseCounter}
             setPoseCounter={setPoseCounter}
-            addedTime2={addedTime2}
-            setAddedTime2={setAddedTime2}
+            addedTime={addedTime}
+            setAddedTime={setAddedTime}
             routine={routine}
+            totalTime={totalTime}
+            setTotalTime={setTotalTime}
           />
+        ) : null}
+        {timerRunning ? (
+          <Timer routine={routine} selectedPose={selectedPose} />
         ) : null}
         <Grid
           container
@@ -73,7 +84,9 @@ function App() {
             setSelectedPose={setSelectedPose}
           />
 
-          <Button variant="outlined">Start Routine</Button>
+          <Button variant="outlined" onClick={startRoutineHandler}>
+            Start Routine
+          </Button>
           <Button variant="outlined">Save Routine</Button>
         </Grid>
       </Container>
