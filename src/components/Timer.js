@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> applied new timer logic
 =======
@@ -19,6 +20,8 @@
 =======
 >>>>>>> applied new timer logic
 >>>>>>> applied new timer logic
+=======
+>>>>>>> final timer edits
 import { React, useState } from 'react';
 
 const Timer = props => {
@@ -29,11 +32,11 @@ const Timer = props => {
       Time Displayed:
       {routine.map(pose => {
         let timeDisplay = pose.defaultTime + pose.addedTime;
-        //"mock" timer circle:
         return <p key={pose.id}>{timeDisplay}</p>;
       })}
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -332,3 +335,8 @@ prev = () => {
 export default Timer;
 >>>>>>> applied new timer logic
 >>>>>>> applied new timer logic
+=======
+};
+
+export default Timer;
+>>>>>>> final timer edits

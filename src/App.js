@@ -12,6 +12,7 @@ import DragLogic from './components/DragLogic';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import InfoDialog from './components/InfoDialog.js';
 =======
 import InfoDialog from './InfoDialog.js';
@@ -39,6 +40,9 @@ import InfoDialog from './InfoDialog.js';
 import InfoDialog from './components/InfoDialog.js';
 >>>>>>> capturing user input in InfoDialog
 >>>>>>> capturing user input in InfoDialog
+=======
+import InfoDialog from './components/InfoDialog.js';
+>>>>>>> final timer edits
 import Timer from './components/Timer.js';
 
 import './App.css';
@@ -59,6 +63,7 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Add and save time to individual poses
   const [addedTime, setAddedTime] = useState(0);
@@ -82,6 +87,9 @@ function App() {
   const [addedTime, setAddedTime] = useState(0);
 >>>>>>> applied new timer logic
 >>>>>>> applied new timer logic
+=======
+  const [addedTime, setAddedTime] = useState(0);
+>>>>>>> final timer edits
   const [timerRunning, setTimerRunning] = useState(false);
   const [totalTime, setTotalTime] = useState(0);
 
@@ -92,6 +100,7 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> applied new timer logic
 =======
@@ -128,6 +137,8 @@ function App() {
 >>>>>>> Add and save time to individual poses
 =======
 >>>>>>> applied new timer logic
+=======
+>>>>>>> final timer edits
 
   return (
     
@@ -147,6 +158,7 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> capturing user input in InfoDialog
         {/* <Timer routine={routine} /> */}
@@ -171,6 +183,8 @@ function App() {
 >>>>>>> some psuedo code added
 =======
 >>>>>>> capturing user input in InfoDialog
+=======
+>>>>>>> final timer edits
         {modalOpen ? (
           <InfoDialog
             modalOpen={modalOpen}
@@ -186,6 +200,7 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Add and save time to individual poses
 =======
@@ -233,6 +248,8 @@ function App() {
             routine={routine}
 >>>>>>> Grab index of currently chosen pose
 =======
+=======
+>>>>>>> final timer edits
             addedTime={addedTime}
             setAddedTime={setAddedTime}
 <<<<<<< HEAD
@@ -252,8 +269,11 @@ function App() {
             routine={routine}
             totalTime={totalTime}
             setTotalTime={setTotalTime}
+<<<<<<< HEAD
 >>>>>>> applied new timer logic
 >>>>>>> applied new timer logic
+=======
+>>>>>>> final timer edits
           />
         ) : null}
         {timerRunning ? (
