@@ -27,7 +27,6 @@ function App() {
   };
 
   return (
-    
     <DragLogic
       poses={poses}
       updatePoses={updatePoses}
@@ -36,7 +35,6 @@ function App() {
       poseCounter={poseCounter}
       setPoseCounter={setPoseCounter}
     >
-      
       <Container className="landingContainer">
         {modalOpen ? (
           <InfoDialog

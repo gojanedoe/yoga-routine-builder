@@ -17,6 +17,7 @@ function SimpleDialog(props) {
 
   const handleClose = () => {
     onClose(routine);
+    setSlideIndex(0);
   };
 
   const time = new Date();
