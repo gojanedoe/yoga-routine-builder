@@ -13,6 +13,7 @@ import DragLogic from './components/DragLogic';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import InfoDialog from './components/InfoDialog.js';
 =======
 import InfoDialog from './InfoDialog.js';
@@ -43,6 +44,9 @@ import InfoDialog from './components/InfoDialog.js';
 =======
 import InfoDialog from './components/InfoDialog.js';
 >>>>>>> final timer edits
+=======
+import InfoDialog from './components/InfoDialog.js';
+>>>>>>> c127490101ef84e4d6f1f6520bb994c02034e4af
 import Timer from './components/Timer.js';
 
 import './App.css';
@@ -64,6 +68,7 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Add and save time to individual poses
   const [addedTime, setAddedTime] = useState(0);
@@ -90,6 +95,9 @@ function App() {
 =======
   const [addedTime, setAddedTime] = useState(0);
 >>>>>>> final timer edits
+=======
+  const [addedTime, setAddedTime] = useState(0);
+>>>>>>> c127490101ef84e4d6f1f6520bb994c02034e4af
   const [timerRunning, setTimerRunning] = useState(false);
   const [totalTime, setTotalTime] = useState(0);
 
@@ -101,6 +109,7 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> applied new timer logic
 =======
@@ -139,6 +148,8 @@ function App() {
 >>>>>>> applied new timer logic
 =======
 >>>>>>> final timer edits
+=======
+>>>>>>> c127490101ef84e4d6f1f6520bb994c02034e4af
 
   return (
     
@@ -159,6 +170,7 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> capturing user input in InfoDialog
         {/* <Timer routine={routine} /> */}
@@ -185,6 +197,9 @@ function App() {
 >>>>>>> capturing user input in InfoDialog
 =======
 >>>>>>> final timer edits
+=======
+        {/* <Timer routine={routine} /> */}
+>>>>>>> c127490101ef84e4d6f1f6520bb994c02034e4af
         {modalOpen ? (
           <InfoDialog
             modalOpen={modalOpen}
@@ -201,6 +216,7 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Add and save time to individual poses
 =======
@@ -274,6 +290,13 @@ function App() {
 >>>>>>> applied new timer logic
 =======
 >>>>>>> final timer edits
+=======
+            addedTime={addedTime}
+            setAddedTime={setAddedTime}
+            routine={routine}
+            totalTime={totalTime}
+            setTotalTime={setTotalTime}
+>>>>>>> c127490101ef84e4d6f1f6520bb994c02034e4af
           />
         ) : null}
         {timerRunning ? (

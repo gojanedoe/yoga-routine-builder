@@ -2,14 +2,22 @@
   {
     "id": "pose-1",
     "name": "Cat/Cow",
+<<<<<<< HEAD
     "description": "On hands and knees, alternate between curving the back/pelvis upward (like an angry cat) and curving them downward, stretching the muscles of the hips, back, abdomen, chest, and lungs",
     "benefits": "Tones the gastrointestinal tract and muscles surrounding the female reproductive system, helps relieve stress from menstrual cramps, lower back pain and sciatica",
     "image": "resources/catcow.svg",
     "audio": "resources/catcow.mp4",
+=======
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/cat-cow.png",
+    "audio": "audio file!",
+>>>>>>> c127490101ef84e4d6f1f6520bb994c02034e4af
     "defaultTime": 50,
     "addedTime": 0,
     "totalTime": 0
   },
+<<<<<<< HEAD
 
   {
     "id": "pose-2",
@@ -18,6 +26,15 @@
     "benefits": "Tones and strengthens the core for healthy posture, balance and coordination",
     "image": "resources/plank.svg",
     "audio": "resources/plank.mp4",
+=======
+  {
+    "id": "pose-2",
+    "name": "Plank",
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "/resources/plank.jpg",
+    "audio": "audio file!",
+>>>>>>> c127490101ef84e4d6f1f6520bb994c02034e4af
     "defaultTime": 39,
     "addedTime": 0,
     "totalTime": 0
@@ -25,10 +42,17 @@
   {
     "id": "pose-3",
     "name": "Bridge",
+<<<<<<< HEAD
     "description": "On back with feet flat on mat, bring knees up and extend navel towards the ceiling",
     "benefits": "A gentle start to spine extensions, improving the mobility of the spine and countering the effects of too much sitting",
     "image": "resources/bridge.svg",
     "audio": "resources/bridge.mp4",
+=======
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/bridge.jpg",
+    "audio": "audio file!",
+>>>>>>> c127490101ef84e4d6f1f6520bb994c02034e4af
     "defaultTime": 49,
     "addedTime": 0,
     "totalTime": 0
@@ -36,10 +60,17 @@
   {
     "id": "pose-4",
     "name": "Sukhasana",
+<<<<<<< HEAD
     "description": "Seated with legs crossed, shoulders and head relaxed, hands on knees, focus on deep, even breath",
     "benefits": "Improves concentration, flexibility of lower extremeties, including hips, and stability",
     "image": "resources/sukhasana.svg",
     "audio": "resources/sukhasana.mp4",
+=======
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/sukhasana.png",
+    "audio": "audio file!",
+>>>>>>> c127490101ef84e4d6f1f6520bb994c02034e4af
     "defaultTime": 41,
     "addedTime": 0,
     "totalTime": 0
@@ -47,10 +78,17 @@
   {
     "id": "pose-5",
     "name": "Tree",
+<<<<<<< HEAD
     "description": "Standing on one foot, balance and develop stablity with the core and connection with the earth",
     "benefits": "helps improve posture and provides stability to the pelvis, srengthening the ankles and legs, elongating the spine and improving flexibity and balance",
     "image": "resources/tree.svg",
     "audio": "resources/tree.mp4",
+=======
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/tree.jpg",
+    "audio": "audio file!",
+>>>>>>> c127490101ef84e4d6f1f6520bb994c02034e4af
     "defaultTime": 64,
     "addedTime": 0,
     "totalTime": 0
@@ -58,10 +96,17 @@
   {
     "id": "pose-6",
     "name": "Chair",
+<<<<<<< HEAD
     "description": "Stand and squat into a position as if seated in a chair",
     "benefits": "Strengthens the ankles, thighs, calves, and spine, stretches shoulders and chest, stimulates the abdominal organs, diaphragm and heart",
     "image": "resources/chair.svg",
     "audio": "resources/chair.mp4",
+=======
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/chair.jpg",
+    "audio": "audio file!",
+>>>>>>> c127490101ef84e4d6f1f6520bb994c02034e4af
     "defaultTime": 51,
     "addedTime": 0,
     "totalTime": 0
@@ -69,21 +114,36 @@
   {
     "id": "pose-7",
     "name": "Extended Side Angle",
+<<<<<<< HEAD
     "description": "Standing and twisting with feet apart, lean toward one knee, then the other",
     "benefits": "Stretches and strengthens the legs, knees, and ankles, increases stamina and stimulates the abdominal organs, as well as increasing physical balance",
     "image": "resources/extended_side_angle.svg",
     "audio": "resources/extended_side_angle.mp4",
+=======
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/extended-side-angle.png",
+    "audio": "audio file!",
+>>>>>>> c127490101ef84e4d6f1f6520bb994c02034e4af
     "defaultTime": 70,
     "addedTime": 0,
     "totalTime": 0
   },
   {
     "id": "pose-8",
+<<<<<<< HEAD
     "name": "Lotus",
     "description": "Laying on belly, raise head and chest, and feet and legs off of the mat",
     "benefits": "Imporoves function of intestine and appetite, strengthens the thighs and abdominal muscles, and improves blood supply to lower back muscles",
     "image": "resources/lotus.svg",
     "audio": "resources/lotus.mp4",
+=======
+    "name": "Locust",
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/locust.jpg",
+    "audio": "audio file!",
+>>>>>>> c127490101ef84e4d6f1f6520bb994c02034e4af
     "defaultTime": 53,
     "addedTime": 0,
     "totalTime": 0
@@ -91,10 +151,17 @@
   {
     "id": "pose-9",
     "name": "Downward Facing Dog",
+<<<<<<< HEAD
     "description": "On hands and knees, push hips up",
     "benefits": "Helps calm the mind, relieve stress as well as energize the body, stretching the shoulders, hamstrings, calves, arches, and hands",
     "image": "resources/down_dog.svg",
     "audio": "resources/down_dog.mp4",
+=======
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/downward-facing-dog.jpg",
+    "audio": "audio file!",
+>>>>>>> c127490101ef84e4d6f1f6520bb994c02034e4af
     "defaultTime": 57,
     "addedTime": 0,
     "totalTime": 0
@@ -102,10 +169,17 @@
   {
     "id": "pose-10",
     "name": "Cobra",
+<<<<<<< HEAD
     "description": "From belly, gently bring the chest up",
     "benefits": "Increases the mobility of the spine, strenghtens spinal support muscles, and helps relieve back pain, opens the chest and front of the body",
     "image": "resources/cobra.svg",
     "audio": "resources/cobra.mp4",
+=======
+    "description": "Hello",
+    "benefits": "Good For You",
+    "image": "resources/cobra.jpg",
+    "audio": "audio file!",
+>>>>>>> c127490101ef84e4d6f1f6520bb994c02034e4af
     "defaultTime": 45,
     "addedTime": 0,
     "totalTime": 0
