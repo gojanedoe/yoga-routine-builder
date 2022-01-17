@@ -3,6 +3,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> applied new timer logic
 =======
 >>>>>>> applied new timer logic
 import { React, useState } from 'react';
@@ -20,6 +23,7 @@ const Timer = props => {
       })}
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { useEffect } from 'react';
@@ -193,3 +197,8 @@ prev = () => {
 >>>>>>> some psuedo code added
 =======
 >>>>>>> capturing user input in InfoDialog
+=======
+};
+
+export default Timer;
+>>>>>>> applied new timer logic

@@ -39,8 +39,12 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [addedTime, setAddedTime] = useState(0);
 <<<<<<< HEAD
+=======
+  const [addedTime, setAddedTime] = useState(0);
+>>>>>>> applied new timer logic
 =======
   const [addedTime, setAddedTime] = useState(0);
 >>>>>>> applied new timer logic
@@ -51,6 +55,7 @@ function App() {
     setTimerRunning(!timerRunning);
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> capturing user input in InfoDialog
 =======
@@ -70,6 +75,8 @@ function App() {
 =======
   const [addedTime2, setAddedTime2] = useState(0); //(...selectedPose, addedTime: addedTime)
 >>>>>>> Add and save time to individual poses
+=======
+>>>>>>> applied new timer logic
 
   return (
     
@@ -112,6 +119,7 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             addedTime={addedTime}
             setAddedTime={setAddedTime}
 <<<<<<< HEAD
@@ -147,6 +155,13 @@ function App() {
 =======
             routine={routine}
 >>>>>>> Grab index of currently chosen pose
+=======
+            addedTime={addedTime}
+            setAddedTime={setAddedTime}
+            routine={routine}
+            totalTime={totalTime}
+            setTotalTime={setTotalTime}
+>>>>>>> applied new timer logic
           />
         ) : null}
         {timerRunning ? (
