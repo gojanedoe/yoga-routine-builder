@@ -9,8 +9,6 @@
 .landingGrid {
   height: 100%;
   text-align: center;
-
-  /* flex-grow: 1; */
 }
 
 .landingColumn {
@@ -22,7 +20,7 @@
 .landingColumn ul {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
 }
 
 .landingColumn li {
