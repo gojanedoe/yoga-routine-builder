@@ -51,64 +51,10 @@ function InfoDialog(props) {
     });
 
     setPoseCounter(poseCounter + 1);
-<<<<<<< HEAD
-    setModalOpen(false);
-    // setAddedTime(0);
-  };
-
-  const addTimeHandler = event => {
-    // Check right column poses (routine state) to find the current pose's placement
-
-    setCurrentIndex(routine.findIndex(pose => pose.id === selectedPose.id));
-    //let currentIndex = routine.findIndex(pose => pose.id === selectedPose.id);
-
-    setAddedTime2(event.target.value);
-
-    console.log('current index', currentIndex);
-
-<<<<<<< HEAD
-    if (event.target.value > 0) {
-      setAddedTime(event.target.value);
-    } else {
-      setAddedTime(0);
-    }
-<<<<<<< HEAD
-=======
-=======
-    // Update routine with newly timed pose
-    // setAddedTime(event.target.value);
-    let updatedPose = {
-      ...selectedPose,
-      addedTime: Number(event.target.value)
-    };
-
-    updateRoutine(prevRoutine => {
-      prevRoutine.splice(currentIndex, 1, updatedPose);
-      return prevRoutine;
-    });
-
->>>>>>> Add and save time to individual poses
-    console.log(event.target.value);
-    console.log('selected pose:', {
-      ...selectedPose,
-      addedTime: event.target.value
-    });
-<<<<<<< HEAD
->>>>>>> some pair programming
-=======
-
-    console.log(routine);
-    console.log(
-      'routine added time at curr index: ',
-      routine[currentIndex].addedTime
-    );
->>>>>>> Add and save time to individual poses
-=======
     setModalOpen(!modalOpen);
     setAddedTime(0);
     //setTotalTime(0);
     console.log(routine);
->>>>>>> applied new timer logic
   };
 
   return (
