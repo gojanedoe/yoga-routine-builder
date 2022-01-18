@@ -116,13 +116,13 @@ function App() {
           {/* ---- RIGHT COLUMN ---- */}
           <RoutineBuilder routine={routine} />
 
-          <Button variant="outlined" onClick={handleClickOpen}>
+          <Button variant="outlined" onClick={handleClickOpen} style={{backgroundColor:'rgb(214, 230, 176)'}}>
             Start Routine
           </Button>
 
           <SimpleDialog routine={routine} open={open} onClose={handleClose} />
 
-          <Button variant="outlined">Save Routine</Button>
+          <Button variant="outlined" style={{backgroundColor:'rgb(214, 230, 176)'}}>Save Routine</Button>
         </Grid>
       </Container>
     </DragDropContext>

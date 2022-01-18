@@ -18,6 +18,9 @@ export default function NewPlayerCarousel() {
         
         <div className="carousel-wrapper">
             <Carousel>
+                {/* {routine.map((pose) => {
+                    return <img src={pose.image} />
+                })} */}
                 {/* here we would write the logic for displaying the poses in order from the json / user input */}
                 <img src={yogaPoses[0].image} />
                 <img src={yogaPoses[1].image} />

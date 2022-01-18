@@ -17,7 +17,8 @@
     grid-area: "header";
     height: 100px;
     /* width: 80px; */
-    border: 1px solid;
+    border: 2px solid ;
+    border-color: rgb(214, 230, 176)
   }
   
   #link {

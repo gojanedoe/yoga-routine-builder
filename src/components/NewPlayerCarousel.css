@@ -25,17 +25,21 @@
     height: 200px;
     width: 1000px;
     margin:0;
-    background-color:rgb(214, 230, 176);
+    /* background-color:rgb(214, 230, 176); */
     /* light olive...nice */
-    /* background-color:rgb(230, 222, 176); */
+    /* background-color:rgb(233, 217, 128); */
     /* neutral tan .... not bad */
      /* background-color:rgb(230, 180, 176); */
     /* dark rose...not bad  */
+    /* background-color:rgb(67, 114, 133); */
+    /* nice blue */
 }
  
 img {
     /* width: 100%; */
     object-fit: contain;
+    border: 2px solid;
+    border-color: rgb(214, 230, 176)
 }
  
 .carousel .control-arrow {
@@ -71,5 +75,6 @@ carousel .thumb {
 }
  
 .carousel.carousel-slider .control-arrow {
-    background:rgba(0,0,0,0.2);
+    /* background:rgba(0,0,0,0.2); */
+    background: rgb(214, 230, 176);
 }

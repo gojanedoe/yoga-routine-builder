@@ -8,7 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import PoseTimer from './PoseTimer';
 import Grid from '@material-ui/core/Grid';
 import "./PoseTimer.css";
- 
+
  
 function SimpleDialog(props) {
   const { onClose, routine, open } = props;
@@ -32,7 +32,7 @@ function SimpleDialog(props) {
             <AudioPlayer
               elevation={1}
               width="500px"
-              variation="primary"
+              // variation='secondary'
               spacing={3}
               src="Assets/tree_(vrkasana).mp4"
               style={{textAlign: 'center'}}
@@ -51,7 +51,7 @@ function SimpleDialog(props) {
               color="inherit"
               onClick={handleClose}
               aria-label="close"
-              style={{ color: "red" }}
+              style={{ color: "red", backgroundColor:'rgb(214, 230, 176)' }}
             >
             <CloseIcon />
               Close Routine
