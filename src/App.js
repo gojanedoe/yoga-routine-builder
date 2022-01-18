@@ -6,6 +6,14 @@ import Grid from '@material-ui/core/Grid';
 import { Container } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import yogaPoses from './data/yogaPoses.json';
+import GetRoutineGrid from './components/RoutineGrid';
+
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+
+//firebase
+import database from './firebase';
+import { ref, set, onValue, update, remove, get, child, push } from 'firebase/database';
+
 import DragLogic from './components/DragLogic';
 import InfoDialog from './InfoDialog.js';
 import './App.css';
@@ -13,6 +21,17 @@ import './App.css';
 function App() {
   const [poses, updatePoses] = useState(yogaPoses);
   const [routine, updateRoutine] = useState([]);
+  const [viewModalOpen, setViewModalOpen] = useState(false);
+
+  
+    const saveRoutine = () => {
+
+      push(ref(database, '/'), {
+        Routine: Array.from(routine)
+      })
+    }
+
+  
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPose, setSelectedPose] = useState(null);
   const [poseCounter, setPoseCounter] = useState(10);
@@ -67,8 +86,20 @@ function App() {
           />
 
           <Button variant="outlined">Start Routine</Button>
-          <Button variant="outlined">Save Routine</Button>
+          <Button variant="outlined" onClick={saveRoutine}>Save Routine</Button>
+          <Button variant="outlined" onClick={() => setViewModalOpen({viewModalOpen: true})}>View Routines</Button>
+          <div>
+          {/* <input type="test" onChange={handleTest} value={data} /> */}
+          {/* <button onClick={saveRoutine}>Add Routine</button> */}
+          {/* <button onClick={getRoutine}>Get Database</button> */}
+        </div>
         </Grid>
+          {viewModalOpen ? (
+             <GetRoutineGrid
+              viewModalOpen={viewModalOpen}
+              setViewModalOpen={setViewModalOpen}
+            />
+          ) : null}
       </Container>
     </DragLogic>
   );
