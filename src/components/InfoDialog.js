@@ -7,7 +7,6 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import { createFFmpeg, fetchFile } from '@ffmpeg/ffmpeg';
 import './InfoDialog.css';
 
 function InfoDialog(props) {
@@ -25,21 +24,6 @@ function InfoDialog(props) {
     setTotalTime
   } = props;
 
-  const [audioCounter, setAudioCounter] = useState(10);
-  const [ready, setReady] = useState(false);
-  const [audioState, setAudioState] = useState();
-
-  const ffmpeg = createFFmpeg({ log: true });
-
-  const load = async () => {
-    await ffmpeg.load();
-    setReady(true);
-  };
-
-  useEffect(() => {
-    load();
-  }, []);
-
   const handleClose = () => {
     setModalOpen(!modalOpen);
   };
@@ -48,30 +32,6 @@ function InfoDialog(props) {
     setAddedTime(Number(event.target.value) - selectedPose.defaultTime);
     //setTotalTime(selectedPose.defaultTime + addedTime);
   };
-
-  // async function mergeAudio() {
-  //   // const fs = require('fs');
-
-  //   let audio1 = selectedPose.audio;
-  //   let audio2 = 'resources/1-second-of-silence.mp3';
-  //   await ffmpeg.load();
-  //   ffmpeg.FS('writeFile', `${audio1}`, await fetchFile(audio1));
-  //   ffmpeg.FS('writeFile', `${audio2}`, await fetchFile(audio2));
-  //   let newAudioId = `${selectedPose.name}-${Math.random() * 100}.mp3`;
-  //   for (let i = 0; i < selectedPose.addedTime; i++) {
-  //     await ffmpeg.run(
-  //       '-i',
-  //       `${audio2}`,
-  //       '-i',
-  //       `${audio2}`,
-  //       '-c',
-  //       'copy',
-  //       `${newAudioId}`
-  //     );
-  //   }
-  //   let data = await ffmpeg.FS('readFile', `${newAudioId}`);
-  //   return new Uint8Array(data.buffer);
-  // }
 
   const handleAddToRoutine = e => {
     updateRoutine(prevState => {
@@ -91,11 +51,10 @@ function InfoDialog(props) {
     setPoseCounter(poseCounter + 1);
     setModalOpen(!modalOpen);
     setAddedTime(0);
-    // console.log(mergeAudio());
     //setTotalTime(0);
   };
 
-  return ready ? (
+  return (
     <div>
       <Dialog
         open={modalOpen}
@@ -112,20 +71,8 @@ function InfoDialog(props) {
               src={selectedPose.image}
               alt="extended side angle"
             />
-            {`${selectedPose.description}`}
+            {`${selectedPose.benefits}`}
           </DialogContentText>
-          {audioState && (
-            <audio>
-              <source
-                src={URL.createObjectURL(audioState)}
-                type="audio/mpeg"
-              ></source>
-            </audio>
-          )}
-          <input
-            type="file"
-            onChange={e => setAudioState(e.target.files?.item(0))}
-          />
           <TextField
             autoFocus
             className="textField"
@@ -137,7 +84,6 @@ function InfoDialog(props) {
             placeholder={`${selectedPose.defaultTime} seconds`}
             helperText={`Adjust time here.`}
             // defaultValue={selectedPose.defaultTime}
-            //idea: helper text to give default time, then user chooses added seconds
             //value={addedTime} //routine[currentIndex].addedTime
             inputProps={{
               min: selectedPose.defaultTime,
@@ -146,7 +92,6 @@ function InfoDialog(props) {
             }}
             onChange={addTimeHandler}
           />
-          {/* needs capturing and sending over to Timer component */}
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
@@ -158,8 +103,6 @@ function InfoDialog(props) {
         </DialogActions>
       </Dialog>
     </div>
-  ) : (
-    <p>Loading...</p>
   );
 }
 
