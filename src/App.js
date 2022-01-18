@@ -18,11 +18,10 @@ function App() {
   const [poseCounter, setPoseCounter] = useState(10);
 
   const clearRoutine = () => {
-    updateRoutine([]); 
-};
+    updateRoutine([]);
+  };
 
   return (
-    
     <DragLogic
       poses={poses}
       updatePoses={updatePoses}
@@ -31,7 +30,6 @@ function App() {
       poseCounter={poseCounter}
       setPoseCounter={setPoseCounter}
     >
-      
       <Container className="landingContainer">
         {modalOpen ? (
           <InfoDialog
@@ -51,6 +49,7 @@ function App() {
           alignItems="center"
           spacing={2}
         >
+        <Grid item xs={12}><h1>Build a Yoga Routine</h1></Grid>
           {/* ---- LEFT COLUMN ---- */}
           <PoseBank
             poses={poses}
@@ -61,6 +60,10 @@ function App() {
           {/* ---- MIDDLE COLUMN ---- */}
           <Grid item xs={4}>
             →
+            <p>
+              Create your routine by dragging the desired pose to the routine
+              builder, rearrange as needed or remove poses.
+            </p>
           </Grid>
           {/* ---- RIGHT COLUMN ---- */}
           <RoutineBuilder
@@ -72,7 +75,9 @@ function App() {
 
           <Button variant="outlined">Start Routine</Button>
           <Button variant="outlined">Save Routine</Button>
-          <Button variant="outlined" onClick={clearRoutine} >Clear Routine</Button>
+          <Button variant="outlined" onClick={clearRoutine}>
+            Clear Routine
+          </Button>
         </Grid>
       </Container>
     </DragLogic>
