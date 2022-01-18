@@ -64,6 +64,7 @@ function App() {
             setModalOpen={setModalOpen}
             modalOpen={modalOpen}
             setSelectedPose={setSelectedPose}
+            updateRoutine={updateRoutine}
           />
 
           <Button variant="outlined">Start Routine</Button>
