@@ -16,7 +16,9 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPose, setSelectedPose] = useState(null);
   const [poseCounter, setPoseCounter] = useState(10);
-
+  const clearRoutine = () => {
+    updateRoutine([]); 
+};
   return (
     
     <DragLogic
@@ -68,6 +70,7 @@ function App() {
 
           <Button variant="outlined">Start Routine</Button>
           <Button variant="outlined">Save Routine</Button>
+          <Button variant="outlined" onClick={clearRoutine}>Clear Routine</Button>
         </Grid>
       </Container>
     </DragLogic>
