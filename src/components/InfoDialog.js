@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import Input from '@material-ui/core/Input';
+import Grid from '@material-ui/core/Grid';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -66,35 +66,41 @@ function InfoDialog(props) {
       >
         <DialogTitle id="form-dialog-title">{selectedPose.name}</DialogTitle>
         <DialogContent>
-          <DialogContentText>
-            <img
-              className="yogaPoseImages"
-              src={selectedPose.image}
-              alt="extended side angle"
-            />
-            {`${selectedPose.benefits}`}
-          </DialogContentText>
-          <TextField
-            autoFocus
-            className="textField"
-            variant="outlined"
-            margin="dense"
-            id={selectedPose.id}
-            label="Seconds in pose"
-            type="number"
-            placeholder={`${
-              selectedPose.defaultTime + selectedPose.addedTime
-            } seconds`}
-            helperText={`Adjust time here.`}
-            // defaultValue={selectedPose.defaultTime}
-            //value={addedTime} //routine[currentIndex].addedTime
-            inputProps={{
-              min: selectedPose.defaultTime,
-              max: 500,
-              step: 1
-            }}
-            onChange={addTimeHandler}
-          />
+          <Grid>
+            <Grid item>
+              <DialogContentText>
+                <img
+                  className="yogaPoseImages"
+                  src={selectedPose.image}
+                  alt="extended side angle"
+                />
+                <Grid item>{`${selectedPose.benefits}`}</Grid>
+              </DialogContentText>
+            </Grid>
+            <Grid item>
+              <TextField
+                autoFocus
+                className="textField"
+                variant="outlined"
+                margin="dense"
+                id={selectedPose.id}
+                label="Seconds in pose"
+                type="number"
+                placeholder={`${
+                  selectedPose.defaultTime + selectedPose.addedTime
+                } seconds`}
+                helperText={`Adjust time here.`}
+                // defaultValue={selectedPose.defaultTime}
+                //value={addedTime} //routine[currentIndex].addedTime
+                inputProps={{
+                  min: selectedPose.defaultTime,
+                  max: 500,
+                  step: 1
+                }}
+                onChange={addTimeHandler}
+              />
+            </Grid>
+          </Grid>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
