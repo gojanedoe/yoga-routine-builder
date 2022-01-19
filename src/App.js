@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PoseBank from './components/PoseBank';
 import RoutineBuilder from './components/RoutineBuilder';
+import SimpleDialog from './components/SimpleDialog';
 import '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import { Container } from '@material-ui/core';
@@ -22,8 +23,11 @@ function App() {
   const [poses, updatePoses] = useState(yogaPoses);
   const [routine, updateRoutine] = useState([]);
   const [viewModalOpen, setViewModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedPose, setSelectedPose] = useState(null);
+  const [poseCounter, setPoseCounter] = useState(10);
+  const [open, setOpen] = React.useState(false);
 
-  
     const saveRoutine = () => {
 
       push(ref(database, '/'), {
@@ -31,13 +35,14 @@ function App() {
       })
     }
 
-  
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedPose, setSelectedPose] = useState(null);
-  const [poseCounter, setPoseCounter] = useState(10);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = value => {
+    setOpen(false);
+  };
 
   return (
-    
     <DragLogic
       poses={poses}
       updatePoses={updatePoses}
@@ -46,7 +51,6 @@ function App() {
       poseCounter={poseCounter}
       setPoseCounter={setPoseCounter}
     >
-      
       <Container className="landingContainer">
         {modalOpen ? (
           <InfoDialog
@@ -85,14 +89,21 @@ function App() {
             setSelectedPose={setSelectedPose}
           />
 
-          <Button variant="outlined">Start Routine</Button>
-          <Button variant="outlined" onClick={saveRoutine}>Save Routine</Button>
+          <Button
+            variant="outlined"
+            onClick={handleClickOpen}
+            disabled={routine.length === 0 ? true : false}
+          >
+            Start Routine
+          </Button>
+
+          <SimpleDialog routine={routine} open={open} onClose={handleClose} />
+
+          <Button 
+          variant="outlined" 
+          disabled={routine.length === 0 ? true : false}
+          onClick={saveRoutine}>Save Routine</Button>
           <Button variant="outlined" onClick={() => setViewModalOpen({viewModalOpen: true})}>View Routines</Button>
-          <div>
-          {/* <input type="test" onChange={handleTest} value={data} /> */}
-          {/* <button onClick={saveRoutine}>Add Routine</button> */}
-          {/* <button onClick={getRoutine}>Get Database</button> */}
-        </div>
         </Grid>
           {viewModalOpen ? (
              <GetRoutineGrid
