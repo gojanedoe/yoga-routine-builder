@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useEffect } from 'react';
 import { useTimer } from 'react-timer-hook';
 import './PoseTimer.css';
 
@@ -6,7 +6,18 @@ import './PoseTimer.css';
 
 //What event listener needs to be tweaked so that we move to the next slide on timer end rather than audio end?
 
-function PoseTimer({ expiryTimestamp, handleNextSlide }) {
+function PoseTimer({
+  expiryTimestamp,
+  handleNextSlide,
+  routine,
+  slideIndex,
+  setSlideIndex,
+  isPaused,
+  setIsPaused,
+  test,
+  setTest,
+  onExpireTestFunction
+}) {
   const {
     seconds,
     minutes,
@@ -19,22 +30,45 @@ function PoseTimer({ expiryTimestamp, handleNextSlide }) {
     restart
   } = useTimer({
     expiryTimestamp,
-    onExpire: () => console.warn('onExpire called')
+    onExpire: () => handleNextSlide()
   });
 
+  // () => console.warn(test)
   // alternative to current time - round progress button: https://www.youtube.com/watch?v=B1tjrnX160k
   // timer buttons not working because of their location on page...timer needs to be lower than thumbs
 
+  useEffect(() => {
+    const time = new Date();
+    time.setSeconds(
+      time.getSeconds() +
+        routine[slideIndex].defaultTime +
+        routine[slideIndex].addedTime
+    );
+    restart(time);
+  }, [slideIndex]);
+
+  //onPause function: call pause on timer AND pause audio(if applicable)
+  //How is audio paused right now?
+
+  const handlePause = () => {
+    setIsPaused(!isPaused);
+    pause();
+  };
+
+  const handleResume = () => {
+    setIsPaused(!isPaused);
+    resume();
+  };
+
   return (
     <div style={{ textAlign: 'center' }}>
-      {/* <h3>Time left in pose:</h3> */}
       <div className="countdown" style={{ fontSize: '25px' }}>
         <span>{minutes}</span>:<span>{seconds}</span>
       </div>
       <p>{isRunning ? 'Time left in pose' : 'Paused'}</p>
       <button onClick={start}>Start</button>
-      <button onClick={pause}>Pause</button>
-      <button onClick={resume}>Resume</button>
+      <button onClick={handlePause}>Pause</button>
+      <button onClick={handleResume}>Resume</button>
       <button
         onClick={() => {
           // Restarts to 5 minutes timer
