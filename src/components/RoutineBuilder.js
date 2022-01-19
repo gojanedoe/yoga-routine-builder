@@ -7,6 +7,7 @@ import DraggablePoseCard from './DraggablePoseCard';
 
 const RoutineBuilder = ({
   routine,
+  updateRoutine,
   setModalOpen,
   modalOpen,
   setSelectedPose
@@ -38,6 +39,10 @@ const RoutineBuilder = ({
                         modalOpen={modalOpen}
                         setModalOpen={setModalOpen}
                         setSelectedPose={setSelectedPose}
+                        deletable={true}
+                        index={index}
+                        routine={routine}
+                        updateRoutine={updateRoutine}
                       />
                     </li>
                   )}
