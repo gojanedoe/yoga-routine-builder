@@ -1,0 +1,69 @@
+.carousel-wrapper {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    margin-bottom: -70px;
+    /* whole carousel */
+}
+ 
+.carousel.carousel-slider {
+    margin: 0px auto;
+    height: 350px;
+    width: 600px;
+    /* whole container on top even dots*/
+}
+ 
+.carousel.carousel-slider img {
+    object-fit: scale-down;
+    height: 350px;
+    /* big pictur \e on top */
+}
+ 
+.carousel {
+    height: 200px;
+    width: 1000px;
+    margin:0;
+    /* whole carousel */
+}
+ 
+img {
+    /* width: 100%; */
+    object-fit: contain;
+}
+ 
+.carousel .control-arrow {
+    outline:0;
+    border:0;
+    background:none;
+    top:50%;
+    margin-top:-13px;
+    font-size:18px;
+}
+ 
+carousel .thumb {
+    -webkit-transition:border .15s ease-in;
+    -moz-transition:border .15s ease-in;
+    -ms-transition:border .15s ease-in;
+    -o-transition:border .15s ease-in;
+    transition:border .15s ease-in;
+    display:inline-block;
+    margin-right:6px;
+    white-space:nowrap;
+    overflow:hidden;
+    border:3px solid #fff;
+    padding:2px
+}
+ 
+.carousel.carousel-slider .control-arrow {
+    top:0;
+    color:#fff;
+    font-size:26px;
+    bottom:0;
+    margin-top:0;
+    padding:5px;
+}
+ 
+.carousel.carousel-slider .control-arrow {
+    background:rgba(0,0,0,0.2);
+}

@@ -51,6 +51,7 @@ function InfoDialog(props) {
     setPoseCounter(poseCounter + 1);
     setModalOpen(!modalOpen);
     setAddedTime(0);
+    console.log(routine);
     //setTotalTime(0);
   };
 
@@ -81,7 +82,9 @@ function InfoDialog(props) {
             id={selectedPose.id}
             label="Seconds in pose"
             type="number"
-            placeholder={`${selectedPose.defaultTime} seconds`}
+            placeholder={`${
+              selectedPose.defaultTime + selectedPose.addedTime
+            } seconds`}
             helperText={`Adjust time here.`}
             // defaultValue={selectedPose.defaultTime}
             //value={addedTime} //routine[currentIndex].addedTime

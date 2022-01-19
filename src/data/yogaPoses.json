@@ -79,11 +79,11 @@
   },
   {
     "id": "pose-8",
-    "name": "Lotus",
+    "name": "Locust",
     "description": "Laying on belly, raise head and chest, and feet and legs off of the mat",
     "benefits": "Imporoves function of intestine and appetite, strengthens the thighs and abdominal muscles, and improves blood supply to lower back muscles",
-    "image": "resources/lotus.svg",
-    "audio": "resources/lotus.mp3",
+    "image": "resources/locust.svg",
+    "audio": "resources/locust.mp3",
     "defaultTime": 53,
     "addedTime": 0,
     "totalTime": 0
