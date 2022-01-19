@@ -26,7 +26,6 @@ import {
 
 import DragLogic from './components/DragLogic';
 import InfoDialog from './components/InfoDialog.js';
-import Timer from './components/Timer.js';
 
 import './App.css';
 

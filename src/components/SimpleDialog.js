@@ -13,13 +13,6 @@ function SimpleDialog(props) {
   const { onClose, routine, open, selectedPose } = props;
   const [slideIndex, setSlideIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [test, setTest] = useState('state test variable');
-
-  console.log('slide index: ', slideIndex);
-  console.log(
-    'routine index',
-    routine[slideIndex].defaultTime + routine[slideIndex].addedTime
-  );
 
   const time = new Date();
   time.setSeconds(
@@ -37,11 +30,6 @@ function SimpleDialog(props) {
   const handleClose = () => {
     onClose(routine);
     setSlideIndex(0);
-  };
-
-  const onExpireTestFunction = () => {
-    setTest('successfully changed test');
-    console.log(test);
   };
 
   const handleNextSlide = () => {
@@ -96,12 +84,8 @@ function SimpleDialog(props) {
               routine={routine}
               expiryTimestamp={time}
               slideIndex={slideIndex}
-              setSlideIndex={setSlideIndex}
               isPaused={isPaused}
               setIsPaused={setIsPaused}
-              test={test}
-              setTest={setTest}
-              onExpireTestFunction={onExpireTestFunction}
             />
             {/* <OriginTimer expiryTimestamp={time} />  this was an experiment where I learned that the buttons don't
     work when it is position over the carousel, and only work when under*/}

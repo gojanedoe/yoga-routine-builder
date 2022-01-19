@@ -11,27 +11,14 @@ function PoseTimer({
   handleNextSlide,
   routine,
   slideIndex,
-  setSlideIndex,
   isPaused,
-  setIsPaused,
-  test,
-  setTest,
-  onExpireTestFunction
+  setIsPaused
 }) {
-  const {
-    seconds,
-    minutes,
-    hours,
-    days,
-    isRunning,
-    start,
-    pause,
-    resume,
-    restart
-  } = useTimer({
-    expiryTimestamp,
-    onExpire: () => handleNextSlide()
-  });
+  const { seconds, minutes, isRunning, start, pause, resume, restart } =
+    useTimer({
+      expiryTimestamp,
+      onExpire: () => handleNextSlide()
+    });
 
   // () => console.warn(test)
   // alternative to current time - round progress button: https://www.youtube.com/watch?v=B1tjrnX160k
@@ -66,7 +53,7 @@ function PoseTimer({
         <span>{minutes}</span>:<span>{seconds}</span>
       </div>
       <p>{isRunning ? 'Time left in pose' : 'Paused'}</p>
-      <button onClick={start}>Start</button>
+      {/* <button onClick={start}>Start</button> */}
       <button onClick={handlePause}>Pause</button>
       <button onClick={handleResume}>Resume</button>
       <button

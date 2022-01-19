@@ -22,7 +22,7 @@ export default function NewPlayerCarousel({
     <div className="carousel-wrapper">
       <Carousel onChange={updateSlide} selectedItem={slideIndex}>
         {routine.map(pose => {
-          return <img src={pose.image} />;
+          return <img key={pose.id} src={pose.image} />;
         })}
       </Carousel>
     </div>
