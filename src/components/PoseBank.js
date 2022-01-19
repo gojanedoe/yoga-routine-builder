@@ -29,6 +29,8 @@ const PoseBank = ({ poses, setModalOpen, modalOpen, setSelectedPose }) => {
                           modalOpen={modalOpen}
                           setModalOpen={setModalOpen}
                           setSelectedPose={setSelectedPose}
+                        deletable={false}
+                        
                         />
                       </li>
                       {/* Copy of card left in place when above card is being dragged*/}
@@ -39,6 +41,7 @@ const PoseBank = ({ poses, setModalOpen, modalOpen, setSelectedPose }) => {
                             modalOpen={modalOpen}
                             setModalOpen={setModalOpen}
                             setSelectedPose={setSelectedPose}
+                            deletable = {false}
                           />
                         )}
                       </li>

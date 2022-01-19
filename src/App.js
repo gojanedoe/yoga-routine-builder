@@ -53,6 +53,10 @@ function App() {
     setOpen(false);
   };
 
+  const clearRoutine = () => {
+    updateRoutine([]);
+  };
+
   return (
     <DragLogic
       poses={poses}
@@ -86,6 +90,7 @@ function App() {
           alignItems="center"
           spacing={2}
         >
+        <Grid item xs={12}><h1>Build a Yoga Routine</h1></Grid>
           {/* ---- LEFT COLUMN ---- */}
           <PoseBank
             poses={poses}
@@ -96,6 +101,10 @@ function App() {
           {/* ---- MIDDLE COLUMN ---- */}
           <Grid item xs={4}>
             →
+            <p>
+              Create your routine by dragging the desired pose to the routine
+              builder, rearrange as needed or remove poses.
+            </p>
           </Grid>
           {/* ---- RIGHT COLUMN ---- */}
           <RoutineBuilder
@@ -103,8 +112,8 @@ function App() {
             setModalOpen={setModalOpen}
             modalOpen={modalOpen}
             setSelectedPose={setSelectedPose}
+            updateRoutine={updateRoutine}
           />
-
           <Button
             variant="outlined"
             onClick={handleClickOpen}
