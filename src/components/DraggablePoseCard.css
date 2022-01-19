@@ -3,7 +3,7 @@
     grid-gap: 1px;
     grid-template-areas:  "header" "pic"
                           "" "link";
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 7fr 5fr;
     height: 100px;
     justify-content: start;
   }
@@ -14,8 +14,8 @@
   
   .pic {
     grid-area: "header";
-    height: 4rem;
-    width: 4rem;
+    height: 100px;
+    /* width: 80px; */
     border: 1px solid;
   }
   
