@@ -1,0 +1,22 @@
+* {
+    text-align: center;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    /* @media screen {
+ 
+    } */
+}
+ 
+.player {
+   
+    margin-left: auto;
+    margin-right: auto;
+ 
+   
+}
+ 
+.routine {
+    font-size: 80px;
+    font-weight: bold;
+}

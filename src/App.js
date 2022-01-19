@@ -26,6 +26,7 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPose, setSelectedPose] = useState(null);
   const [poseCounter, setPoseCounter] = useState(10);
+  const [open, setOpen] = React.useState(false);
 
     const saveRoutine = () => {
 
