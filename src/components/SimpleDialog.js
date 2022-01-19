@@ -14,6 +14,14 @@ function SimpleDialog(props) {
   const [slideIndex, setSlideIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
+  // const playAudio = () => {
+  //   let audioEl = document.getElementsByClassName('audio-element');
+  //   for (let i = 0; i < routine.length; i++) {
+  //     audioEl = document.getElementsByClassName('audio-element')[i];
+  //   }
+  //   audioEl.play();
+  // };
+
   const time = new Date();
   time.setSeconds(
     time.getSeconds() +
@@ -59,6 +67,15 @@ function SimpleDialog(props) {
         <Grid item xs={1}></Grid>
         <Grid item xs={3}>
           <item>
+            {/* <audio className="audio-element">
+              <source
+                src={
+                  routine.length === 0
+                    ? 'Assets/tree_(vrkasana).mp4'
+                    : routine[slideIndex].audio
+                }
+              ></source>
+            </audio> */}
             {isPaused ? null : (
               <AudioPlayer
                 elevation={1}
@@ -86,6 +103,7 @@ function SimpleDialog(props) {
               slideIndex={slideIndex}
               isPaused={isPaused}
               setIsPaused={setIsPaused}
+              // playAudio={playAudio}
             />
             {/* <OriginTimer expiryTimestamp={time} />  this was an experiment where I learned that the buttons don't
     work when it is position over the carousel, and only work when under*/}

@@ -13,6 +13,7 @@ function PoseTimer({
   slideIndex,
   isPaused,
   setIsPaused
+  // playAudio
 }) {
   const { seconds, minutes, isRunning, start, pause, resume, restart } =
     useTimer({
@@ -47,13 +48,18 @@ function PoseTimer({
     resume();
   };
 
+  // const handleStart = () => {
+  //   playAudio();
+  //   start();
+  // };
+
   return (
     <div style={{ textAlign: 'center' }}>
       <div className="countdown" style={{ fontSize: '25px' }}>
         <span>{minutes}</span>:<span>{seconds}</span>
       </div>
       <p>{isRunning ? 'Time left in pose' : 'Paused'}</p>
-      {/* <button onClick={start}>Start</button> */}
+      {/* <button onClick={handleStart}>Start</button> */}
       <button onClick={handlePause}>Pause</button>
       <button onClick={handleResume}>Resume</button>
       <button
