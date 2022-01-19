@@ -52,10 +52,10 @@ const DraggablePoseCard = ({
         </Typography>
         <CardMedia
           component="img"
-          title="Pose"
+          title={pose.name}
           height="150"
           image={pose.image}
-          alt="pose image"
+          alt={pose.name}
           className="pic"
         />
       </CardContent>

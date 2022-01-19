@@ -51,7 +51,7 @@ function InfoDialog(props) {
             <img
               className="yogaPoseImages"
               src={selectedPose.image}
-              alt="extended side angle"
+              alt={selectedPose.name}
             />
             {`${selectedPose.description}`}
           </DialogContentText>
