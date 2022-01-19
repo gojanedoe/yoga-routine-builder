@@ -10,10 +10,14 @@ import Grid from '@material-ui/core/Grid';
 import './PoseTimer.css';
 
 function SimpleDialog(props) {
-  const { onClose, routine, open } = props;
+  const { onClose, routine, open, selectedPose } = props;
   const [slideIndex, setSlideIndex] = useState(0);
 
   console.log('slide index: ', slideIndex);
+  console.log(
+    'routine index',
+    routine[slideIndex].defaultTime + routine[slideIndex].addedTime
+  );
 
   const handleClose = () => {
     onClose(routine);
@@ -21,9 +25,13 @@ function SimpleDialog(props) {
   };
 
   const time = new Date();
-  time.setSeconds(time.getSeconds() + 600); // 10 minutes timer
+  time.setSeconds(
+    time.getSeconds() +
+      routine[slideIndex].defaultTime +
+      routine[slideIndex].addedTime
+  );
 
-  const handleAudioEnd = () => {
+  const handleNextSlide = () => {
     // If routine is over, alert and end
     if (slideIndex === routine.length - 1) {
       alert('Great workout!');
@@ -61,14 +69,17 @@ function SimpleDialog(props) {
                   : routine[slideIndex].audio
               }
               style={{ textAlign: 'center' }}
-              onFinished={handleAudioEnd}
+              onFinished={handleNextSlide}
               autoplay={true}
             />
           </item>
         </Grid>
         <Grid item xs={4}>
           <div className="player">
-            <PoseTimer expiryTimestamp={time} />
+            <PoseTimer
+              handleNextSlide={handleNextSlide}
+              expiryTimestamp={time}
+            />
             {/* <OriginTimer expiryTimestamp={time} />  this was an experiment where I learned that the buttons don't
     work when it is position over the carousel, and only work when under*/}
           </div>

@@ -114,7 +114,9 @@ function App() {
             Start Routine
           </Button>
 
-          <SimpleDialog routine={routine} open={open} onClose={handleClose} />
+          {routine.length === 0 ? null : (
+            <SimpleDialog routine={routine} open={open} onClose={handleClose} />
+          )}
 
           <Button
             variant="outlined"
