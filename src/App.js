@@ -44,6 +44,7 @@ function App() {
     push(ref(database, '/'), {
       Routine: Array.from(routine)
     });
+    clearRoutine();
   };
 
   const handleClickOpen = () => {
