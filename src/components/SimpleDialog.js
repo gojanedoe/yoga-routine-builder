@@ -51,7 +51,7 @@ function SimpleDialog(props) {
               color="inherit"
               onClick={handleClose}
               aria-label="close"
-              style={{ color: "red", backgroundColor:'rgb(214, 230, 176)' }}
+              style={{ color: "red"}}
             >
             <CloseIcon />
               Close Routine
