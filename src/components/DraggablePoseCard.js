@@ -60,9 +60,14 @@ const DraggablePoseCard = ({
         />
       </CardContent>
       <CardActions>
+        {isDeletable ? 
+        <Button size="small" id="link" onClick={handleButtonClick}>
+        Update Pose
+      </Button>
+        :
         <Button size="small" id="link" onClick={handleButtonClick}>
           Learn More
-        </Button>
+        </Button>}
       </CardActions>
     </Card>
   );
