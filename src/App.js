@@ -8,6 +8,7 @@ import { Container } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import yogaPoses from './data/yogaPoses.json';
 import GetRoutineGrid from './components/RoutineGrid';
+import AuthForm from './components/Auth/AuthForm';
 
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
@@ -67,6 +68,7 @@ function App() {
       poseCounter={poseCounter}
       setPoseCounter={setPoseCounter}
     >
+      <AuthForm />
       <Container className="landingContainer">
         {modalOpen ? (
           <InfoDialog
@@ -91,7 +93,9 @@ function App() {
           alignItems="center"
           spacing={2}
         >
-        <Grid item xs={12}><h1>Build a Yoga Routine</h1></Grid>
+          <Grid item xs={12}>
+            <h1>Build a Yoga Routine</h1>
+          </Grid>
           {/* ---- LEFT COLUMN ---- */}
           <PoseBank
             poses={poses}
