@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import AudioPlayer from 'material-ui-audio-player';
 import NewPlayerCarousel from './NewPlayerCarousel';
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
@@ -12,28 +11,6 @@ import './PoseTimer.css';
 function SimpleDialog(props) {
   const { onClose, routine, open, selectedPose } = props;
   const [slideIndex, setSlideIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-
-  // const playAudio = () => {
-  //   let audioEl = document.getElementsByClassName('audio-element');
-  //   for (let i = 0; i < routine.length; i++) {
-  //     audioEl = document.getElementsByClassName('audio-element')[i];
-  //   }
-  //   audioEl.play();
-  // };
-
-  const time = new Date();
-  time.setSeconds(
-    time.getSeconds() +
-      routine[slideIndex].defaultTime +
-      routine[slideIndex].addedTime
-  );
-
-  //I don't know how to resume audio after pause because I think it's a built-in functionality of the player that I don't know how to manipulate, so each audio file is restarting after 'pause' from the timer controls
-
-  // const handlePauseSD = () => {
-  //   setIsPaused(true);
-  // };
 
   const handleClose = () => {
     onClose(routine);
@@ -67,31 +44,7 @@ function SimpleDialog(props) {
         <Grid item xs={1}></Grid>
         <Grid item xs={3}>
           <item>
-            {/* <audio className="audio-element">
-              <source
-                src={
-                  routine.length === 0
-                    ? 'Assets/tree_(vrkasana).mp4'
-                    : routine[slideIndex].audio
-                }
-              ></source>
-            </audio> */}
-            {isPaused ? null : (
-              <AudioPlayer
-                elevation={1}
-                width="60px"
-                variation="primary"
-                spacing={3}
-                src={
-                  routine.length === 0
-                    ? 'Assets/tree_(vrkasana).mp4'
-                    : routine[slideIndex].audio
-                }
-                style={{ textAlign: 'center' }}
-                autoplay={true}
-                displaySlider={false}
-              />
-            )}
+            <p>Placeholder</p>
           </item>
         </Grid>
         <Grid item xs={4}>
@@ -99,11 +52,7 @@ function SimpleDialog(props) {
             <PoseTimer
               handleNextSlide={handleNextSlide}
               routine={routine}
-              expiryTimestamp={time}
               slideIndex={slideIndex}
-              isPaused={isPaused}
-              setIsPaused={setIsPaused}
-              // playAudio={playAudio}
             />
             {/* <OriginTimer expiryTimestamp={time} />  this was an experiment where I learned that the buttons don't
     work when it is position over the carousel, and only work when under*/}

@@ -1,27 +1,18 @@
 import { React, useEffect } from 'react';
 import { useTimer } from 'react-timer-hook';
+import AudioPlayer from 'material-ui-audio-player';
 import './PoseTimer.css';
 
-//What information does SimpleDialog need from InfoDialog to function/show Timer timestamps accurately?
+//Bug: Timer is pausing between poses when the timer expires and when new slide is chosen manually
+//onPlayed in AudioPlayer is conflicting with useEffect restart timestamp; causing slides to not update their time and flow from one to the other with a 0-second timestamp. Goal: resume timer function after a pause
 
-//What event listener needs to be tweaked so that we move to the next slide on timer end rather than audio end?
-
-function PoseTimer({
-  expiryTimestamp,
-  handleNextSlide,
-  routine,
-  slideIndex,
-  isPaused,
-  setIsPaused
-  // playAudio
-}) {
+function PoseTimer({ expiryTimestamp, handleNextSlide, routine, slideIndex }) {
   const { seconds, minutes, isRunning, start, pause, resume, restart } =
     useTimer({
       expiryTimestamp,
       onExpire: () => handleNextSlide()
     });
 
-  // () => console.warn(test)
   // alternative to current time - round progress button: https://www.youtube.com/watch?v=B1tjrnX160k
   // timer buttons not working because of their location on page...timer needs to be lower than thumbs
 
@@ -33,25 +24,19 @@ function PoseTimer({
         routine[slideIndex].addedTime
     );
     restart(time);
-  }, [slideIndex]);
-
-  //onPause function: call pause on timer AND pause audio(if applicable)
-  //How is audio paused right now?
+    console.log('I started');
+  }, [slideIndex, routine]);
 
   const handlePause = () => {
-    setIsPaused(!isPaused);
+    // setIsPaused(!isPaused);
     pause();
   };
 
   const handleResume = () => {
-    setIsPaused(!isPaused);
+    // setIsPaused(!isPaused);
     resume();
+    console.log('I resumed');
   };
-
-  // const handleStart = () => {
-  //   playAudio();
-  //   start();
-  // };
 
   return (
     <div style={{ textAlign: 'center' }}>
@@ -60,7 +45,7 @@ function PoseTimer({
       </div>
       <p>{isRunning ? 'Time left in pose' : 'Paused'}</p>
       {/* <button onClick={handleStart}>Start</button> */}
-      <button onClick={handlePause}>Pause</button>
+      {/* <button onClick={handlePause}>Pause</button> */}
       <button onClick={handleResume}>Resume</button>
       <button
         onClick={() => {
@@ -72,6 +57,22 @@ function PoseTimer({
       >
         Restart
       </button>
+      <AudioPlayer
+        elevation={1}
+        width="60px"
+        variation="primary"
+        spacing={3}
+        src={
+          routine.length === 0
+            ? 'Assets/tree_(vrkasana).mp4'
+            : routine[slideIndex].audio
+        }
+        style={{ textAlign: 'center' }}
+        autoplay={true}
+        displaySlider={false}
+        onPaused={handlePause}
+        // onPlayed={resume}
+      />
     </div>
   );
 }
