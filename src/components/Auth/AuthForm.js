@@ -1,8 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
 const AuthForm = () => {
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
+
+  const [isLogin, setIsLogin] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const signupHandler = event => {
     event.preventDefault();
@@ -11,6 +14,9 @@ const AuthForm = () => {
     const enteredPassword = passwordInputRef.current.value;
 
     // Send sign up info to Firebase
+
+    setIsLoading(true);
+
     fetch(
       'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBAK05pq6Pp1qURQFy1czDGyNiEATk-wkc',
       {
@@ -25,6 +31,7 @@ const AuthForm = () => {
         }
       }
     ).then(res => {
+      setIsLoading(false);
       if (res.ok) {
         // sign up worked
         alert('Your Account Creation was Successful!');
@@ -32,7 +39,11 @@ const AuthForm = () => {
         // if sign up doesn't work
         return res.json().then(data => {
           // show error
-          alert(data.error.message);
+          let errorMessage = 'Authentication failed!';
+          if (data && data.error && data.error.message) {
+            errorMessage = data.error.message;
+          }
+          alert(errorMessage);
         });
       }
     });
@@ -44,7 +55,7 @@ const AuthForm = () => {
 
   return (
     <>
-      <h2>Sign Up</h2>
+      {isLogin ? <h2>Log In</h2> : <h2>Sign Up</h2>}
       <form onSubmit={signupHandler}>
         <label htmlFor="email">Your Email:</label>
         <input type="email" id="email" required ref={emailInputRef}></input>
@@ -55,8 +66,9 @@ const AuthForm = () => {
           required
           ref={passwordInputRef}
         ></input>
-        <input type="submit" value="Sign Up"></input>
+        {!isLoading ? <input type="submit" value={isLogin ? "Login" : "Sign Up"}></input> : <p>Sending request...</p> }
       </form>
+      { !isLogin ? <button onClick={() => setIsLogin(!isLogin)}>Login with existing account</button> : <button onClick={() => setIsLogin(!isLogin)}>Create a new account</button>}
     </>
   );
 };
