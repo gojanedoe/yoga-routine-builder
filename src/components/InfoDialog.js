@@ -21,7 +21,8 @@ function InfoDialog(props) {
     setAddedTime,
     routine,
     totalTime,
-    setTotalTime
+    setTotalTime,
+    isDeletable
   } = props;
 
   const handleClose = () => {
@@ -104,11 +105,12 @@ function InfoDialog(props) {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
-            Cancel
+            Close
           </Button>
+          {isDeletable &&
           <Button onClick={e => handleAddToRoutine(e)} color="primary">
             Add to Routine
-          </Button>
+          </Button>}
         </DialogActions>
       </Dialog>
     </div>

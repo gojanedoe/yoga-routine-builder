@@ -6,7 +6,6 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 import './DraggablePoseCard.css';
-import yogaPoses from '../data/yogaPoses.json';
 import CardHeader from '@material-ui/core/CardHeader';
 import CloseButton from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
