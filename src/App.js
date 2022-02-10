@@ -40,6 +40,7 @@ function App() {
   const [totalTime, setTotalTime] = useState(0);
   const [open, setOpen] = React.useState(false);
 
+
   const saveRoutine = () => {
     push(ref(database, '/'), {
       Routine: Array.from(routine)
@@ -134,6 +135,7 @@ function App() {
           >
             Save Routine
           </Button>
+          <Button variant="outlined" onClick={clearRoutine}>Clear Routine</Button>
           <Button
             variant="outlined"
             onClick={() => setViewModalOpen({ viewModalOpen: true })}
