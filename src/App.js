@@ -9,8 +9,6 @@ import Button from '@material-ui/core/Button';
 import yogaPoses from './data/yogaPoses.json';
 import GetRoutineGrid from './components/RoutineGrid';
 
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-
 //firebase
 import database from './firebase';
 import {
@@ -133,6 +131,9 @@ function App() {
             onClick={saveRoutine}
           >
             Save Routine
+          </Button>
+          <Button variant="outlined" onClick={clearRoutine}>
+            Clear Routine
           </Button>
           <Button
             variant="outlined"
