@@ -28,7 +28,7 @@ import InfoDialog from './components/InfoDialog.js';
 import './App.css';
 
 function App() {
-  at [poses, updatePoses] = useState(yogaPoses);
+  const [poses, updatePoses] = useState(yogaPoses);
   const [routine, updateRoutine] = useState([]);
   const [viewModalOpen, setViewModalOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
