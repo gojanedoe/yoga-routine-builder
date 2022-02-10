@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
 import AudioPlayer from 'material-ui-audio-player';
 import NewPlayerCarousel from './NewPlayerCarousel';
 import CloseIcon from '@material-ui/icons/Close';
