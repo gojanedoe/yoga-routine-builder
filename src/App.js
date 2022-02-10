@@ -133,9 +133,11 @@ function App() {
           >
             Save Routine
           </Button>
+
           <Button variant="outlined" onClick={clearRoutine}>
             Clear Routine
           </Button>
+          <Button variant="outlined" onClick={clearRoutine}>Clear Routine</Button>
           <Button
             variant="outlined"
             onClick={() => setViewModalOpen({ viewModalOpen: true })}
