@@ -28,7 +28,7 @@ import InfoDialog from './components/InfoDialog.js';
 import './App.css';
 
 function App() {
-  const [poses, updatePoses] = useState(yogaPoses);
+  at [poses, updatePoses] = useState(yogaPoses);
   const [routine, updateRoutine] = useState([]);
   const [viewModalOpen, setViewModalOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -133,13 +133,9 @@ function App() {
           >
             Save Routine
           </Button>
-<<<<<<< HEAD
           <Button variant="outlined" onClick={clearRoutine}>
             Clear Routine
           </Button>
-=======
-          <Button variant="outlined" onClick={clearRoutine}>Clear Routine</Button>
->>>>>>> aa666467413db3904268542359ba346476d4d494
           <Button
             variant="outlined"
             onClick={() => setViewModalOpen({ viewModalOpen: true })}
