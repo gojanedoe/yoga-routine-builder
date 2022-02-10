@@ -100,9 +100,9 @@ function App() {
             setSelectedPose={setSelectedPose}
           />
           {/* ---- MIDDLE COLUMN ---- */}
-          <Grid item xs={4}>
+          <Grid item xs={4}><h1>
             →
-            <p>
+            </h1><p>
               Create your routine by dragging the desired pose to the routine
               builder, rearrange as needed or remove poses.
             </p>

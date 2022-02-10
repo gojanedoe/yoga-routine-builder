@@ -1,3 +1,8 @@
+/* $desktop:1200px;
+$laptop:1024px;
+$tablet:768px;
+$phone:480px; */
+
 .contentContainer {
     display: grid;
     grid-gap: 1px;
@@ -6,6 +11,12 @@
     grid-template-columns: 7fr 5fr;
     height: 100px;
     justify-content: start;
+    /* @media screen and (max-width:760px) {
+      grid-template-areas: 'header'
+                            'pic'
+                            'link';
+     } */  
+     /* should work, to put image under header when screen is smaller thatn 760, but it doesn't */
   }
   
   .header {
@@ -13,10 +24,16 @@
   }
   
   .pic {
-    grid-area: "header";
+    grid-area: "pic";
     height: 100px;
+    width: auto;
     /* width: 80px; */
     border: 1px solid;
+    /* @media screen and (max-width:760px) {
+      flex-direction: column;
+      min-width: 50px;
+     } */
+      /* should put image in a column and keep it at least 50 px wide when screen is small, but it doesn't */
   }
   
   #link {
