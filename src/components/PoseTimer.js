@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTimer } from 'react-timer-hook';
 import AudioPlayer from 'material-ui-audio-player';
 import './PoseTimer.css';
@@ -13,10 +13,28 @@ function PoseTimer({ expiryTimestamp, handleNextSlide, routine, slideIndex }) {
       onExpire: () => handleNextSlide()
     });
 
+  const [count, setCount] = useState(0);
   // alternative to current time - round progress button: https://www.youtube.com/watch?v=B1tjrnX160k
   // timer buttons not working because of their location on page...timer needs to be lower than thumbs
 
+  console.log('re-rendered count: ', count);
+
   useEffect(() => {
+    if (count === 0) {
+      handlePlay();
+      // setCount(0);
+    } else if (count > 0) {
+      resume();
+    }
+  }, [slideIndex, routine]);
+
+  // useEffect(() => {
+  //   if (isRunning) {
+  //     setCount(1);
+  //   }
+  // }, [count]);
+
+  const handlePlay = () => {
     const time = new Date();
     time.setSeconds(
       time.getSeconds() +
@@ -24,18 +42,25 @@ function PoseTimer({ expiryTimestamp, handleNextSlide, routine, slideIndex }) {
         routine[slideIndex].addedTime
     );
     restart(time);
+    setCount(1);
     console.log('I started');
-  }, [slideIndex, routine]);
+    console.log(seconds);
+    console.log('count:', count);
+    // setCount(prevCount => { prevCount++ });
+  };
 
   const handlePause = () => {
     // setIsPaused(!isPaused);
     pause();
+    setCount(1);
+    console.log('count', count);
   };
 
   const handleResume = () => {
-    // setIsPaused(!isPaused);
-    resume();
-    console.log('I resumed');
+    if (count > 0) {
+      resume();
+      console.log('I resumed');
+    }
   };
 
   return (
@@ -71,7 +96,7 @@ function PoseTimer({ expiryTimestamp, handleNextSlide, routine, slideIndex }) {
         autoplay={true}
         displaySlider={false}
         onPaused={handlePause}
-        // onPlayed={resume}
+        onPlayed={handleResume}
       />
     </div>
   );
