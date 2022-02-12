@@ -20,51 +20,49 @@ const AuthForm = () => {
     let url;
 
     if (isLogin) {
-
-      url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBAK05pq6Pp1qURQFy1czDGyNiEATk-wkc';
-
-    } else { 
-
-      url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBAK05pq6Pp1qURQFy1czDGyNiEATk-wkc';
-
+      console.log('logging in');
+      url =
+        'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBAK05pq6Pp1qURQFy1czDGyNiEATk-wkc';
+    } else {
+      console.log('signing up');
+      url =
+        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBAK05pq6Pp1qURQFy1czDGyNiEATk-wkc';
     }
-    fetch(
-      url,
-      {
-        method: 'POST',
-        body: JSON.stringify({
-          email: enteredEmail,
-          password: enteredPassword,
-          returnSecureToken: true
-        }),
-        headers: {
-          'Content-Type': 'application/json'
+    fetch(url, {
+      method: 'POST',
+      body: JSON.stringify({
+        email: enteredEmail,
+        password: enteredPassword,
+        returnSecureToken: true
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(res => {
+        setIsLoading(false);
+        if (res.ok) {
+          // sign up worked
+          return res.json();
+        } else {
+          // if sign up doesn't work
+          return res.json().then(data => {
+            // show error
+            let errorMessage = 'Authentication failed!';
+            throw new Error(errorMessage);
+          });
         }
-      }
-    ).then(res => {
-      setIsLoading(false);
-      if (res.ok) {
-        // sign up worked
-        console.log(res.json());
-        return res.json();
-        alert('Your Account Creation or login was Successful!');
-      } else {
-        // if sign up doesn't work
-        return res.json().then(data => {
-          // show error
-          let errorMessage = 'Authentication failed!';
-          // if (data && data.error && data.error.message) {
-          //   errorMessage = data.error.message;
-          // }
-          // alert(errorMessage);
-          throw new Error(errorMessage);
-        });
-      }
-    }).then(data => {
-      console.log(data);
-    }).catch(err => {
-      alert(err.message);
-    });
+      })
+      .then(data => {
+        if (isLogin) {
+          alert('Your login was successful!');
+        } else {
+          alert('Your account creation was successful!');
+        }
+      })
+      .catch(err => {
+        alert(err.message);
+      });
 
     // Clear inputs
     emailInputRef.current.value = '';
@@ -84,9 +82,15 @@ const AuthForm = () => {
           required
           ref={passwordInputRef}
         ></input>
-        {!isLoading ? <input type="submit" value={isLogin ? "Login" : "Sign Up"}></input> : <p>Sending request...</p> }
+        {!isLoading ? (
+          <input type="submit" value={isLogin ? 'Login' : 'Sign Up'}></input>
+        ) : (
+          <p>Sending request...</p>
+        )}
       </form>
-      { !isLogin ? <button onClick={() => setIsLogin(!isLogin)}>Login with existing account</button> : <button onClick={() => setIsLogin(!isLogin)}>Create a new account</button>}
+      <button onClick={() => setIsLogin(!isLogin)}>
+        {isLogin ? 'Create new account' : 'Login with existing account'}
+      </button>
     </>
   );
 };
