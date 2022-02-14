@@ -80,6 +80,7 @@ const GetRoutineGrid = (props) => {
                                                 <CardMedia
                                                 className="media"
                                                 image={displayData["displayData"][index]["Routine"][0].image}
+                                                alt=''
                                                 title={`Routine ${index}`}
                                                 />
                                             </CardActionArea>
