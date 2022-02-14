@@ -9,14 +9,22 @@ import Button from '@material-ui/core/Button';
 import yogaPoses from './data/yogaPoses.json';
 import GetRoutineGrid from './components/RoutineGrid';
 
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-
 //firebase
 import database from './firebase';
-import { ref, set, onValue, update, remove, get, child, push } from 'firebase/database';
+import {
+  ref,
+  set,
+  onValue,
+  update,
+  remove,
+  get,
+  child,
+  push
+} from 'firebase/database';
 
 import DragLogic from './components/DragLogic';
-import InfoDialog from './InfoDialog.js';
+import InfoDialog from './components/InfoDialog.js';
+
 import './App.css';
 
 function App() {
@@ -26,14 +34,17 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPose, setSelectedPose] = useState(null);
   const [poseCounter, setPoseCounter] = useState(10);
+  const [addedTime, setAddedTime] = useState(0);
+  const [totalTime, setTotalTime] = useState(0);
   const [open, setOpen] = React.useState(false);
 
-    const saveRoutine = () => {
 
-      push(ref(database, '/'), {
-        Routine: Array.from(routine)
-      })
-    }
+  const saveRoutine = () => {
+    push(ref(database, '/'), {
+      Routine: Array.from(routine)
+    });
+    clearRoutine();
+  };
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -64,6 +75,11 @@ function App() {
             updateRoutine={updateRoutine}
             poseCounter={poseCounter}
             setPoseCounter={setPoseCounter}
+            addedTime={addedTime}
+            setAddedTime={setAddedTime}
+            routine={routine}
+            totalTime={totalTime}
+            setTotalTime={setTotalTime}
           />
         ) : null}
         <Grid
@@ -106,20 +122,33 @@ function App() {
             Start Routine
           </Button>
 
-          <SimpleDialog routine={routine} open={open} onClose={handleClose} />
+          {routine.length === 0 ? null : (
+            <SimpleDialog routine={routine} open={open} onClose={handleClose} />
+          )}
 
-          <Button 
-          variant="outlined" 
-          disabled={routine.length === 0 ? true : false}
-          onClick={saveRoutine}>Save Routine</Button>
-          <Button variant="outlined" onClick={() => setViewModalOpen({viewModalOpen: true})}>View Routines</Button>
+          <Button
+            variant="outlined"
+            disabled={routine.length === 0 ? true : false}
+            onClick={saveRoutine}
+          >
+            Save Routine
+          </Button>
+          <Button variant="outlined" onClick={clearRoutine}>
+            Clear Routine
+          </Button>
+          <Button
+            variant="outlined"
+            onClick={() => setViewModalOpen({ viewModalOpen: true })}
+          >
+            View Routines
+          </Button>
         </Grid>
-          {viewModalOpen ? (
-             <GetRoutineGrid
-              viewModalOpen={viewModalOpen}
-              setViewModalOpen={setViewModalOpen}
-            />
-          ) : null}
+        {viewModalOpen ? (
+          <GetRoutineGrid
+            viewModalOpen={viewModalOpen}
+            setViewModalOpen={setViewModalOpen}
+          />
+        ) : null}
       </Container>
     </DragLogic>
   );

@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
+import SimpleDialog from "./SimpleDialog";
 import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
 
@@ -27,6 +25,17 @@ const GetRoutineGrid = (props) => {
     } = props;
 
     const [displayData, setDisplayData] = useState({ displayData: [] });
+    const [routi, updateRouti] = useState([]);
+    const [open, setOpen] = React.useState(false);
+
+    function handlePlay(routine){
+        updateRouti(routine)
+        setOpen(true)
+    };
+    
+    const handleClose = () => {
+        setOpen(false)
+    }
 
     const handleRoutinesClose = () => {
         setViewModalOpen(false);
@@ -73,14 +82,17 @@ const GetRoutineGrid = (props) => {
                                                 image={displayData["displayData"][index]["Routine"][0].image}
                                                 alt=''
                                                 title={`Routine ${index}`}
-                                                />           
+                                                />
                                             </CardActionArea>
                                             <CardActions>
-                                                <Button size="small" color="primary">
-                                                Play
+                                                <Button onClick={e => {e.preventDefault(); handlePlay(displayData["displayData"][index]["Routine"])}} size="small" color="primary">
+                                                    Play
                                                 </Button>
+                                                {routi.length === 0 ? null : (
+                                                    <SimpleDialog routine={routi} open={open} onClose={handleClose} />
+                                                )}
                                                 <Button onClick={e => {e.preventDefault(); deleteHandler(index)}} size="small" color="secondary">
-                                                Delete
+                                                    Delete
                                                 </Button>
                                             </CardActions>
                                             </Card>
