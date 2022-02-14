@@ -8,6 +8,8 @@ import { Container } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import yogaPoses from './data/yogaPoses.json';
 import GetRoutineGrid from './components/RoutineGrid';
+import DragLogic from './components/DragLogic';
+import InfoDialog from './components/InfoDialog.js';
 
 //firebase
 import database from './firebase';
@@ -22,9 +24,6 @@ import {
   push
 } from 'firebase/database';
 
-import DragLogic from './components/DragLogic';
-import InfoDialog from './components/InfoDialog.js';
-
 import './App.css';
 
 function App() {
@@ -37,7 +36,6 @@ function App() {
   const [addedTime, setAddedTime] = useState(0);
   const [totalTime, setTotalTime] = useState(0);
   const [open, setOpen] = React.useState(false);
-
 
   const saveRoutine = () => {
     push(ref(database, '/'), {
@@ -90,7 +88,9 @@ function App() {
           alignItems="center"
           spacing={2}
         >
-        <Grid item xs={12}><h1>Build a Yoga Routine</h1></Grid>
+          <Grid item xs={12}>
+            <h1>Build a Yoga Routine</h1>
+          </Grid>
           {/* ---- LEFT COLUMN ---- */}
           <PoseBank
             poses={poses}
