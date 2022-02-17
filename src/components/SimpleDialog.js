@@ -78,7 +78,7 @@ function SimpleDialog(props) {
           </item>
         </Grid>
         <Grid item xs={4}>
-          <div className="player">
+          <item className="player">
             <PoseTimer
               handleNextSlide={handleNextSlide}
               routine={routine}
@@ -89,7 +89,7 @@ function SimpleDialog(props) {
             />
             {/* <OriginTimer expiryTimestamp={time} />  this was an experiment where I learned that the buttons don't
     work when it is position over the carousel, and only work when under*/}
-          </div>
+          </item>
         </Grid>
         <Grid item xs={4}>
           <item>
@@ -106,12 +106,17 @@ function SimpleDialog(props) {
           </item>
         </Grid>
       </Grid>
-      <Grid>
-        <NewPlayerCarousel
-          routine={routine}
-          slideIndex={slideIndex}
-          setSlideIndex={setSlideIndex}
-        />
+      <Grid container spacing={2}>
+        <Grid item xs={2}></Grid>
+        <Grid item xs={8}>
+          <item className="centered">
+            <NewPlayerCarousel
+              routine={routine}
+              slideIndex={slideIndex}
+              setSlideIndex={setSlideIndex}
+            />
+          </item>
+        </Grid>
       </Grid>
     </Dialog>
   );
