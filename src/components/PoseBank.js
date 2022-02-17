@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 import DraggablePoseCard from './DraggablePoseCard';
 
+
 const PoseBank = ({ poses, setModalOpen, modalOpen, setSelectedPose }) => {
   return (
     <Grid item xs={4} className="landingColumn">

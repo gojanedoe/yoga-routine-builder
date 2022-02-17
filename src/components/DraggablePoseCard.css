@@ -29,15 +29,19 @@ $phone:480px; */
     width: auto;
     /* width: 80px; */
     border: 1px solid;
-    /* @media screen and (max-width:760px) {
-      flex-direction: column;
-      min-width: 50px;
-     } */
-      /* should put image in a column and keep it at least 50 px wide when screen is small, but it doesn't */
   }
-  
+
   #link {
     grid-area: "link";
     justify-content: end;
     text-decoration: underline;
   }
+  @media screen and (max-width:700px) {
+
+    .pic {
+      visibility: hidden;
+      border: none;
+    }
+    /* flex-direction: column; */
+    /* min-width: 50px; */
+  } 
