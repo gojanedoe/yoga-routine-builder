@@ -1,105 +1,94 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useTimer } from 'react-timer-hook';
-import AudioPlayer from 'material-ui-audio-player';
+import AudioControls from './AudioControls';
 import './PoseTimer.css';
 
-//Bug: Timer is pausing between poses when the timer expires and when new slide is chosen manually
-//onPlayed in AudioPlayer is conflicting with useEffect restart timestamp; causing slides to not update their time and flow from one to the other with a 0-second timestamp. Goal: resume timer function after a pause
-
-function PoseTimer({ expiryTimestamp, handleNextSlide, routine, slideIndex }) {
+const TimerAndAudio = props => {
+  const { handleNextSlide, routine, slideIndex, audioSrc, expiryTimestamp } =
+    props;
   const { seconds, minutes, isRunning, start, pause, resume, restart } =
     useTimer({
       expiryTimestamp,
       onExpire: () => handleNextSlide()
     });
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  const [count, setCount] = useState(0);
-  // alternative to current time - round progress button: https://www.youtube.com/watch?v=B1tjrnX160k
-  // timer buttons not working because of their location on page...timer needs to be lower than thumbs
+  const audioRef = useRef(new Audio(audioSrc)); //sets audioRef to current Audio object
+  const intervalRef = useRef(); //To add in maybe later when accounting for added and default time. Used for tracking place in playback of audio file
 
-  console.log('re-rendered count: ', count);
+  const isReady = useRef(false);
 
   useEffect(() => {
-    if (count === 0) {
-      handlePlay();
-      // setCount(0);
-    } else if (count > 0) {
+    if (isPlaying) {
+      audioRef.current.play();
       resume();
+    } else {
+      pause();
+      audioRef.current.pause();
     }
-  }, [slideIndex, routine]);
+  }, [slideIndex, isPlaying]);
 
-  // useEffect(() => {
-  //   if (isRunning) {
-  //     setCount(1);
-  //   }
-  // }, [count]);
+  useEffect(() => {
+    // Pause and clean up on unmount
+    return () => {
+      audioRef.current.pause();
+      clearInterval(intervalRef.current); //clearInterval is a DOM method
+    };
+  }, []);
 
-  const handlePlay = () => {
-    const time = new Date();
-    time.setSeconds(
-      time.getSeconds() +
-        routine[slideIndex].defaultTime +
-        routine[slideIndex].addedTime
+  useEffect(() => {
+    audioRef.current.pause();
+
+    audioRef.current = new Audio(audioSrc);
+
+    if (isReady.current) {
+      audioRef.current.play();
+      setIsPlaying(true);
+      const time = new Date();
+      time.setSeconds(
+        time.getSeconds() +
+          routine[slideIndex].defaultTime +
+          routine[slideIndex].addedTime
+      );
+      restart(time);
+    } else {
+      // Set the isReady ref as true for the next pass
+      isReady.current = true;
+    }
+  }, [slideIndex]);
+
+  const AudioPlayerScratch = () => {
+    return (
+      <div className="audio-player">
+        <AudioControls
+          isPlaying={isPlaying}
+          onPrevClick={handleNextSlide}
+          onNextClick={handleNextSlide}
+          setIsPlaying={setIsPlaying}
+        />
+      </div>
     );
-    restart(time);
-    setCount(1);
-    console.log('I started');
-    console.log(seconds);
-    console.log('count:', count);
-    // setCount(prevCount => { prevCount++ });
   };
 
-  const handlePause = () => {
-    // setIsPaused(!isPaused);
-    pause();
-    setCount(1);
-    console.log('count', count);
-  };
-
-  const handleResume = () => {
-    if (count > 0) {
-      resume();
-      console.log('I resumed');
-    }
+  const PoseTimer = () => {
+    return (
+      <div style={{ textAlign: 'center' }}>
+        <div className="countdown" style={{ fontSize: '25px' }}>
+          <span>{minutes}</span>:<span>{seconds}</span>
+        </div>
+        <p>{isRunning ? 'Time left in pose' : 'Paused'}</p>
+      </div>
+    );
   };
 
   return (
-    <div style={{ textAlign: 'center' }}>
-      <div className="countdown" style={{ fontSize: '25px' }}>
-        <span>{minutes}</span>:<span>{seconds}</span>
-      </div>
-      <p>{isRunning ? 'Time left in pose' : 'Paused'}</p>
-      {/* <button onClick={handleStart}>Start</button> */}
-      {/* <button onClick={handlePause}>Pause</button> */}
-      <button onClick={handleResume}>Resume</button>
-      <button
-        onClick={() => {
-          // Restarts to 5 minutes timer
-          const time = new Date();
-          time.setSeconds(time.getSeconds() + 300);
-          restart(time);
-        }}
-      >
-        Restart
-      </button>
-      <AudioPlayer
-        elevation={1}
-        width="60px"
-        variation="primary"
-        spacing={3}
-        src={
-          routine.length === 0
-            ? 'Assets/tree_(vrkasana).mp4'
-            : routine[slideIndex].audio
-        }
-        style={{ textAlign: 'center' }}
-        autoplay={true}
-        displaySlider={false}
-        onPaused={handlePause}
-        onPlayed={handleResume}
-      />
+    <div>
+      <AudioPlayerScratch />
+      <PoseTimer />
     </div>
   );
-}
+};
 
-export default PoseTimer;
+export default TimerAndAudio;
+
+// alternative to current time - round progress button: https://www.youtube.com/watch?v=B1tjrnX160k

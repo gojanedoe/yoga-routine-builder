@@ -4,6 +4,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import NewPlayerCarousel from './NewPlayerCarousel';
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
+import TimerAndAudio from './PoseTimer';
 import PoseTimer from './PoseTimer';
 import Grid from '@material-ui/core/Grid';
 import './PoseTimer.css';
@@ -11,6 +12,13 @@ import './PoseTimer.css';
 function SimpleDialog(props) {
   const { onClose, routine, open, selectedPose } = props;
   const [slideIndex, setSlideIndex] = useState(0);
+
+  const expiryTime = new Date();
+  expiryTime.setSeconds(
+    expiryTime.getSeconds() +
+      routine[slideIndex].defaultTime +
+      routine[slideIndex].addedTime
+  );
 
   const handleClose = () => {
     onClose(routine);
@@ -49,10 +57,16 @@ function SimpleDialog(props) {
         </Grid>
         <Grid item xs={4}>
           <div className="player">
-            <PoseTimer
+            <TimerAndAudio
               handleNextSlide={handleNextSlide}
               routine={routine}
               slideIndex={slideIndex}
+              audioSrc={
+                routine.length === 0
+                  ? 'Assets/tree_(vrkasana).mp4'
+                  : routine[slideIndex].audio
+              }
+              expiryTimestamp={expiryTime}
             />
             {/* <OriginTimer expiryTimestamp={time} />  this was an experiment where I learned that the buttons don't
     work when it is position over the carousel, and only work when under*/}
