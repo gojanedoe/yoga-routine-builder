@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import PoseBank from './components/PoseBank';
 import RoutineBuilder from './components/RoutineBuilder';
 import SimpleDialog from './components/SimpleDialog';
@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import yogaPoses from './data/yogaPoses.json';
 import GetRoutineGrid from './components/RoutineGrid';
 import AuthForm from './components/Auth/AuthForm';
+import AuthContext from './store/auth-context';
 
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
@@ -41,6 +42,10 @@ function App() {
   const [totalTime, setTotalTime] = useState(0);
   const [open, setOpen] = React.useState(false);
 
+  // Get authorization info using context
+  const authContext = useContext(AuthContext);
+  const { isLoggedIn } = authContext;
+
   const saveRoutine = () => {
     push(ref(database, '/'), {
       Routine: Array.from(routine)
@@ -68,6 +73,8 @@ function App() {
       poseCounter={poseCounter}
       setPoseCounter={setPoseCounter}
     >
+      <h2>{isLoggedIn ? 'You are logged in!' : 'You are not logged in'}</h2>
+
       <AuthForm />
       <Container className="landingContainer">
         {modalOpen ? (

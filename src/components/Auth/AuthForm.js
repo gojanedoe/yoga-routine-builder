@@ -1,8 +1,12 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useContext } from 'react';
+
+import AuthContext from '../../store/auth-context';
 
 const AuthForm = () => {
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
+
+  const authContext = useContext(AuthContext);
 
   const [isLogin, setIsLogin] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
@@ -54,8 +58,11 @@ const AuthForm = () => {
         }
       })
       .then(data => {
+        console.log('data from signup or login: ', data);
+
         if (isLogin) {
           alert('Your login was successful!');
+          authContext.login(data.idToken);
         } else {
           alert('Your account creation was successful!');
         }
